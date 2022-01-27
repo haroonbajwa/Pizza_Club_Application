@@ -42,7 +42,7 @@ namespace Pizza_Club
 
         private void btn_pizzas_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form_Pizzas(), sender);
+            OpenChildForm(Program.fp, sender);
         }
     }
 }

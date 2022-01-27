@@ -12,6 +12,7 @@ namespace Pizza_Club
         public static Form_AdminLogin fal;
         public static Form_Welcome fw;
         public static Form_AdminMain fam;
+        public static Form_Pizzas fp;
 
         /// <summary>
         /// The main entry point for the application.
@@ -24,6 +25,7 @@ namespace Pizza_Club
             fal = new Form_AdminLogin();
             fw = new Form_Welcome();
             fam = new Form_AdminMain();
+            fp = new Form_Pizzas();
             Application.Run(new Form_Welcome());
         }
     }

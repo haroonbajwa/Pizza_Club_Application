@@ -40,7 +40,7 @@ namespace Pizza_Club
             this.btn_pizzas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_admin_main = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
             this.panel_admin_main = new System.Windows.Forms.Panel();
@@ -186,25 +186,25 @@ namespace Pizza_Club
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label_admin_main);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(302, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 54);
             this.panel3.TabIndex = 3;
             // 
-            // label1
+            // label_admin_main
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label_admin_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Hobo Std", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 52);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ADMIN PANEL";
+            this.label_admin_main.AutoSize = true;
+            this.label_admin_main.Font = new System.Drawing.Font("Hobo Std", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_admin_main.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label_admin_main.Location = new System.Drawing.Point(0, 0);
+            this.label_admin_main.Name = "label_admin_main";
+            this.label_admin_main.Size = new System.Drawing.Size(282, 52);
+            this.label_admin_main.TabIndex = 0;
+            this.label_admin_main.Text = "ADMIN PANEL";
             // 
             // pictureBox1
             // 
@@ -271,7 +271,7 @@ namespace Pizza_Club
         private System.Windows.Forms.Button btn_burgers;
         private System.Windows.Forms.Button btn_pizzas;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_admin_main;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Panel panel3;
