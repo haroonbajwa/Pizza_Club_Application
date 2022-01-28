@@ -28,7 +28,7 @@ namespace Pizza_Club
         {
             if (activeForm != null)
             {
-                activeForm.Close();
+                activeForm.Hide();
             }
             activeForm = childForm;
             childForm.TopLevel = false;

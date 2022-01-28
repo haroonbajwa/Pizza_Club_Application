@@ -29,15 +29,8 @@ namespace Pizza_Club
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_pizzaName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,20 +50,10 @@ namespace Pizza_Club
             this.btn_updatePizza = new System.Windows.Forms.Button();
             this.btn_addPizza = new System.Windows.Forms.Button();
             this.dataGridView_pizzas = new System.Windows.Forms.DataGridView();
-            this.tblpizzasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet = new Pizza_Club.DatabaseDataSet();
-            this.tbl_pizzasTableAdapter = new Pizza_Club.DatabaseDataSetTableAdapters.tbl_pizzasTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceXLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_clear_pizzas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pizzas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblpizzasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -167,6 +150,7 @@ namespace Pizza_Club
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btn_clear_pizzas);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_priceXL);
@@ -199,6 +183,7 @@ namespace Pizza_Club
             this.txt_pizzaId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pizzaId.Location = new System.Drawing.Point(73, 4);
             this.txt_pizzaId.Name = "txt_pizzaId";
+            this.txt_pizzaId.ReadOnly = true;
             this.txt_pizzaId.Size = new System.Drawing.Size(178, 21);
             this.txt_pizzaId.TabIndex = 1;
             // 
@@ -272,7 +257,6 @@ namespace Pizza_Club
             this.dataGridView_pizzas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_pizzas.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -282,101 +266,34 @@ namespace Pizza_Club
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_pizzas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_pizzas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_pizzas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.priceSDataGridViewTextBoxColumn,
-            this.priceMDataGridViewTextBoxColumn,
-            this.priceLDataGridViewTextBoxColumn,
-            this.priceXLDataGridViewTextBoxColumn});
-            this.dataGridView_pizzas.DataSource = this.tblpizzasBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_pizzas.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_pizzas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_pizzas.Location = new System.Drawing.Point(1, 154);
             this.dataGridView_pizzas.Name = "dataGridView_pizzas";
+            this.dataGridView_pizzas.ReadOnly = true;
             this.dataGridView_pizzas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_pizzas.Size = new System.Drawing.Size(1050, 303);
             this.dataGridView_pizzas.TabIndex = 4;
+            this.dataGridView_pizzas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_pizzas_MouseClick);
             // 
-            // tblpizzasBindingSource
+            // btn_clear_pizzas
             // 
-            this.tblpizzasBindingSource.DataMember = "tbl_pizzas";
-            this.tblpizzasBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbl_pizzasTableAdapter
-            // 
-            this.tbl_pizzasTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F);
-            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F);
-            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // priceSDataGridViewTextBoxColumn
-            // 
-            this.priceSDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceSDataGridViewTextBoxColumn.DataPropertyName = "priceS";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F);
-            this.priceSDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.priceSDataGridViewTextBoxColumn.HeaderText = "Price (S)";
-            this.priceSDataGridViewTextBoxColumn.Name = "priceSDataGridViewTextBoxColumn";
-            // 
-            // priceMDataGridViewTextBoxColumn
-            // 
-            this.priceMDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceMDataGridViewTextBoxColumn.DataPropertyName = "priceM";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F);
-            this.priceMDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.priceMDataGridViewTextBoxColumn.HeaderText = "Price (M)";
-            this.priceMDataGridViewTextBoxColumn.Name = "priceMDataGridViewTextBoxColumn";
-            // 
-            // priceLDataGridViewTextBoxColumn
-            // 
-            this.priceLDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceLDataGridViewTextBoxColumn.DataPropertyName = "priceL";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F);
-            this.priceLDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.priceLDataGridViewTextBoxColumn.HeaderText = "Price (L)";
-            this.priceLDataGridViewTextBoxColumn.Name = "priceLDataGridViewTextBoxColumn";
-            // 
-            // priceXLDataGridViewTextBoxColumn
-            // 
-            this.priceXLDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceXLDataGridViewTextBoxColumn.DataPropertyName = "priceXL";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F);
-            this.priceXLDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.priceXLDataGridViewTextBoxColumn.HeaderText = "Price (XL)";
-            this.priceXLDataGridViewTextBoxColumn.Name = "priceXLDataGridViewTextBoxColumn";
+            this.btn_clear_pizzas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_clear_pizzas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear_pizzas.Font = new System.Drawing.Font("Adobe Gothic Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_clear_pizzas.Location = new System.Drawing.Point(684, 111);
+            this.btn_clear_pizzas.Name = "btn_clear_pizzas";
+            this.btn_clear_pizzas.Size = new System.Drawing.Size(79, 28);
+            this.btn_clear_pizzas.TabIndex = 7;
+            this.btn_clear_pizzas.Text = "Clear";
+            this.btn_clear_pizzas.UseVisualStyleBackColor = false;
+            this.btn_clear_pizzas.Click += new System.EventHandler(this.btn_clear_pizzas_Click);
             // 
             // Form_Pizzas
             // 
@@ -395,8 +312,6 @@ namespace Pizza_Club
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pizzas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblpizzasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,14 +337,12 @@ namespace Pizza_Club
         private System.Windows.Forms.Button btn_updatePizza;
         private System.Windows.Forms.Button btn_addPizza;
         private System.Windows.Forms.DataGridView dataGridView_pizzas;
-        private DatabaseDataSet databaseDataSet;
-        private System.Windows.Forms.BindingSource tblpizzasBindingSource;
-        private DatabaseDataSetTableAdapters.tbl_pizzasTableAdapter tbl_pizzasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceLDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceXLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_clear_pizzas;
     }
 }

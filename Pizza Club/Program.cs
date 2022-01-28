@@ -27,6 +27,7 @@ namespace Pizza_Club
             fam = new Form_AdminMain();
             fp = new Form_Pizzas();
             Application.Run(new Form_Welcome());
+            // Application.Run(new Form_Pizzas());
         }
     }
 }

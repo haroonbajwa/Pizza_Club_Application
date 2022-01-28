@@ -13,7 +13,7 @@ namespace Pizza_Club
 {
     public partial class Form_AdminLogin : Form
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabasePC.mdf;Integrated Security=True");
         public Form_AdminLogin()
         {
             InitializeComponent();
