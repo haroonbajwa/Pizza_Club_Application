@@ -111,6 +111,7 @@ namespace Pizza_Club
             this.btn_purchasePcs.TabIndex = 0;
             this.btn_purchasePcs.Text = "Purchase (PCS)";
             this.btn_purchasePcs.UseVisualStyleBackColor = false;
+            this.btn_purchasePcs.Click += new System.EventHandler(this.btn_purchasePcs_Click);
             // 
             // btn_ingredients
             // 
@@ -156,6 +157,7 @@ namespace Pizza_Club
             this.btn_burgers.TabIndex = 0;
             this.btn_burgers.Text = "Burgers";
             this.btn_burgers.UseVisualStyleBackColor = false;
+            this.btn_burgers.Click += new System.EventHandler(this.btn_burgers_Click);
             // 
             // btn_pizzas
             // 

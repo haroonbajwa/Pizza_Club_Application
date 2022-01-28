@@ -78,6 +78,12 @@
     <Compile Include="Form_AdminMain.Designer.cs">
       <DependentUpon>Form_AdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Burgers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Burgers.designer.cs">
+      <DependentUpon>Form_Burgers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Pizzas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,11 +98,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form_PurchasePieces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PurchasePieces.Designer.cs">
+      <DependentUpon>Form_PurchasePieces.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form_AdminLogin.resx">
       <DependentUpon>Form_AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_AdminMain.resx">
       <DependentUpon>Form_AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Burgers.resx">
+      <DependentUpon>Form_Burgers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Pizzas.resx">
       <DependentUpon>Form_Pizzas.cs</DependentUpon>
@@ -113,6 +128,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_PurchasePieces.resx">
+      <DependentUpon>Form_PurchasePieces.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DatabasePCDataSet.xsc">
       <DependentUpon>DatabasePCDataSet.xsd</DependentUpon>
     </None>

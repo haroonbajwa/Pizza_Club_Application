@@ -199,6 +199,19 @@ namespace Pizza_Club
 
         private void Form_Pizzas_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'databasePCDataSet.tbl_pizzas' table. You can move, or remove it, as needed.
+            this.tbl_pizzasTableAdapter.Fill(this.databasePCDataSet.tbl_pizzas);
+            // TODO: This line of code loads data into the 'databasePCDataSet.tbl_pizzas' table. You can move, or remove it, as needed.
+            //this.tbl_pizzasTableAdapter.Fill(this.databasePCDataSet.tbl_pizzas);
+
+            dataGridView_pizzas.Columns[0].ReadOnly = true;
+            dataGridView_pizzas.Columns[1].ReadOnly = true;
+            dataGridView_pizzas.Columns[2].ReadOnly = true;
+            dataGridView_pizzas.Columns[3].ReadOnly = true;
+            dataGridView_pizzas.Columns[4].ReadOnly = true;
+            dataGridView_pizzas.Columns[5].ReadOnly = true;
+            dataGridView_pizzas.Columns[6].ReadOnly = false;
+
             auto_increment_id(sender, e);
 
         }
@@ -243,7 +256,7 @@ namespace Pizza_Club
                     cell = selectedcell;
                     break;
                 }
-
+                
                 if (cell != null)
                 {
                     DataGridViewRow row = cell.OwningRow;
@@ -253,7 +266,6 @@ namespace Pizza_Club
                     txt_priceM.Text = row.Cells[3].Value.ToString();
                     txt_priceL.Text = row.Cells[4].Value.ToString();
                     txt_priceXL.Text = row.Cells[5].Value.ToString();
-
                 }
             }
             catch
