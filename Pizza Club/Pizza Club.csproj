@@ -66,6 +66,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabasePCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form_PurchaseGrams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PurchaseGrams.Designer.cs">
+      <DependentUpon>Form_PurchaseGrams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Users.Designer.cs">
+      <DependentUpon>Form_Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,17 +90,41 @@
     <Compile Include="Form_AdminMain.Designer.cs">
       <DependentUpon>Form_AdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_AllIngredients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AllIngredients.Designer.cs">
+      <DependentUpon>Form_AllIngredients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Burgers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Burgers.designer.cs">
       <DependentUpon>Form_Burgers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Customers.Designer.cs">
+      <DependentUpon>Form_Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Drinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Drinks.designer.cs">
+      <DependentUpon>Form_Drinks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Pizzas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Pizzas.Designer.cs">
       <DependentUpon>Form_Pizzas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Stock.designer.cs">
+      <DependentUpon>Form_Stock.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Welcome.cs">
       <SubType>Form</SubType>
@@ -104,17 +140,35 @@
     <Compile Include="Form_PurchasePieces.Designer.cs">
       <DependentUpon>Form_PurchasePieces.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_PurchaseGrams.resx">
+      <DependentUpon>Form_PurchaseGrams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Users.resx">
+      <DependentUpon>Form_Users.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_AdminLogin.resx">
       <DependentUpon>Form_AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_AdminMain.resx">
       <DependentUpon>Form_AdminMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_AllIngredients.resx">
+      <DependentUpon>Form_AllIngredients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Burgers.resx">
       <DependentUpon>Form_Burgers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Customers.resx">
+      <DependentUpon>Form_Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Drinks.resx">
+      <DependentUpon>Form_Drinks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Pizzas.resx">
       <DependentUpon>Form_Pizzas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Stock.resx">
+      <DependentUpon>Form_Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Welcome.resx">
       <DependentUpon>Form_Welcome.cs</DependentUpon>

@@ -244,6 +244,7 @@ namespace Pizza_Club
         {
             ClearTextBoxes();
             Uncheck_checkboxes();
+            auto_increment_id(sender, e);
         }
 
         private void dataGridView_pizzas_MouseClick(object sender, MouseEventArgs e)

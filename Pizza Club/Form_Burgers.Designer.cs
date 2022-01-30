@@ -83,46 +83,47 @@ namespace Pizza_Club
             this.dataGridView_burgers.DataSource = this.tblburgersBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_burgers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_burgers.Location = new System.Drawing.Point(2, 154);
+            this.dataGridView_burgers.MultiSelect = false;
             this.dataGridView_burgers.Name = "dataGridView_burgers";
-            this.dataGridView_burgers.ReadOnly = true;
             this.dataGridView_burgers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_burgers.Size = new System.Drawing.Size(1050, 303);
-            this.dataGridView_burgers.TabIndex = 6;
+            this.dataGridView_burgers.TabIndex = 9;
+            this.dataGridView_burgers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_burgers_MouseClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // priceDataGridViewTextBoxColumn
             // 
+            this.priceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // selectDataGridViewCheckBoxColumn
             // 
             this.selectDataGridViewCheckBoxColumn.DataPropertyName = "select";
-            this.selectDataGridViewCheckBoxColumn.HeaderText = "select";
+            this.selectDataGridViewCheckBoxColumn.HeaderText = "Select";
             this.selectDataGridViewCheckBoxColumn.Name = "selectDataGridViewCheckBoxColumn";
-            this.selectDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.selectDataGridViewCheckBoxColumn.Width = 60;
             // 
             // tblburgersBindingSource
             // 
@@ -158,7 +159,7 @@ namespace Pizza_Club
             this.btn_clearBurger.Location = new System.Drawing.Point(493, 110);
             this.btn_clearBurger.Name = "btn_clearBurger";
             this.btn_clearBurger.Size = new System.Drawing.Size(79, 28);
-            this.btn_clearBurger.TabIndex = 7;
+            this.btn_clearBurger.TabIndex = 4;
             this.btn_clearBurger.Text = "Clear";
             this.btn_clearBurger.UseVisualStyleBackColor = false;
             this.btn_clearBurger.Click += new System.EventHandler(this.btn_clearBurger_Click);
@@ -167,7 +168,7 @@ namespace Pizza_Club
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(186, 11);
+            this.label6.Location = new System.Drawing.Point(189, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 20);
             this.label6.TabIndex = 0;
@@ -177,7 +178,7 @@ namespace Pizza_Club
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(159, 49);
+            this.label1.Location = new System.Drawing.Point(162, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 0;
@@ -185,6 +186,7 @@ namespace Pizza_Club
             // 
             // txt_BurgerId
             // 
+            this.txt_BurgerId.Enabled = false;
             this.txt_BurgerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_BurgerId.Location = new System.Drawing.Point(220, 10);
             this.txt_BurgerId.Name = "txt_BurgerId";
@@ -204,7 +206,7 @@ namespace Pizza_Club
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(160, 86);
+            this.label2.Location = new System.Drawing.Point(163, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 0;
@@ -239,7 +241,7 @@ namespace Pizza_Club
             this.btn_viewBurger.Location = new System.Drawing.Point(184, 74);
             this.btn_viewBurger.Name = "btn_viewBurger";
             this.btn_viewBurger.Size = new System.Drawing.Size(181, 65);
-            this.btn_viewBurger.TabIndex = 10;
+            this.btn_viewBurger.TabIndex = 8;
             this.btn_viewBurger.Text = "View";
             this.btn_viewBurger.UseVisualStyleBackColor = false;
             this.btn_viewBurger.Click += new System.EventHandler(this.btn_viewBurger_Click);
@@ -252,7 +254,7 @@ namespace Pizza_Club
             this.btn_deleteBurger.Location = new System.Drawing.Point(3, 73);
             this.btn_deleteBurger.Name = "btn_deleteBurger";
             this.btn_deleteBurger.Size = new System.Drawing.Size(175, 65);
-            this.btn_deleteBurger.TabIndex = 9;
+            this.btn_deleteBurger.TabIndex = 7;
             this.btn_deleteBurger.Text = "Delete";
             this.btn_deleteBurger.UseVisualStyleBackColor = false;
             this.btn_deleteBurger.Click += new System.EventHandler(this.btn_deleteBurger_Click);
@@ -265,7 +267,7 @@ namespace Pizza_Club
             this.btn_updateBurger.Location = new System.Drawing.Point(184, 4);
             this.btn_updateBurger.Name = "btn_updateBurger";
             this.btn_updateBurger.Size = new System.Drawing.Size(181, 65);
-            this.btn_updateBurger.TabIndex = 8;
+            this.btn_updateBurger.TabIndex = 6;
             this.btn_updateBurger.Text = "Update";
             this.btn_updateBurger.UseVisualStyleBackColor = false;
             this.btn_updateBurger.Click += new System.EventHandler(this.btn_updateBurger_Click);
@@ -278,7 +280,7 @@ namespace Pizza_Club
             this.btn_addBurger.Location = new System.Drawing.Point(3, 4);
             this.btn_addBurger.Name = "btn_addBurger";
             this.btn_addBurger.Size = new System.Drawing.Size(175, 65);
-            this.btn_addBurger.TabIndex = 7;
+            this.btn_addBurger.TabIndex = 5;
             this.btn_addBurger.Text = "ADD";
             this.btn_addBurger.UseVisualStyleBackColor = false;
             this.btn_addBurger.Click += new System.EventHandler(this.btn_addBurger_Click);

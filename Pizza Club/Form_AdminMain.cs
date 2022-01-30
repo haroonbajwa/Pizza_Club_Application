@@ -54,5 +54,31 @@ namespace Pizza_Club
         {
             OpenChildForm(Program.fb, sender);
         }
+
+        private void btn_drinks_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fd, sender);
+        }
+
+        private void btn_allIngredients_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fai, sender);
+        }
+
+        private void btn_stock_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fs, sender);
+
+        }
+
+        private void btn_customers_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fc, sender);
+        }
+
+        private void btn_adminUsers_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fu, sender);
+        }
     }
 }
