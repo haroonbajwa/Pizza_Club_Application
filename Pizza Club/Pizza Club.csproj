@@ -66,11 +66,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabasePCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form_Expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Expense.Designer.cs">
+      <DependentUpon>Form_Expense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_PurchaseGrams.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_PurchaseGrams.Designer.cs">
       <DependentUpon>Form_PurchaseGrams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Sales.Designer.cs">
+      <DependentUpon>Form_Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SideOderItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SideOderItems.Designer.cs">
+      <DependentUpon>Form_SideOderItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Users.cs">
       <SubType>Form</SubType>
@@ -140,8 +158,17 @@
     <Compile Include="Form_PurchasePieces.Designer.cs">
       <DependentUpon>Form_PurchasePieces.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_Expense.resx">
+      <DependentUpon>Form_Expense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_PurchaseGrams.resx">
       <DependentUpon>Form_PurchaseGrams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Sales.resx">
+      <DependentUpon>Form_Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SideOderItems.resx">
+      <DependentUpon>Form_SideOderItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Users.resx">
       <DependentUpon>Form_Users.cs</DependentUpon>

@@ -30,5 +30,11 @@ namespace Pizza_Club
             this.Hide();
             Program.fal.Show();
         }
+
+        private void btn_guest_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.fsales.Show();
+        }
     }
 }

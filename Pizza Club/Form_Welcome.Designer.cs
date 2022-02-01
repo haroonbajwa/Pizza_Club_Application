@@ -54,6 +54,7 @@ namespace Pizza_Club
             this.btn_guest.TabIndex = 0;
             this.btn_guest.Text = "GUEST";
             this.btn_guest.UseVisualStyleBackColor = false;
+            this.btn_guest.Click += new System.EventHandler(this.btn_guest_Click);
             // 
             // btn_admin
             // 
@@ -103,7 +104,7 @@ namespace Pizza_Club
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(759, 2);
+            this.button1.Location = new System.Drawing.Point(760, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 33);
             this.button1.TabIndex = 3;

@@ -235,6 +235,7 @@ namespace Pizza_Club
             this.btn_viewStockGrams.TabIndex = 10;
             this.btn_viewStockGrams.Text = "View";
             this.btn_viewStockGrams.UseVisualStyleBackColor = false;
+            this.btn_viewStockGrams.Click += new System.EventHandler(this.btn_viewStockGrams_Click);
             // 
             // btn_deleteStockGrams
             // 
@@ -247,6 +248,7 @@ namespace Pizza_Club
             this.btn_deleteStockGrams.TabIndex = 9;
             this.btn_deleteStockGrams.Text = "Delete";
             this.btn_deleteStockGrams.UseVisualStyleBackColor = false;
+            this.btn_deleteStockGrams.Click += new System.EventHandler(this.btn_deleteStockGrams_Click);
             // 
             // label3
             // 
@@ -269,6 +271,7 @@ namespace Pizza_Club
             this.btn_updateStockGrams.TabIndex = 8;
             this.btn_updateStockGrams.Text = "Update";
             this.btn_updateStockGrams.UseVisualStyleBackColor = false;
+            this.btn_updateStockGrams.Click += new System.EventHandler(this.btn_updateStockGrams_Click);
             // 
             // label4
             // 
@@ -446,6 +449,7 @@ namespace Pizza_Club
             this.dataGridView_stockGrams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_stockGrams.Size = new System.Drawing.Size(517, 240);
             this.dataGridView_stockGrams.TabIndex = 13;
+            this.dataGridView_stockGrams.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_stockGrams_MouseClick);
             // 
             // idDataGridViewTextBoxColumn1
             // 

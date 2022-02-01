@@ -62,7 +62,9 @@ namespace Pizza_Club
             dataGridView_purchasePCS.Columns[5].ReadOnly = false;
 
             auto_increment_id(sender, e);
+            btn_viewPCS_Click(sender, e);
             load_allIngredients();
+            calculate_grossTotal();
 
         }
 
@@ -353,12 +355,14 @@ namespace Pizza_Club
             {
                 MessageBox.Show("Error " + ex);
             }
+            calculate_grossTotal();
         }
 
         //Clear textboxes
         private void ClearTextBoxes()
         {
             combo_pcsName.Text = "";
+            txt_pcsName.Text = "";
             txt_pcsQuantity.Text = "";
             txt_pcsPrice.Text = "";
             combo_pcsName.Focus();
@@ -382,6 +386,7 @@ namespace Pizza_Club
             ClearTextBoxes();
             Uncheck_checkboxes();
             auto_increment_id(sender, e);
+            btn_viewPCS_Click(sender, e);
         }
 
         //selct record to show in text boxes
@@ -408,6 +413,29 @@ namespace Pizza_Club
             catch
             {
             }
+        }
+
+        public void calculate_grossTotal()
+        {
+            //calculate gross total from datagridview
+            decimal sum = 0;
+            for (int i = 0; i < dataGridView_purchasePCS.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(dataGridView_purchasePCS.Rows[i].Cells[3].Value);
+            }
+            label_grossTotal.Text = sum.ToString();
+            if (sum == 0)
+            {
+                label_grossTotal.Text = "0.00";
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DataView DV = new DataView(dt);
+            DV.RowFilter = string.Format("Date = #{0}#", dateTimePicker1.Text);
+            dataGridView_purchasePCS.DataSource = DV;
+            calculate_grossTotal();
         }
     }
 }

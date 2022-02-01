@@ -14,12 +14,16 @@ namespace Pizza_Club
         public static Form_AdminMain fam;
         public static Form_Pizzas fp;
         public static purchase_pieces fpp;
+        public static Form_PurchaseGrams fpg;
         public static Form_Burgers fb;
         public static Form_Drinks fd;
         public static Form_AllIngredients fai;
         public static Form_Stock fs;
         public static Form_Customers fc;
         public static Form_Users fu;
+        public static Form_SideOderItems fso;
+        public static Form_Expense fe;
+        public static Form_Sales fsales;
 
         /// <summary>
         /// The main entry point for the application.
@@ -34,12 +38,16 @@ namespace Pizza_Club
             fam = new Form_AdminMain();
             fp = new Form_Pizzas();
             fpp = new purchase_pieces();
+            fpg = new Form_PurchaseGrams();
             fb = new Form_Burgers();
             fd = new Form_Drinks();
             fai = new Form_AllIngredients();
             fs = new Form_Stock();
             fc = new Form_Customers();
             fu = new Form_Users();
+            fso = new Form_SideOderItems();
+            fe = new Form_Expense();
+            fsales = new Form_Sales();
             Application.Run(new Form_Welcome());
             // Application.Run(new Form_Pizzas());
         }

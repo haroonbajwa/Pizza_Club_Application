@@ -70,6 +70,7 @@ namespace Pizza_Club
             this.btn_sideOrders.TabIndex = 3;
             this.btn_sideOrders.Text = "Side Orders";
             this.btn_sideOrders.UseVisualStyleBackColor = false;
+            this.btn_sideOrders.Click += new System.EventHandler(this.btn_sideOrders_Click);
             // 
             // btn_allIngredients
             // 
@@ -103,6 +104,7 @@ namespace Pizza_Club
             this.btn_expenses.TabIndex = 0;
             this.btn_expenses.Text = "Expenses";
             this.btn_expenses.UseVisualStyleBackColor = false;
+            this.btn_expenses.Click += new System.EventHandler(this.btn_expenses_Click);
             // 
             // btn_purchasePcs
             // 
@@ -237,6 +239,7 @@ namespace Pizza_Club
             this.btn_purchaseGrms.TabIndex = 6;
             this.btn_purchaseGrms.Text = "Purchase (Grms)";
             this.btn_purchaseGrms.UseVisualStyleBackColor = false;
+            this.btn_purchaseGrms.Click += new System.EventHandler(this.btn_purchaseGrms_Click);
             // 
             // panel2
             // 
