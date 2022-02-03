@@ -24,6 +24,7 @@ namespace Pizza_Club
         public static Form_SideOderItems fso;
         public static Form_Expense fe;
         public static Form_Sales fsales;
+        public static Form_ViewSales fvsales;
 
         /// <summary>
         /// The main entry point for the application.
@@ -48,6 +49,7 @@ namespace Pizza_Club
             fso = new Form_SideOderItems();
             fe = new Form_Expense();
             fsales = new Form_Sales();
+            fvsales = new Form_ViewSales();
             Application.Run(new Form_Welcome());
             // Application.Run(new Form_Pizzas());
         }

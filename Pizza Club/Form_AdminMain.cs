@@ -95,5 +95,10 @@ namespace Pizza_Club
         {
             OpenChildForm(Program.fe, sender);
         }
+
+        private void btn_sales_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fvsales, sender);
+        }
     }
 }
