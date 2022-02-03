@@ -662,7 +662,9 @@ namespace Pizza_Club
 
         private void btn_preview_Click(object sender, EventArgs e)
         {
-
+            printPreviewDialog1.Document = printDocument1;
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+            printPreviewDialog1.ShowDialog();
         }
 
         //Auto Increment
@@ -1126,7 +1128,7 @@ namespace Pizza_Club
                         }
                         sqlcon.Close();
 
-                        //decreaseStockOnSale();
+                        
 
                         if(combo_customerName.Text != "")
                         {
@@ -1185,7 +1187,7 @@ namespace Pizza_Club
 
 
                         MessageBox.Show("Sales Successfull!");
-                        //printDocument1.Print();
+                        printDocument1.Print();
                         sqlcon.Close();
 
                         btn_resetCart_Click(sender, e);
@@ -1460,6 +1462,86 @@ namespace Pizza_Club
             string selectedDeal = "Deal 16";
             string dealPrice = "2399";
             HandleDealATC(selectedDeal, dealPrice);
+        }
+
+        //design of receipt
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bmp = Properties.Resources.pizzalogo;
+            //Bitmap bmp2 = Properties.Resources.fotolarge;
+            Image img = bmp;
+            //Image logo = bmp2;
+            e.Graphics.DrawImage(img, 5, 5, 75, 70);
+            //e.Graphics.DrawImage(logo, 700, 20, 150, 80);
+            //e.Graphics.DrawString("Customer Name: " + txtBoxCustomer.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, 220));
+            e.Graphics.DrawString("PIZZA CLUB", new Font("Arial", 9, FontStyle.Bold), Brushes.Black, new Point(100, 20));
+            e.Graphics.DrawString("Model Town Phase: 2", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(102, 40));
+            e.Graphics.DrawString("Near Islam Medical College", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(92, 50));
+            e.Graphics.DrawString("Pasrur Road Sialkot", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(104, 60));
+            e.Graphics.DrawString("Order Receipt", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(110, 80));
+            auto_increment_id(sender, e);
+            e.Graphics.DrawString("Sale ID: " + sale_id, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 90));
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(215, 90));
+            //if (string.IsNullOrEmpty(txtBoxCustomer.Text) != true)
+
+            //e.Graphics.DrawString("Time: " + DateTime.Now.ToLongTimeString(), new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, 310));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 100));
+            e.Graphics.DrawString("ITEM", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 110));
+            e.Graphics.DrawString("PRICE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(110, 110));
+            e.Graphics.DrawString("QTY", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(170, 110));
+            e.Graphics.DrawString("Total", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(220, 110));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 120));
+            int gap = 130;
+            //int subTotal1 = 0;
+            for (int i = 0; i < dataGridView_cart.Rows.Count-1; i++)
+            {
+                try
+                {   //item name
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[0].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(10, gap));
+                    //item price
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(110, gap));
+                    //quantity
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(170, gap));
+                    //total
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(220, gap));
+                    gap = gap + 20;
+                    //subTotal1 = subTotal1 + (Convert.ToInt32(sales_dataGridView.Rows[i].Cells[5].Value.ToString()));
+                }
+                catch
+                {
+
+                }
+            }
+            //if (gap < 750)
+            //gap = 750;
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
+            gap = gap + 10;
+            //e.Graphics.DrawString("Sub Total: " + subTotal1 + ".00 Rs/-", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, gap));
+            //gap = gap + 30;
+            //if (txtBoxFinalCost.Text != null)
+            //e.Graphics.DrawString("Taxes: " + printTax + ".00 Rs/-", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, gap));
+            //gap = gap + 20;
+            e.Graphics.DrawString("Final Amount: " + label_cartGrossTotal.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(160, gap));
+            gap = gap + 10;
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
+            gap = gap + 10;
+            e.Graphics.DrawString("Amount Paid: " + txt_amountGiven.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(162, gap));
+            gap = gap + 10;
+            e.Graphics.DrawString("Change: " + txt_change.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(183, gap));
+            gap = gap + 30;
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
+            gap = gap + 10;
+
+            e.Graphics.DrawString("Thanks for your order!", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(90, gap));
+            gap = gap + 10;
+            e.Graphics.DrawString("For Home Delivery, Call us at: 0314 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(48, gap));
+            //gap = gap + 10;
+            //e.Graphics.DrawString("Previously known as BAJWA SUPER STORE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(48, gap));
+            gap = gap + 20;
+            e.Graphics.DrawString("Developer Contact: 0304-2998055", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(70, gap));
+            gap = gap + 10;
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
+            gap = gap + 10;
         }
     }
 }

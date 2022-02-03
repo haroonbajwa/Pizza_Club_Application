@@ -217,6 +217,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Form_PurchasePieces.resx">
       <DependentUpon>Form_PurchasePieces.cs</DependentUpon>
@@ -265,6 +266,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DatabasePC.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\pizzalogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
