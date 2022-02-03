@@ -734,6 +734,202 @@ namespace Pizza_Club
                             cmdSale.Parameters.AddWithValue("@select", false);
 
                             cmdSale.ExecuteNonQuery();
+
+                            //check product name and decrease ingrediennts from database accordingly
+                            if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Zinger Burger")
+                            {
+                                //bread, zinger piece
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'"+ Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value)+ "') WHERE name='Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece'", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Chicken Burger")
+                            {
+                                //bread, chicken petty
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Chicken Petty'", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Beef Burger")
+                            {
+                                //bread, beef petty
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Beef Petty'", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Sizler Burger")
+                            {
+                                //bread, 1.5 zinger piece
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(2*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece'", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Tower Burger")
+                            {
+                                //bread, 2 zinger piece
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(2*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece'", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Mighty Burger")
+                            {
+                                //bread, zinger piece, cheese slice, chicken petty
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Cheese Slice';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Chicken Petty';", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Club Burger")
+                            {
+                                //bread, zinger piece, cheese slice, beef petty
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Cheese Slice';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Beef Petty';", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Twister")
+                            {
+                                //twister bread, zinger piece
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Twister Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece'", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Zinger Shwarma")
+                            {
+                                //shwarma bread, zinger piece
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Shwarma Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece'", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Cheese Burger")
+                            {
+                                //bread, zinger piece, cheeze slice
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Cheese Slice';", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Cheese Twister")
+                            {
+                                //twister bread, zinger piece, cheeze slice
+                                try
+                                {
+                                    SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Twister Bread';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Zinger Piece';" +
+                                        "UPDATE tbl_stockPCS SET quantity=quantity-(1*'" + Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value) + "') WHERE name='Cheese Slice';", sqlcon)
+                                    {
+                                        CommandType = CommandType.Text
+                                    };
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+
                         }
                         sqlcon.Close();
 
