@@ -663,7 +663,36 @@ namespace Pizza_Club
         private void btn_preview_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument1;
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+            int totalItems = dataGridView_cart.Rows.Count;
+            if(totalItems > 0 && totalItems <= 6)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 400);
+            }
+            if (totalItems > 6 && totalItems <= 10)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 500);
+            }
+            if (totalItems > 10 && totalItems <= 14)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+            }
+            if (totalItems > 14 && totalItems <= 20)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 700);
+            }
+            if (totalItems > 20 && totalItems <= 25)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 800);
+            }
+            if (totalItems > 25 && totalItems <= 30)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 900);
+            }
+            if (totalItems > 30 && totalItems <= 35)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 1000);
+            }
+            //printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
             printPreviewDialog1.ShowDialog();
         }
 
@@ -712,7 +741,7 @@ namespace Pizza_Club
 
         private void btn_pay_Click(object sender, EventArgs e)
         {
-            if (dataGridView_cart.Rows.Count <= 0)
+            if (dataGridView_cart.Rows.Count <= 1)
             {
                 MessageBox.Show("Please First add product(s) to cart");
             }
@@ -720,10 +749,15 @@ namespace Pizza_Club
             {
                 MessageBox.Show("Please Enter the Amount given by Customer");
             }
-            else if(Convert.ToInt32(txt_amountGiven.Text) < Convert.ToInt32(label_cartGrossTotal.Text))
+            else if(Convert.ToInt32(txt_amountGiven.Text) < Convert.ToDecimal(label_cartGrossTotal.Text))
             {
                 MessageBox.Show("Your Entered Amount is less then Total Bill");
             }
+            else if (Convert.ToDecimal(label_cartGrossTotal.Text) <= 0)
+            {
+                MessageBox.Show("Please First add product(s) to cart");
+            }
+
             else
             {
                 DialogResult dialogResult = MessageBox.Show("\tTotal Amount: " + label_cartGrossTotal.Text + "\n\tAmount Given: " + txt_amountGiven.Text + "\n\tAmount Returned: " + txt_change.Text + "\nAre you sure, Submit current order?", "Question..", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -1187,7 +1221,8 @@ namespace Pizza_Club
 
 
                         MessageBox.Show("Sales Successfull!");
-                        printDocument1.Print();
+                        //to print receipt
+                        ReceiptPrints();
                         sqlcon.Close();
 
                         btn_resetCart_Click(sender, e);
@@ -1210,18 +1245,26 @@ namespace Pizza_Club
         //calculate change when given amount entered
         private void txt_amountGiven_TextChanged(object sender, EventArgs e)
         {
-            try
+            if (System.Text.RegularExpressions.Regex.IsMatch(txt_amountGiven.Text, "[^0-9]"))
             {
-                if (string.IsNullOrEmpty(txt_amountGiven.Text))
+                txt_amountGiven.Clear();
+            }
+            else
+            {
+                try
                 {
-                    txt_change.Text = "";
-                }
-                txt_change.Text = (float.Parse(txt_amountGiven.Text) - float.Parse(label_cartGrossTotal.Text)).ToString();
+                    if (string.IsNullOrEmpty(txt_amountGiven.Text))
+                    {
+                        txt_change.Text = "";
+                    }
+                    txt_change.Text = (float.Parse(txt_amountGiven.Text) - float.Parse(label_cartGrossTotal.Text)).ToString();
 
+                }
+                catch
+                {
+                }
             }
-            catch
-            {
-            }
+            
         }
 
         //for placeholder in customer details text boxes
@@ -1464,6 +1507,46 @@ namespace Pizza_Club
             HandleDealATC(selectedDeal, dealPrice);
         }
 
+        private void ReceiptPrints()
+        {
+            int totalItems = dataGridView_cart.Rows.Count;
+            if (totalItems > 0 && totalItems <= 6)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 400);
+                printDocument1.Print();
+            }
+            if (totalItems > 6 && totalItems <= 10)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 500);
+                printDocument1.Print();
+            }
+            if (totalItems > 10 && totalItems <= 14)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+                printDocument1.Print();
+            }
+            if (totalItems > 14 && totalItems <= 20)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 700);
+                printDocument1.Print();
+            }
+            if (totalItems > 20 && totalItems <= 25)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 800);
+                printDocument1.Print();
+            }
+            if (totalItems > 25 && totalItems <= 30)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 900);
+                printDocument1.Print();
+            }
+            if (totalItems > 30 && totalItems <= 35)
+            {
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 1000);
+                printDocument1.Print();
+            }
+        }
+
         //design of receipt
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -1480,7 +1563,7 @@ namespace Pizza_Club
             e.Graphics.DrawString("Pasrur Road Sialkot", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(104, 60));
             e.Graphics.DrawString("Order Receipt", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(110, 80));
             auto_increment_id(sender, e);
-            e.Graphics.DrawString("Sale ID: " + sale_id, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 90));
+            e.Graphics.DrawString("Order ID: " + sale_id, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 90));
             e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(215, 90));
             //if (string.IsNullOrEmpty(txtBoxCustomer.Text) != true)
 
@@ -1542,6 +1625,43 @@ namespace Pizza_Club
             gap = gap + 10;
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
+        }
+
+        //allow only numbers to quantity textboxes
+        private void txt_qtyPizza_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txt_qtyPizza.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txt_qtyPizza.Clear();
+            }
+        }
+
+        private void txt_qtyBurger_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txt_qtyBurger.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txt_qtyBurger.Clear();
+            }
+        }
+
+        private void txt_qtyDrink_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txt_qtyDrink.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txt_qtyDrink.Clear();
+            }
+        }
+
+        private void txt_qtySideOrder_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txt_qtySideOrder.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txt_qtySideOrder.Clear();
+            }
         }
     }
 }

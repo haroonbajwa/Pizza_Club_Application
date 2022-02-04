@@ -46,6 +46,7 @@ namespace Pizza_Club
         {
             if(IsValid())
             {
+                txt_username.Focus();
                 try
                 {
                     string query = "select * from tbl_users where username = '" + txt_username.Text + "' and password = '" + txt_password.Text + "'";

@@ -363,6 +363,7 @@ namespace Pizza_Club
             this.txt_qtyPizza.TabIndex = 9;
             this.txt_qtyPizza.Text = "1";
             this.txt_qtyPizza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_qtyPizza.TextChanged += new System.EventHandler(this.txt_qtyPizza_TextChanged);
             this.txt_qtyPizza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_qtyPizza_KeyPress);
             // 
             // btn_ATCPizza
@@ -430,6 +431,7 @@ namespace Pizza_Club
             this.txt_qtyBurger.TabIndex = 12;
             this.txt_qtyBurger.Text = "1";
             this.txt_qtyBurger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_qtyBurger.TextChanged += new System.EventHandler(this.txt_qtyBurger_TextChanged);
             this.txt_qtyBurger.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_qtyBurger_KeyPress);
             // 
             // btn_ATCBurger
@@ -497,6 +499,7 @@ namespace Pizza_Club
             this.txt_qtyDrink.TabIndex = 15;
             this.txt_qtyDrink.Text = "1";
             this.txt_qtyDrink.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_qtyDrink.TextChanged += new System.EventHandler(this.txt_qtyDrink_TextChanged);
             this.txt_qtyDrink.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_qtyDrink_KeyPress);
             // 
             // btn_ATCDrink
@@ -578,6 +581,7 @@ namespace Pizza_Club
             this.txt_qtySideOrder.TabIndex = 18;
             this.txt_qtySideOrder.Text = "1";
             this.txt_qtySideOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_qtySideOrder.TextChanged += new System.EventHandler(this.txt_qtySideOrder_TextChanged);
             this.txt_qtySideOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_qtySideOrder_KeyPress);
             // 
             // groupBox3
@@ -780,11 +784,11 @@ namespace Pizza_Club
             // 
             // btn_deal1
             // 
-            this.btn_deal1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal1.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal1.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal1.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal1.Location = new System.Drawing.Point(3, 3);
             this.btn_deal1.Name = "btn_deal1";
             this.btn_deal1.Size = new System.Drawing.Size(144, 58);
@@ -795,11 +799,11 @@ namespace Pizza_Club
             // 
             // btn_deal2
             // 
-            this.btn_deal2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal2.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal2.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal2.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal2.Location = new System.Drawing.Point(153, 3);
             this.btn_deal2.Name = "btn_deal2";
             this.btn_deal2.Size = new System.Drawing.Size(145, 58);
@@ -810,11 +814,11 @@ namespace Pizza_Club
             // 
             // btn_deal3
             // 
-            this.btn_deal3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal3.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal3.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal3.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal3.Location = new System.Drawing.Point(3, 67);
             this.btn_deal3.Name = "btn_deal3";
             this.btn_deal3.Size = new System.Drawing.Size(144, 58);
@@ -825,11 +829,11 @@ namespace Pizza_Club
             // 
             // btn_deal4
             // 
-            this.btn_deal4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal4.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal4.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal4.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal4.Location = new System.Drawing.Point(153, 67);
             this.btn_deal4.Name = "btn_deal4";
             this.btn_deal4.Size = new System.Drawing.Size(145, 58);
@@ -840,11 +844,11 @@ namespace Pizza_Club
             // 
             // btn_deal5
             // 
-            this.btn_deal5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal5.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal5.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal5.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal5.Location = new System.Drawing.Point(3, 131);
             this.btn_deal5.Name = "btn_deal5";
             this.btn_deal5.Size = new System.Drawing.Size(144, 58);
@@ -855,11 +859,11 @@ namespace Pizza_Club
             // 
             // btn_deal6
             // 
-            this.btn_deal6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal6.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal6.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal6.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal6.Location = new System.Drawing.Point(153, 131);
             this.btn_deal6.Name = "btn_deal6";
             this.btn_deal6.Size = new System.Drawing.Size(145, 58);
@@ -870,11 +874,11 @@ namespace Pizza_Club
             // 
             // btn_deal7
             // 
-            this.btn_deal7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal7.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal7.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal7.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal7.Location = new System.Drawing.Point(3, 195);
             this.btn_deal7.Name = "btn_deal7";
             this.btn_deal7.Size = new System.Drawing.Size(144, 58);
@@ -885,11 +889,11 @@ namespace Pizza_Club
             // 
             // btn_deal8
             // 
-            this.btn_deal8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal8.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal8.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal8.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal8.Location = new System.Drawing.Point(153, 195);
             this.btn_deal8.Name = "btn_deal8";
             this.btn_deal8.Size = new System.Drawing.Size(145, 58);
@@ -900,11 +904,11 @@ namespace Pizza_Club
             // 
             // btn_deal9
             // 
-            this.btn_deal9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal9.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal9.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal9.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal9.Location = new System.Drawing.Point(3, 259);
             this.btn_deal9.Name = "btn_deal9";
             this.btn_deal9.Size = new System.Drawing.Size(144, 58);
@@ -915,11 +919,11 @@ namespace Pizza_Club
             // 
             // btn_deal10
             // 
-            this.btn_deal10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal10.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal10.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal10.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal10.Location = new System.Drawing.Point(153, 259);
             this.btn_deal10.Name = "btn_deal10";
             this.btn_deal10.Size = new System.Drawing.Size(145, 58);
@@ -930,11 +934,11 @@ namespace Pizza_Club
             // 
             // btn_deal11
             // 
-            this.btn_deal11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal11.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal11.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal11.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal11.Location = new System.Drawing.Point(3, 323);
             this.btn_deal11.Name = "btn_deal11";
             this.btn_deal11.Size = new System.Drawing.Size(144, 58);
@@ -945,11 +949,11 @@ namespace Pizza_Club
             // 
             // btn_deal12
             // 
-            this.btn_deal12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal12.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal12.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal12.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal12.Location = new System.Drawing.Point(153, 323);
             this.btn_deal12.Name = "btn_deal12";
             this.btn_deal12.Size = new System.Drawing.Size(145, 58);
@@ -960,11 +964,11 @@ namespace Pizza_Club
             // 
             // btn_deal13
             // 
-            this.btn_deal13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal13.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal13.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal13.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal13.Location = new System.Drawing.Point(3, 387);
             this.btn_deal13.Name = "btn_deal13";
             this.btn_deal13.Size = new System.Drawing.Size(144, 58);
@@ -975,11 +979,11 @@ namespace Pizza_Club
             // 
             // btn_deal14
             // 
-            this.btn_deal14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal14.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal14.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal14.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal14.Location = new System.Drawing.Point(153, 387);
             this.btn_deal14.Name = "btn_deal14";
             this.btn_deal14.Size = new System.Drawing.Size(145, 58);
@@ -990,11 +994,11 @@ namespace Pizza_Club
             // 
             // btn_deal15
             // 
-            this.btn_deal15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal15.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal15.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal15.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal15.Location = new System.Drawing.Point(3, 451);
             this.btn_deal15.Name = "btn_deal15";
             this.btn_deal15.Size = new System.Drawing.Size(144, 59);
@@ -1005,11 +1009,11 @@ namespace Pizza_Club
             // 
             // btn_deal16
             // 
-            this.btn_deal16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_deal16.BackColor = System.Drawing.Color.Tomato;
             this.btn_deal16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_deal16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal16.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_deal16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_deal16.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal16.Location = new System.Drawing.Point(153, 451);
             this.btn_deal16.Name = "btn_deal16";
             this.btn_deal16.Size = new System.Drawing.Size(145, 59);
