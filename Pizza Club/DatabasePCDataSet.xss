@@ -18,7 +18,7 @@
     <Shape ID="DesignTable:tbl_purchaseGrams" ZOrder="7" X="2065" Y="0" Height="191" Width="255" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:tbl_sideOrder" ZOrder="6" X="2390" Y="0" Height="153" Width="222" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:tbl_expense" ZOrder="5" X="2682" Y="0" Height="172" Width="213" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:tbl_sales" ZOrder="1" X="2965" Y="0" Height="286" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
+    <Shape ID="DesignTable:tbl_sales" ZOrder="1" X="2965" Y="0" Height="305" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

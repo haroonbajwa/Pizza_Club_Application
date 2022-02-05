@@ -66,19 +66,6 @@ namespace Pizza_Club
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_ATCSideOrder = new System.Windows.Forms.Button();
             this.txt_qtySideOrder = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_resetCart = new System.Windows.Forms.Button();
-            this.btn_preview = new System.Windows.Forms.Button();
-            this.btn_pay = new System.Windows.Forms.Button();
-            this.label_cartGrossTotal = new System.Windows.Forms.Label();
-            this.txt_change = new System.Windows.Forms.TextBox();
-            this.labelChange = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_amountGiven = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelExtra = new System.Windows.Forms.Label();
-            this.txt_extraCharges = new System.Windows.Forms.TextBox();
             this.dataGridView_cart = new System.Windows.Forms.DataGridView();
             this.DGVname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGVquantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,6 +92,22 @@ namespace Pizza_Club
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_resetCart = new System.Windows.Forms.Button();
+            this.btn_preview = new System.Windows.Forms.Button();
+            this.btn_pay = new System.Windows.Forms.Button();
+            this.label_cartGrossTotal = new System.Windows.Forms.Label();
+            this.txt_change = new System.Windows.Forms.TextBox();
+            this.labelChange = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_amountGiven = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelExtra = new System.Windows.Forms.Label();
+            this.txt_extraCharges = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.radio_dineIn = new System.Windows.Forms.RadioButton();
+            this.radio_takeAway = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,13 +126,14 @@ namespace Pizza_Club
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.tableLayoutPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.panel3.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -229,8 +233,8 @@ namespace Pizza_Club
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.88453F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.11547F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel8, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel10, 0, 1);
@@ -239,8 +243,8 @@ namespace Pizza_Club
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.79816F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.20184F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.45454F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.54546F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(433, 220);
             this.tableLayoutPanel4.TabIndex = 45;
             // 
@@ -255,10 +259,10 @@ namespace Pizza_Club
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.6F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.6F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.8F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(210, 121);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.95652F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.17391F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.86956F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(210, 115);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // combo_pizzas
@@ -284,11 +288,11 @@ namespace Pizza_Club
             this.tableLayoutPanel6.Controls.Add(this.radio_large, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.radio_xLarge, 3, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 29);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 34);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(204, 34);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(204, 31);
             this.tableLayoutPanel6.TabIndex = 5;
             // 
             // radio_small
@@ -298,7 +302,7 @@ namespace Pizza_Club
             this.radio_small.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radio_small.Location = new System.Drawing.Point(3, 3);
             this.radio_small.Name = "radio_small";
-            this.radio_small.Size = new System.Drawing.Size(45, 28);
+            this.radio_small.Size = new System.Drawing.Size(45, 25);
             this.radio_small.TabIndex = 5;
             this.radio_small.TabStop = true;
             this.radio_small.Text = "S";
@@ -311,7 +315,7 @@ namespace Pizza_Club
             this.radio_medium.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radio_medium.Location = new System.Drawing.Point(54, 3);
             this.radio_medium.Name = "radio_medium";
-            this.radio_medium.Size = new System.Drawing.Size(45, 28);
+            this.radio_medium.Size = new System.Drawing.Size(45, 25);
             this.radio_medium.TabIndex = 6;
             this.radio_medium.TabStop = true;
             this.radio_medium.Text = "M";
@@ -324,7 +328,7 @@ namespace Pizza_Club
             this.radio_large.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radio_large.Location = new System.Drawing.Point(105, 3);
             this.radio_large.Name = "radio_large";
-            this.radio_large.Size = new System.Drawing.Size(45, 28);
+            this.radio_large.Size = new System.Drawing.Size(45, 25);
             this.radio_large.TabIndex = 7;
             this.radio_large.TabStop = true;
             this.radio_large.Text = "L";
@@ -337,7 +341,7 @@ namespace Pizza_Club
             this.radio_xLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radio_xLarge.Location = new System.Drawing.Point(156, 3);
             this.radio_xLarge.Name = "radio_xLarge";
-            this.radio_xLarge.Size = new System.Drawing.Size(45, 28);
+            this.radio_xLarge.Size = new System.Drawing.Size(45, 25);
             this.radio_xLarge.TabIndex = 8;
             this.radio_xLarge.TabStop = true;
             this.radio_xLarge.Text = "XL";
@@ -351,11 +355,11 @@ namespace Pizza_Club
             this.tableLayoutPanel7.Controls.Add(this.txt_qtyPizza, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.btn_ATCPizza, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 69);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 71);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(204, 49);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(204, 41);
             this.tableLayoutPanel7.TabIndex = 6;
             // 
             // txt_qtyPizza
@@ -379,7 +383,7 @@ namespace Pizza_Club
             this.btn_ATCPizza.ForeColor = System.Drawing.Color.White;
             this.btn_ATCPizza.Location = new System.Drawing.Point(105, 3);
             this.btn_ATCPizza.Name = "btn_ATCPizza";
-            this.btn_ATCPizza.Size = new System.Drawing.Size(96, 43);
+            this.btn_ATCPizza.Size = new System.Drawing.Size(96, 35);
             this.btn_ATCPizza.TabIndex = 10;
             this.btn_ATCPizza.Text = "ADD";
             this.btn_ATCPizza.UseVisualStyleBackColor = false;
@@ -395,9 +399,9 @@ namespace Pizza_Club
             this.tableLayoutPanel8.Location = new System.Drawing.Point(219, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(211, 121);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.13044F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.86956F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(211, 115);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
             // combo_burgers
@@ -419,11 +423,11 @@ namespace Pizza_Club
             this.tableLayoutPanel9.Controls.Add(this.txt_qtyBurger, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.btn_ATCBurger, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 70);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 71);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(205, 48);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(205, 41);
             this.tableLayoutPanel9.TabIndex = 6;
             // 
             // txt_qtyBurger
@@ -447,7 +451,7 @@ namespace Pizza_Club
             this.btn_ATCBurger.ForeColor = System.Drawing.Color.White;
             this.btn_ATCBurger.Location = new System.Drawing.Point(105, 3);
             this.btn_ATCBurger.Name = "btn_ATCBurger";
-            this.btn_ATCBurger.Size = new System.Drawing.Size(97, 42);
+            this.btn_ATCBurger.Size = new System.Drawing.Size(97, 35);
             this.btn_ATCBurger.TabIndex = 13;
             this.btn_ATCBurger.Text = "ADD";
             this.btn_ATCBurger.UseVisualStyleBackColor = false;
@@ -456,16 +460,16 @@ namespace Pizza_Club
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 1;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Controls.Add(this.combo_drinks, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 0, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 130);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 124);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.97531F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.02469F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(210, 87);
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(210, 93);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
             // combo_drinks
@@ -487,11 +491,11 @@ namespace Pizza_Club
             this.tableLayoutPanel11.Controls.Add(this.txt_qtyDrink, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.btn_ATCDrink, 1, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 39);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 49);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(204, 45);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(204, 41);
             this.tableLayoutPanel11.TabIndex = 15;
             // 
             // txt_qtyDrink
@@ -515,7 +519,7 @@ namespace Pizza_Club
             this.btn_ATCDrink.ForeColor = System.Drawing.Color.White;
             this.btn_ATCDrink.Location = new System.Drawing.Point(105, 3);
             this.btn_ATCDrink.Name = "btn_ATCDrink";
-            this.btn_ATCDrink.Size = new System.Drawing.Size(96, 39);
+            this.btn_ATCDrink.Size = new System.Drawing.Size(96, 35);
             this.btn_ATCDrink.TabIndex = 16;
             this.btn_ATCDrink.Text = "ADD";
             this.btn_ATCDrink.UseVisualStyleBackColor = false;
@@ -524,16 +528,16 @@ namespace Pizza_Club
             // tableLayoutPanel12
             // 
             this.tableLayoutPanel12.ColumnCount = 1;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel12.Controls.Add(this.combo_sideOrders, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel13, 0, 1);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(219, 130);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(219, 124);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.52874F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.47126F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(211, 87);
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(211, 93);
             this.tableLayoutPanel12.TabIndex = 3;
             // 
             // combo_sideOrders
@@ -555,11 +559,11 @@ namespace Pizza_Club
             this.tableLayoutPanel13.Controls.Add(this.btn_ATCSideOrder, 1, 0);
             this.tableLayoutPanel13.Controls.Add(this.txt_qtySideOrder, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 40);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 49);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(205, 44);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(205, 41);
             this.tableLayoutPanel13.TabIndex = 16;
             // 
             // btn_ATCSideOrder
@@ -570,7 +574,7 @@ namespace Pizza_Club
             this.btn_ATCSideOrder.ForeColor = System.Drawing.Color.White;
             this.btn_ATCSideOrder.Location = new System.Drawing.Point(105, 3);
             this.btn_ATCSideOrder.Name = "btn_ATCSideOrder";
-            this.btn_ATCSideOrder.Size = new System.Drawing.Size(97, 38);
+            this.btn_ATCSideOrder.Size = new System.Drawing.Size(97, 35);
             this.btn_ATCSideOrder.TabIndex = 19;
             this.btn_ATCSideOrder.Text = "ADD";
             this.btn_ATCSideOrder.UseVisualStyleBackColor = false;
@@ -588,169 +592,6 @@ namespace Pizza_Club
             this.txt_qtySideOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_qtySideOrder.TextChanged += new System.EventHandler(this.txt_qtySideOrder_TextChanged);
             this.txt_qtySideOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_qtySideOrder_KeyPress);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.tableLayoutPanel14);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 342);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(439, 216);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Payments";
-            // 
-            // tableLayoutPanel14
-            // 
-            this.tableLayoutPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel14.ColumnCount = 3;
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.18492F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.40754F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.40754F));
-            this.tableLayoutPanel14.Controls.Add(this.btn_resetCart, 0, 3);
-            this.tableLayoutPanel14.Controls.Add(this.btn_preview, 1, 3);
-            this.tableLayoutPanel14.Controls.Add(this.btn_pay, 2, 3);
-            this.tableLayoutPanel14.Controls.Add(this.label_cartGrossTotal, 2, 2);
-            this.tableLayoutPanel14.Controls.Add(this.txt_change, 1, 2);
-            this.tableLayoutPanel14.Controls.Add(this.labelChange, 0, 2);
-            this.tableLayoutPanel14.Controls.Add(this.label2, 2, 1);
-            this.tableLayoutPanel14.Controls.Add(this.txt_amountGiven, 1, 1);
-            this.tableLayoutPanel14.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel14.Controls.Add(this.labelExtra, 0, 0);
-            this.tableLayoutPanel14.Controls.Add(this.txt_extraCharges, 1, 0);
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 24);
-            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            this.tableLayoutPanel14.RowCount = 4;
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(433, 183);
-            this.tableLayoutPanel14.TabIndex = 46;
-            // 
-            // btn_resetCart
-            // 
-            this.btn_resetCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_resetCart.Location = new System.Drawing.Point(3, 138);
-            this.btn_resetCart.Name = "btn_resetCart";
-            this.btn_resetCart.Size = new System.Drawing.Size(85, 42);
-            this.btn_resetCart.TabIndex = 24;
-            this.btn_resetCart.Text = "RESET";
-            this.btn_resetCart.UseVisualStyleBackColor = true;
-            this.btn_resetCart.Click += new System.EventHandler(this.btn_resetCart_Click);
-            // 
-            // btn_preview
-            // 
-            this.btn_preview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_preview.Location = new System.Drawing.Point(94, 138);
-            this.btn_preview.Name = "btn_preview";
-            this.btn_preview.Size = new System.Drawing.Size(164, 42);
-            this.btn_preview.TabIndex = 23;
-            this.btn_preview.Text = "PREVIEW";
-            this.btn_preview.UseVisualStyleBackColor = true;
-            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
-            // 
-            // btn_pay
-            // 
-            this.btn_pay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_pay.Location = new System.Drawing.Point(264, 138);
-            this.btn_pay.Name = "btn_pay";
-            this.btn_pay.Size = new System.Drawing.Size(166, 42);
-            this.btn_pay.TabIndex = 22;
-            this.btn_pay.Text = "PAY";
-            this.btn_pay.UseVisualStyleBackColor = true;
-            this.btn_pay.Click += new System.EventHandler(this.btn_pay_Click);
-            // 
-            // label_cartGrossTotal
-            // 
-            this.label_cartGrossTotal.AutoSize = true;
-            this.label_cartGrossTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_cartGrossTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cartGrossTotal.Location = new System.Drawing.Point(264, 90);
-            this.label_cartGrossTotal.Name = "label_cartGrossTotal";
-            this.label_cartGrossTotal.Size = new System.Drawing.Size(166, 45);
-            this.label_cartGrossTotal.TabIndex = 1;
-            this.label_cartGrossTotal.Text = "0.00";
-            this.label_cartGrossTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_change
-            // 
-            this.txt_change.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_change.Location = new System.Drawing.Point(94, 93);
-            this.txt_change.Name = "txt_change";
-            this.txt_change.ReadOnly = true;
-            this.txt_change.Size = new System.Drawing.Size(164, 22);
-            this.txt_change.TabIndex = 21;
-            this.txt_change.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // labelChange
-            // 
-            this.labelChange.AutoSize = true;
-            this.labelChange.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelChange.Location = new System.Drawing.Point(3, 90);
-            this.labelChange.Name = "labelChange";
-            this.labelChange.Size = new System.Drawing.Size(85, 45);
-            this.labelChange.TabIndex = 1;
-            this.labelChange.Text = "Change";
-            this.labelChange.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(264, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 45);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Gross Total";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_amountGiven
-            // 
-            this.txt_amountGiven.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_amountGiven.Location = new System.Drawing.Point(94, 48);
-            this.txt_amountGiven.Name = "txt_amountGiven";
-            this.txt_amountGiven.Size = new System.Drawing.Size(164, 22);
-            this.txt_amountGiven.TabIndex = 20;
-            this.txt_amountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_amountGiven.TextChanged += new System.EventHandler(this.txt_amountGiven_TextChanged);
-            this.txt_amountGiven.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_amountGiven_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 45);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Amount Given";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // labelExtra
-            // 
-            this.labelExtra.AutoSize = true;
-            this.labelExtra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelExtra.Location = new System.Drawing.Point(3, 0);
-            this.labelExtra.Name = "labelExtra";
-            this.labelExtra.Size = new System.Drawing.Size(85, 45);
-            this.labelExtra.TabIndex = 25;
-            this.labelExtra.Text = "Extra Charges";
-            this.labelExtra.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txt_extraCharges
-            // 
-            this.txt_extraCharges.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_extraCharges.Location = new System.Drawing.Point(94, 3);
-            this.txt_extraCharges.Name = "txt_extraCharges";
-            this.txt_extraCharges.Size = new System.Drawing.Size(164, 22);
-            this.txt_extraCharges.TabIndex = 26;
-            this.txt_extraCharges.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_extraCharges.TextChanged += new System.EventHandler(this.txt_extraCharges_TextChanged);
             // 
             // dataGridView_cart
             // 
@@ -1128,17 +969,223 @@ namespace Pizza_Club
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel15, 0, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.Size = new System.Drawing.Size(445, 561);
             this.tableLayoutPanel2.TabIndex = 44;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tableLayoutPanel14);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(3, 377);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(439, 181);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Payments";
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel14.ColumnCount = 3;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.18492F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.40754F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.40754F));
+            this.tableLayoutPanel14.Controls.Add(this.btn_resetCart, 0, 3);
+            this.tableLayoutPanel14.Controls.Add(this.btn_preview, 1, 3);
+            this.tableLayoutPanel14.Controls.Add(this.btn_pay, 2, 3);
+            this.tableLayoutPanel14.Controls.Add(this.label_cartGrossTotal, 2, 2);
+            this.tableLayoutPanel14.Controls.Add(this.txt_change, 1, 2);
+            this.tableLayoutPanel14.Controls.Add(this.labelChange, 0, 2);
+            this.tableLayoutPanel14.Controls.Add(this.label2, 2, 1);
+            this.tableLayoutPanel14.Controls.Add(this.txt_amountGiven, 1, 1);
+            this.tableLayoutPanel14.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel14.Controls.Add(this.labelExtra, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.txt_extraCharges, 1, 0);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 21);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 4;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(433, 154);
+            this.tableLayoutPanel14.TabIndex = 46;
+            // 
+            // btn_resetCart
+            // 
+            this.btn_resetCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_resetCart.Location = new System.Drawing.Point(3, 117);
+            this.btn_resetCart.Name = "btn_resetCart";
+            this.btn_resetCart.Size = new System.Drawing.Size(85, 34);
+            this.btn_resetCart.TabIndex = 24;
+            this.btn_resetCart.Text = "RESET";
+            this.btn_resetCart.UseVisualStyleBackColor = true;
+            this.btn_resetCart.Click += new System.EventHandler(this.btn_resetCart_Click);
+            // 
+            // btn_preview
+            // 
+            this.btn_preview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_preview.Location = new System.Drawing.Point(94, 117);
+            this.btn_preview.Name = "btn_preview";
+            this.btn_preview.Size = new System.Drawing.Size(164, 34);
+            this.btn_preview.TabIndex = 23;
+            this.btn_preview.Text = "PREVIEW";
+            this.btn_preview.UseVisualStyleBackColor = true;
+            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
+            // 
+            // btn_pay
+            // 
+            this.btn_pay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_pay.Location = new System.Drawing.Point(264, 117);
+            this.btn_pay.Name = "btn_pay";
+            this.btn_pay.Size = new System.Drawing.Size(166, 34);
+            this.btn_pay.TabIndex = 22;
+            this.btn_pay.Text = "PAY";
+            this.btn_pay.UseVisualStyleBackColor = true;
+            this.btn_pay.Click += new System.EventHandler(this.btn_pay_Click);
+            // 
+            // label_cartGrossTotal
+            // 
+            this.label_cartGrossTotal.AutoSize = true;
+            this.label_cartGrossTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_cartGrossTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_cartGrossTotal.Location = new System.Drawing.Point(264, 76);
+            this.label_cartGrossTotal.Name = "label_cartGrossTotal";
+            this.label_cartGrossTotal.Size = new System.Drawing.Size(166, 38);
+            this.label_cartGrossTotal.TabIndex = 1;
+            this.label_cartGrossTotal.Text = "0.00";
+            this.label_cartGrossTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_change
+            // 
+            this.txt_change.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_change.Location = new System.Drawing.Point(94, 79);
+            this.txt_change.Name = "txt_change";
+            this.txt_change.ReadOnly = true;
+            this.txt_change.Size = new System.Drawing.Size(164, 22);
+            this.txt_change.TabIndex = 21;
+            this.txt_change.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelChange
+            // 
+            this.labelChange.AutoSize = true;
+            this.labelChange.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelChange.Location = new System.Drawing.Point(3, 76);
+            this.labelChange.Name = "labelChange";
+            this.labelChange.Size = new System.Drawing.Size(85, 38);
+            this.labelChange.TabIndex = 1;
+            this.labelChange.Text = "Change";
+            this.labelChange.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(264, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 38);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Gross Total";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_amountGiven
+            // 
+            this.txt_amountGiven.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_amountGiven.Location = new System.Drawing.Point(94, 41);
+            this.txt_amountGiven.Name = "txt_amountGiven";
+            this.txt_amountGiven.Size = new System.Drawing.Size(164, 22);
+            this.txt_amountGiven.TabIndex = 20;
+            this.txt_amountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_amountGiven.TextChanged += new System.EventHandler(this.txt_amountGiven_TextChanged);
+            this.txt_amountGiven.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_amountGiven_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Amount Given";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // labelExtra
+            // 
+            this.labelExtra.AutoSize = true;
+            this.labelExtra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelExtra.Location = new System.Drawing.Point(3, 0);
+            this.labelExtra.Name = "labelExtra";
+            this.labelExtra.Size = new System.Drawing.Size(85, 38);
+            this.labelExtra.TabIndex = 25;
+            this.labelExtra.Text = "Extra Charges";
+            this.labelExtra.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txt_extraCharges
+            // 
+            this.txt_extraCharges.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_extraCharges.Location = new System.Drawing.Point(94, 3);
+            this.txt_extraCharges.Name = "txt_extraCharges";
+            this.txt_extraCharges.Size = new System.Drawing.Size(164, 22);
+            this.txt_extraCharges.TabIndex = 26;
+            this.txt_extraCharges.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_extraCharges.TextChanged += new System.EventHandler(this.txt_extraCharges_TextChanged);
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 2;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.Controls.Add(this.radio_dineIn, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.radio_takeAway, 1, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 342);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(439, 29);
+            this.tableLayoutPanel15.TabIndex = 7;
+            // 
+            // radio_dineIn
+            // 
+            this.radio_dineIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radio_dineIn.AutoSize = true;
+            this.radio_dineIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radio_dineIn.Location = new System.Drawing.Point(142, 3);
+            this.radio_dineIn.Name = "radio_dineIn";
+            this.radio_dineIn.Size = new System.Drawing.Size(74, 20);
+            this.radio_dineIn.TabIndex = 0;
+            this.radio_dineIn.TabStop = true;
+            this.radio_dineIn.Text = "Dine In";
+            this.radio_dineIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radio_dineIn.UseVisualStyleBackColor = true;
+            // 
+            // radio_takeAway
+            // 
+            this.radio_takeAway.AutoSize = true;
+            this.radio_takeAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radio_takeAway.Location = new System.Drawing.Point(222, 3);
+            this.radio_takeAway.Name = "radio_takeAway";
+            this.radio_takeAway.Size = new System.Drawing.Size(103, 20);
+            this.radio_takeAway.TabIndex = 0;
+            this.radio_takeAway.TabStop = true;
+            this.radio_takeAway.Text = "Take Away";
+            this.radio_takeAway.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radio_takeAway.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -1211,15 +1258,17 @@ namespace Pizza_Club
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.tableLayoutPanel14.ResumeLayout(false);
-            this.tableLayoutPanel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel14.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1247,15 +1296,6 @@ namespace Pizza_Club
         private System.Windows.Forms.Button btn_ATCDrink;
         private System.Windows.Forms.ComboBox combo_sideOrders;
         private System.Windows.Forms.ComboBox combo_drinks;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_amountGiven;
-        private System.Windows.Forms.Label label_cartGrossTotal;
-        private System.Windows.Forms.Label labelChange;
-        private System.Windows.Forms.TextBox txt_change;
-        private System.Windows.Forms.Button btn_pay;
-        private System.Windows.Forms.Button btn_preview;
         private System.Windows.Forms.DataGridView dataGridView_cart;
         private System.Windows.Forms.Button btn_deal1;
         private System.Windows.Forms.Button btn_deal2;
@@ -1277,7 +1317,6 @@ namespace Pizza_Club
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox combo_customerName;
-        private System.Windows.Forms.Button btn_resetCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGVname;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGVquantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGVprice;
@@ -1295,7 +1334,6 @@ namespace Pizza_Club
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TextBox txt_qtyPizza;
         private System.Windows.Forms.Button btn_ATCPizza;
@@ -1303,6 +1341,20 @@ namespace Pizza_Club
         private System.Windows.Forms.ToolStripMenuItem removeItemToolStripMenuItem;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.RadioButton radio_dineIn;
+        private System.Windows.Forms.RadioButton radio_takeAway;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.Button btn_resetCart;
+        private System.Windows.Forms.Button btn_preview;
+        private System.Windows.Forms.Button btn_pay;
+        private System.Windows.Forms.Label label_cartGrossTotal;
+        private System.Windows.Forms.TextBox txt_change;
+        private System.Windows.Forms.Label labelChange;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_amountGiven;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelExtra;
         private System.Windows.Forms.TextBox txt_extraCharges;
     }

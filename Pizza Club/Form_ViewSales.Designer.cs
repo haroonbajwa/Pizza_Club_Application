@@ -34,20 +34,11 @@ namespace Pizza_Club
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ViewSales));
             this.dataGridView_viewSales = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grossTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountGivenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.changeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selectDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tblsalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databasePCDataSet = new Pizza_Club.DatabasePCDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_searchSales = new System.Windows.Forms.TextBox();
             this.btn_deleteSales = new System.Windows.Forms.Button();
             this.btn_refreshSales = new System.Windows.Forms.Button();
             this.btn_filterSales = new System.Windows.Forms.Button();
@@ -60,8 +51,19 @@ namespace Pizza_Club
             this.label1 = new System.Windows.Forms.Label();
             this.label_totalViewSales = new System.Windows.Forms.Label();
             this.tbl_salesTableAdapter = new Pizza_Club.DatabasePCDataSetTableAdapters.tbl_salesTableAdapter();
-            this.txt_searchSales = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.extraChargesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grossTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountGivenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.changeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.selectDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_viewSales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblsalesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databasePCDataSet)).BeginInit();
@@ -90,9 +92,11 @@ namespace Pizza_Club
             this.quantityDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
             this.totalPriceDataGridViewTextBoxColumn,
+            this.extraChargesDataGridViewTextBoxColumn,
             this.grossTotalDataGridViewTextBoxColumn,
             this.amountGivenDataGridViewTextBoxColumn,
             this.changeDataGridViewTextBoxColumn,
+            this.orderTypeDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
             this.selectDataGridViewCheckBoxColumn});
             this.dataGridView_viewSales.DataSource = this.tblsalesBindingSource;
@@ -109,73 +113,6 @@ namespace Pizza_Club
             this.dataGridView_viewSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_viewSales.Size = new System.Drawing.Size(1050, 276);
             this.dataGridView_viewSales.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // customerNameDataGridViewTextBoxColumn
-            // 
-            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "customerName";
-            this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer";
-            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "productName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Qty";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // totalPriceDataGridViewTextBoxColumn
-            // 
-            this.totalPriceDataGridViewTextBoxColumn.DataPropertyName = "totalPrice";
-            this.totalPriceDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalPriceDataGridViewTextBoxColumn.Name = "totalPriceDataGridViewTextBoxColumn";
-            // 
-            // grossTotalDataGridViewTextBoxColumn
-            // 
-            this.grossTotalDataGridViewTextBoxColumn.DataPropertyName = "grossTotal";
-            this.grossTotalDataGridViewTextBoxColumn.HeaderText = "GrossTotal";
-            this.grossTotalDataGridViewTextBoxColumn.Name = "grossTotalDataGridViewTextBoxColumn";
-            // 
-            // amountGivenDataGridViewTextBoxColumn
-            // 
-            this.amountGivenDataGridViewTextBoxColumn.DataPropertyName = "amountGiven";
-            this.amountGivenDataGridViewTextBoxColumn.HeaderText = "Paid";
-            this.amountGivenDataGridViewTextBoxColumn.Name = "amountGivenDataGridViewTextBoxColumn";
-            // 
-            // changeDataGridViewTextBoxColumn
-            // 
-            this.changeDataGridViewTextBoxColumn.DataPropertyName = "change";
-            this.changeDataGridViewTextBoxColumn.HeaderText = "Change";
-            this.changeDataGridViewTextBoxColumn.Name = "changeDataGridViewTextBoxColumn";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            // 
-            // selectDataGridViewCheckBoxColumn
-            // 
-            this.selectDataGridViewCheckBoxColumn.DataPropertyName = "select";
-            this.selectDataGridViewCheckBoxColumn.HeaderText = "Select";
-            this.selectDataGridViewCheckBoxColumn.Name = "selectDataGridViewCheckBoxColumn";
-            this.selectDataGridViewCheckBoxColumn.Width = 60;
             // 
             // tblsalesBindingSource
             // 
@@ -205,6 +142,27 @@ namespace Pizza_Club
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1052, 114);
             this.panel1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(30, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Search";
+            // 
+            // txt_searchSales
+            // 
+            this.txt_searchSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_searchSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_searchSales.Location = new System.Drawing.Point(93, 86);
+            this.txt_searchSales.Name = "txt_searchSales";
+            this.txt_searchSales.Size = new System.Drawing.Size(188, 22);
+            this.txt_searchSales.TabIndex = 5;
+            this.txt_searchSales.TextChanged += new System.EventHandler(this.txt_searchSales_TextChanged);
             // 
             // btn_deleteSales
             // 
@@ -340,26 +298,83 @@ namespace Pizza_Club
             // 
             this.tbl_salesTableAdapter.ClearBeforeFill = true;
             // 
-            // txt_searchSales
+            // idDataGridViewTextBoxColumn
             // 
-            this.txt_searchSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_searchSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchSales.Location = new System.Drawing.Point(93, 86);
-            this.txt_searchSales.Name = "txt_searchSales";
-            this.txt_searchSales.Size = new System.Drawing.Size(188, 22);
-            this.txt_searchSales.TabIndex = 5;
-            this.txt_searchSales.TextChanged += new System.EventHandler(this.txt_searchSales_TextChanged);
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
-            // label3
+            // customerNameDataGridViewTextBoxColumn
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(30, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Search";
+            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "customerName";
+            this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer";
+            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "productName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // totalPriceDataGridViewTextBoxColumn
+            // 
+            this.totalPriceDataGridViewTextBoxColumn.DataPropertyName = "totalPrice";
+            this.totalPriceDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalPriceDataGridViewTextBoxColumn.Name = "totalPriceDataGridViewTextBoxColumn";
+            // 
+            // extraChargesDataGridViewTextBoxColumn
+            // 
+            this.extraChargesDataGridViewTextBoxColumn.DataPropertyName = "extraCharges";
+            this.extraChargesDataGridViewTextBoxColumn.HeaderText = "Extra";
+            this.extraChargesDataGridViewTextBoxColumn.Name = "extraChargesDataGridViewTextBoxColumn";
+            // 
+            // grossTotalDataGridViewTextBoxColumn
+            // 
+            this.grossTotalDataGridViewTextBoxColumn.DataPropertyName = "grossTotal";
+            this.grossTotalDataGridViewTextBoxColumn.HeaderText = "Gross Total";
+            this.grossTotalDataGridViewTextBoxColumn.Name = "grossTotalDataGridViewTextBoxColumn";
+            // 
+            // amountGivenDataGridViewTextBoxColumn
+            // 
+            this.amountGivenDataGridViewTextBoxColumn.DataPropertyName = "amountGiven";
+            this.amountGivenDataGridViewTextBoxColumn.HeaderText = "Paid";
+            this.amountGivenDataGridViewTextBoxColumn.Name = "amountGivenDataGridViewTextBoxColumn";
+            // 
+            // changeDataGridViewTextBoxColumn
+            // 
+            this.changeDataGridViewTextBoxColumn.DataPropertyName = "change";
+            this.changeDataGridViewTextBoxColumn.HeaderText = "Change";
+            this.changeDataGridViewTextBoxColumn.Name = "changeDataGridViewTextBoxColumn";
+            // 
+            // orderTypeDataGridViewTextBoxColumn
+            // 
+            this.orderTypeDataGridViewTextBoxColumn.DataPropertyName = "orderType";
+            this.orderTypeDataGridViewTextBoxColumn.HeaderText = "Order Type";
+            this.orderTypeDataGridViewTextBoxColumn.Name = "orderTypeDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // selectDataGridViewCheckBoxColumn
+            // 
+            this.selectDataGridViewCheckBoxColumn.DataPropertyName = "select";
+            this.selectDataGridViewCheckBoxColumn.HeaderText = "Select";
+            this.selectDataGridViewCheckBoxColumn.Name = "selectDataGridViewCheckBoxColumn";
             // 
             // Form_ViewSales
             // 
@@ -401,20 +416,22 @@ namespace Pizza_Club
         private DatabasePCDataSet databasePCDataSet;
         private System.Windows.Forms.BindingSource tblsalesBindingSource;
         private DatabasePCDataSetTableAdapters.tbl_salesTableAdapter tbl_salesTableAdapter;
+        private System.Windows.Forms.Button btn_refreshSales;
+        private System.Windows.Forms.Button btn_deleteSales;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_searchSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn extraChargesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn grossTotalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountGivenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn changeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn selectDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Button btn_refreshSales;
-        private System.Windows.Forms.Button btn_deleteSales;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_searchSales;
     }
 }

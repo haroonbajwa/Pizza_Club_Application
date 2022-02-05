@@ -206,9 +206,11 @@ namespace Pizza_Club
             load_burgers();
             load_drinks();
             load_sideOrders();
+            btn_resetCart_Click(sender, e);
 
             //auto check pizza size to small when form loads
             radio_small.Checked = true;
+            radio_dineIn.Checked = true;
         }
 
         //fetch customer data from database when anyone is selected from combobox
@@ -655,16 +657,18 @@ namespace Pizza_Club
             txt_customerContact.Text = "Contact";
             txt_customerAddress.Text = "Address";
 
-            combo_pizzas.SelectedIndex = -1;
+            combo_pizzas.SelectedIndex = 0;
             radio_small.Checked = true;
 
-            combo_burgers.SelectedIndex = -1;
+            combo_burgers.SelectedIndex = 0;
 
-            combo_drinks.SelectedIndex = -1;
+            combo_drinks.SelectedIndex = 0;
 
-            combo_sideOrders.SelectedIndex = -1;
+            combo_sideOrders.SelectedIndex = 0;
 
             dataGridView_cart.Rows.Clear();
+
+            radio_dineIn.Checked = true;
 
             txt_extraCharges.Clear();
             txt_amountGiven.Clear();
@@ -822,11 +826,32 @@ namespace Pizza_Club
                     {
                         auto_increment_id(sender, e);
 
+                        string orderType = "";
+                        //check order type
+                        if(radio_dineIn.Checked == true)
+                        {
+                            orderType = "Dine In";
+                        }
+                        else if(radio_takeAway.Checked == true)
+                        {
+                            orderType = "Take Away";
+                        }
+                        //get extra charges
+                        int extraCharges;
+                        if(txt_extraCharges.Text == "")
+                        {
+                            extraCharges = 0;
+                        }
+                        else
+                        {
+                            extraCharges = Convert.ToInt32(txt_extraCharges.Text);
+                        }
+
                         sqlcon.Open();
                         SqlCommand cmdSale;
                         for (int i = 0; i < (dataGridView_cart.Rows.Count) - 1; i++)
                         {
-                            cmdSale = new SqlCommand(@"INSERT INTO tbl_sales VALUES (@saleId, @customer, @product, @quantity, @price, @totalPrice, @grossTotal, @amountGiven, @change, @date, @select)", sqlcon)
+                            cmdSale = new SqlCommand(@"INSERT INTO tbl_sales VALUES (@saleId, @customer, @product, @quantity, @price, @totalPrice, @extraCharges, @grossTotal, @amountGiven, @change, @orderType, @date, @select)", sqlcon)
                             {
                                 CommandType = CommandType.Text
                             };
@@ -837,9 +862,11 @@ namespace Pizza_Club
                             cmdSale.Parameters.AddWithValue("@quantity", dataGridView_cart.Rows[i].Cells["DGVquantity"].Value);
                             cmdSale.Parameters.AddWithValue("@price", dataGridView_cart.Rows[i].Cells["DGVprice"].Value);
                             cmdSale.Parameters.AddWithValue("@totalPrice", dataGridView_cart.Rows[i].Cells["DGVtotal"].Value);
+                            cmdSale.Parameters.AddWithValue("@extraCharges", extraCharges);
                             cmdSale.Parameters.AddWithValue("@grossTotal", label_cartGrossTotal.Text);
                             cmdSale.Parameters.AddWithValue("@amountGiven", txt_amountGiven.Text);
                             cmdSale.Parameters.AddWithValue("@change", txt_change.Text);
+                            cmdSale.Parameters.AddWithValue("@orderType", orderType);
                             cmdSale.Parameters.AddWithValue("@date", DateTime.Now);
                             cmdSale.Parameters.AddWithValue("@select", false);
 

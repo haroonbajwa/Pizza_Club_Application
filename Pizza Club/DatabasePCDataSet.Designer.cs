@@ -4468,11 +4468,15 @@ namespace Pizza_Club {
             
             private global::System.Data.DataColumn columntotalPrice;
             
+            private global::System.Data.DataColumn columnextraCharges;
+            
             private global::System.Data.DataColumn columngrossTotal;
             
             private global::System.Data.DataColumn columnamountGiven;
             
             private global::System.Data.DataColumn columnchange;
+            
+            private global::System.Data.DataColumn columnorderType;
             
             private global::System.Data.DataColumn columndate;
             
@@ -4561,6 +4565,14 @@ namespace Pizza_Club {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn extraChargesColumn {
+                get {
+                    return this.columnextraCharges;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn grossTotalColumn {
                 get {
                     return this.columngrossTotal;
@@ -4580,6 +4592,14 @@ namespace Pizza_Club {
             public global::System.Data.DataColumn changeColumn {
                 get {
                     return this.columnchange;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn orderTypeColumn {
+                get {
+                    return this.columnorderType;
                 }
             }
             
@@ -4636,7 +4656,7 @@ namespace Pizza_Club {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_salesRow Addtbl_salesRow(int Id, string customerName, string productName, int quantity, int price, int totalPrice, int grossTotal, int amountGiven, int change, System.DateTime date, bool select) {
+            public tbl_salesRow Addtbl_salesRow(int Id, string customerName, string productName, int quantity, int price, int totalPrice, int extraCharges, int grossTotal, int amountGiven, int change, string orderType, System.DateTime date, bool select) {
                 tbl_salesRow rowtbl_salesRow = ((tbl_salesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -4645,9 +4665,11 @@ namespace Pizza_Club {
                         quantity,
                         price,
                         totalPrice,
+                        extraCharges,
                         grossTotal,
                         amountGiven,
                         change,
+                        orderType,
                         date,
                         select};
                 rowtbl_salesRow.ItemArray = columnValuesArray;
@@ -4678,9 +4700,11 @@ namespace Pizza_Club {
                 this.columnquantity = base.Columns["quantity"];
                 this.columnprice = base.Columns["price"];
                 this.columntotalPrice = base.Columns["totalPrice"];
+                this.columnextraCharges = base.Columns["extraCharges"];
                 this.columngrossTotal = base.Columns["grossTotal"];
                 this.columnamountGiven = base.Columns["amountGiven"];
                 this.columnchange = base.Columns["change"];
+                this.columnorderType = base.Columns["orderType"];
                 this.columndate = base.Columns["date"];
                 this.columnselect = base.Columns["select"];
             }
@@ -4700,12 +4724,16 @@ namespace Pizza_Club {
                 base.Columns.Add(this.columnprice);
                 this.columntotalPrice = new global::System.Data.DataColumn("totalPrice", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntotalPrice);
+                this.columnextraCharges = new global::System.Data.DataColumn("extraCharges", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnextraCharges);
                 this.columngrossTotal = new global::System.Data.DataColumn("grossTotal", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngrossTotal);
                 this.columnamountGiven = new global::System.Data.DataColumn("amountGiven", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnamountGiven);
                 this.columnchange = new global::System.Data.DataColumn("change", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnchange);
+                this.columnorderType = new global::System.Data.DataColumn("orderType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnorderType);
                 this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate);
                 this.columnselect = new global::System.Data.DataColumn("select", typeof(bool), null, global::System.Data.MappingType.Element);
@@ -4713,6 +4741,7 @@ namespace Pizza_Club {
                 this.columnId.AllowDBNull = false;
                 this.columncustomerName.MaxLength = 70;
                 this.columnproductName.MaxLength = 100;
+                this.columnorderType.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6546,6 +6575,22 @@ namespace Pizza_Club {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int extraCharges {
+                get {
+                    try {
+                        return ((int)(this[this.tabletbl_sales.extraChargesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'extraCharges\' in table \'tbl_sales\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbl_sales.extraChargesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int grossTotal {
                 get {
                     try {
@@ -6589,6 +6634,22 @@ namespace Pizza_Club {
                 }
                 set {
                     this[this.tabletbl_sales.changeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string orderType {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbl_sales.orderTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'orderType\' in table \'tbl_sales\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbl_sales.orderTypeColumn] = value;
                 }
             }
             
@@ -6686,6 +6747,18 @@ namespace Pizza_Club {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsextraChargesNull() {
+                return this.IsNull(this.tabletbl_sales.extraChargesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetextraChargesNull() {
+                this[this.tabletbl_sales.extraChargesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsgrossTotalNull() {
                 return this.IsNull(this.tabletbl_sales.grossTotalColumn);
             }
@@ -6718,6 +6791,18 @@ namespace Pizza_Club {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetchangeNull() {
                 this[this.tabletbl_sales.changeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsorderTypeNull() {
+                return this.IsNull(this.tabletbl_sales.orderTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetorderTypeNull() {
+                this[this.tabletbl_sales.orderTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12410,15 +12495,17 @@ SELECT Id, name, price, date, [select] FROM tbl_expense WHERE (Id = @Id)";
             tableMapping.ColumnMappings.Add("quantity", "quantity");
             tableMapping.ColumnMappings.Add("price", "price");
             tableMapping.ColumnMappings.Add("totalPrice", "totalPrice");
+            tableMapping.ColumnMappings.Add("extraCharges", "extraCharges");
             tableMapping.ColumnMappings.Add("grossTotal", "grossTotal");
             tableMapping.ColumnMappings.Add("amountGiven", "amountGiven");
             tableMapping.ColumnMappings.Add("change", "change");
+            tableMapping.ColumnMappings.Add("orderType", "orderType");
             tableMapping.ColumnMappings.Add("date", "date");
             tableMapping.ColumnMappings.Add("select", "select");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_sales] ([Id], [customerName], [productName], [quantity], [price], [totalPrice], [grossTotal], [amountGiven], [change], [date], [select]) VALUES (@Id, @customerName, @productName, @quantity, @price, @totalPrice, @grossTotal, @amountGiven, @change, @date, @select)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [tbl_sales] ([Id], [customerName], [productName], [quantity], [price], [totalPrice], [amountGiven], [change], [date], [extraCharges], [grossTotal], [orderType], [select]) VALUES (@Id, @customerName, @productName, @quantity, @price, @totalPrice, @amountGiven, @change, @date, @extraCharges, @grossTotal, @orderType, @select)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12426,10 +12513,12 @@ SELECT Id, name, price, date, [select] FROM tbl_expense WHERE (Id = @Id)";
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalPrice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@grossTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "grossTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amountGiven", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amountGiven", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@change", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "change", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@extraCharges", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "extraCharges", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@grossTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "grossTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@orderType", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "orderType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@select", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "select", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -12446,8 +12535,8 @@ SELECT Id, name, price, date, [select] FROM tbl_expense WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, customerName, productName, quantity, price, totalPrice, grossTotal, am" +
-                "ountGiven, change, date, [select] FROM dbo.tbl_sales";
+            this._commandCollection[0].CommandText = "SELECT Id, customerName, productName, quantity, price, totalPrice, amountGiven, c" +
+                "hange, date, extraCharges, grossTotal, orderType, [select] FROM tbl_sales";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12508,7 +12597,7 @@ SELECT Id, name, price, date, [select] FROM tbl_expense WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string customerName, string productName, global::System.Nullable<int> quantity, global::System.Nullable<int> price, global::System.Nullable<int> totalPrice, global::System.Nullable<int> grossTotal, global::System.Nullable<int> amountGiven, global::System.Nullable<int> change, global::System.Nullable<global::System.DateTime> date, global::System.Nullable<bool> select) {
+        public virtual int Insert(int Id, string customerName, string productName, global::System.Nullable<int> quantity, global::System.Nullable<int> price, global::System.Nullable<int> totalPrice, global::System.Nullable<int> amountGiven, global::System.Nullable<int> change, global::System.Nullable<global::System.DateTime> date, global::System.Nullable<int> extraCharges, global::System.Nullable<int> grossTotal, string orderType, global::System.Nullable<bool> select) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((customerName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -12540,35 +12629,47 @@ SELECT Id, name, price, date, [select] FROM tbl_expense WHERE (Id = @Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((grossTotal.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(grossTotal.Value));
+            if ((amountGiven.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(amountGiven.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((amountGiven.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(amountGiven.Value));
+            if ((change.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(change.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((change.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(change.Value));
+            if ((date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(date.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(date.Value));
+            if ((extraCharges.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(extraCharges.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((select.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(select.Value));
+            if ((grossTotal.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(grossTotal.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((orderType == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(orderType));
+            }
+            if ((select.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(select.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

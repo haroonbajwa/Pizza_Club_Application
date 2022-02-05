@@ -37,7 +37,9 @@ namespace Pizza_Club
             dataGridView_viewSales.Columns[7].ReadOnly = true;
             dataGridView_viewSales.Columns[8].ReadOnly = true;
             dataGridView_viewSales.Columns[9].ReadOnly = true;
-            dataGridView_viewSales.Columns[10].ReadOnly = false;
+            dataGridView_viewSales.Columns[10].ReadOnly = true;
+            dataGridView_viewSales.Columns[11].ReadOnly = true;
+            dataGridView_viewSales.Columns[12].ReadOnly = false;
 
             btn_refreshSales_Click(sender, e);
             calculate_grossTotal();
@@ -49,9 +51,16 @@ namespace Pizza_Club
         {
             //calculate gross total from datagridview
             decimal sum = 0;
+            int preId = 0;
             for (int i = 0; i < dataGridView_viewSales.Rows.Count; ++i)
             {
-                sum += Convert.ToInt32(dataGridView_viewSales.Rows[i].Cells[5].Value);
+                if (Convert.ToInt32(dataGridView_viewSales.Rows[i].Cells[0].Value) != preId)
+                {
+                    //add sale grosstotal value to gross total label
+                    sum += Convert.ToInt32(dataGridView_viewSales.Rows[i].Cells[7].Value);
+                }
+                preId = Convert.ToInt32(dataGridView_viewSales.Rows[i].Cells[0].Value);
+
             }
             label_totalViewSales.Text = sum.ToString();
             if (sum == 0)
@@ -193,7 +202,7 @@ namespace Pizza_Club
             for (int i = 0; i <= dataGridView_viewSales.Rows.Count - 1; i++)
             {
                 drow = dataGridView_viewSales.Rows[i];
-                if (Convert.ToBoolean(drow.Cells[10].Value) == true) //checking if  checked or not.  
+                if (Convert.ToBoolean(drow.Cells[12].Value) == true) //checking if  checked or not.  
                 {
                     string id = drow.Cells[0].Value.ToString();
                     selectedItem.Add(id); //If checked adding it to the list  
