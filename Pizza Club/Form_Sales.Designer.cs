@@ -30,8 +30,8 @@ namespace Pizza_Club
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Sales));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,15 +68,17 @@ namespace Pizza_Club
             this.txt_qtySideOrder = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_pay = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_preview = new System.Windows.Forms.Button();
             this.btn_resetCart = new System.Windows.Forms.Button();
-            this.labelChange = new System.Windows.Forms.Label();
-            this.txt_amountGiven = new System.Windows.Forms.TextBox();
+            this.btn_preview = new System.Windows.Forms.Button();
+            this.btn_pay = new System.Windows.Forms.Button();
             this.label_cartGrossTotal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_change = new System.Windows.Forms.TextBox();
+            this.labelChange = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_amountGiven = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelExtra = new System.Windows.Forms.Label();
+            this.txt_extraCharges = new System.Windows.Forms.TextBox();
             this.dataGridView_cart = new System.Windows.Forms.DataGridView();
             this.DGVname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGVquantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -594,7 +596,7 @@ namespace Pizza_Club
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(3, 342);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(439, 168);
+            this.groupBox3.Size = new System.Drawing.Size(439, 216);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Payments";
@@ -607,83 +609,110 @@ namespace Pizza_Club
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.18492F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.40754F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.40754F));
-            this.tableLayoutPanel14.Controls.Add(this.btn_pay, 2, 2);
-            this.tableLayoutPanel14.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel14.Controls.Add(this.btn_preview, 1, 2);
-            this.tableLayoutPanel14.Controls.Add(this.btn_resetCart, 0, 2);
-            this.tableLayoutPanel14.Controls.Add(this.labelChange, 0, 1);
-            this.tableLayoutPanel14.Controls.Add(this.txt_amountGiven, 1, 0);
-            this.tableLayoutPanel14.Controls.Add(this.label_cartGrossTotal, 2, 1);
-            this.tableLayoutPanel14.Controls.Add(this.label2, 2, 0);
-            this.tableLayoutPanel14.Controls.Add(this.txt_change, 1, 1);
+            this.tableLayoutPanel14.Controls.Add(this.btn_resetCart, 0, 3);
+            this.tableLayoutPanel14.Controls.Add(this.btn_preview, 1, 3);
+            this.tableLayoutPanel14.Controls.Add(this.btn_pay, 2, 3);
+            this.tableLayoutPanel14.Controls.Add(this.label_cartGrossTotal, 2, 2);
+            this.tableLayoutPanel14.Controls.Add(this.txt_change, 1, 2);
+            this.tableLayoutPanel14.Controls.Add(this.labelChange, 0, 2);
+            this.tableLayoutPanel14.Controls.Add(this.label2, 2, 1);
+            this.tableLayoutPanel14.Controls.Add(this.txt_amountGiven, 1, 1);
+            this.tableLayoutPanel14.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel14.Controls.Add(this.labelExtra, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.txt_extraCharges, 1, 0);
             this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 24);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            this.tableLayoutPanel14.RowCount = 3;
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(433, 150);
+            this.tableLayoutPanel14.RowCount = 4;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(433, 183);
             this.tableLayoutPanel14.TabIndex = 46;
-            // 
-            // btn_pay
-            // 
-            this.btn_pay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_pay.Location = new System.Drawing.Point(264, 103);
-            this.btn_pay.Name = "btn_pay";
-            this.btn_pay.Size = new System.Drawing.Size(166, 44);
-            this.btn_pay.TabIndex = 22;
-            this.btn_pay.Text = "PAY";
-            this.btn_pay.UseVisualStyleBackColor = true;
-            this.btn_pay.Click += new System.EventHandler(this.btn_pay_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 50);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Amount Given";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // btn_preview
-            // 
-            this.btn_preview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_preview.Location = new System.Drawing.Point(94, 103);
-            this.btn_preview.Name = "btn_preview";
-            this.btn_preview.Size = new System.Drawing.Size(164, 44);
-            this.btn_preview.TabIndex = 23;
-            this.btn_preview.Text = "PREVIEW";
-            this.btn_preview.UseVisualStyleBackColor = true;
-            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
             // 
             // btn_resetCart
             // 
             this.btn_resetCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_resetCart.Location = new System.Drawing.Point(3, 103);
+            this.btn_resetCart.Location = new System.Drawing.Point(3, 138);
             this.btn_resetCart.Name = "btn_resetCart";
-            this.btn_resetCart.Size = new System.Drawing.Size(85, 44);
+            this.btn_resetCart.Size = new System.Drawing.Size(85, 42);
             this.btn_resetCart.TabIndex = 24;
             this.btn_resetCart.Text = "RESET";
             this.btn_resetCart.UseVisualStyleBackColor = true;
             this.btn_resetCart.Click += new System.EventHandler(this.btn_resetCart_Click);
             // 
+            // btn_preview
+            // 
+            this.btn_preview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_preview.Location = new System.Drawing.Point(94, 138);
+            this.btn_preview.Name = "btn_preview";
+            this.btn_preview.Size = new System.Drawing.Size(164, 42);
+            this.btn_preview.TabIndex = 23;
+            this.btn_preview.Text = "PREVIEW";
+            this.btn_preview.UseVisualStyleBackColor = true;
+            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
+            // 
+            // btn_pay
+            // 
+            this.btn_pay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_pay.Location = new System.Drawing.Point(264, 138);
+            this.btn_pay.Name = "btn_pay";
+            this.btn_pay.Size = new System.Drawing.Size(166, 42);
+            this.btn_pay.TabIndex = 22;
+            this.btn_pay.Text = "PAY";
+            this.btn_pay.UseVisualStyleBackColor = true;
+            this.btn_pay.Click += new System.EventHandler(this.btn_pay_Click);
+            // 
+            // label_cartGrossTotal
+            // 
+            this.label_cartGrossTotal.AutoSize = true;
+            this.label_cartGrossTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_cartGrossTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_cartGrossTotal.Location = new System.Drawing.Point(264, 90);
+            this.label_cartGrossTotal.Name = "label_cartGrossTotal";
+            this.label_cartGrossTotal.Size = new System.Drawing.Size(166, 45);
+            this.label_cartGrossTotal.TabIndex = 1;
+            this.label_cartGrossTotal.Text = "0.00";
+            this.label_cartGrossTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_change
+            // 
+            this.txt_change.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_change.Location = new System.Drawing.Point(94, 93);
+            this.txt_change.Name = "txt_change";
+            this.txt_change.ReadOnly = true;
+            this.txt_change.Size = new System.Drawing.Size(164, 22);
+            this.txt_change.TabIndex = 21;
+            this.txt_change.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // labelChange
             // 
             this.labelChange.AutoSize = true;
             this.labelChange.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelChange.Location = new System.Drawing.Point(3, 50);
+            this.labelChange.Location = new System.Drawing.Point(3, 90);
             this.labelChange.Name = "labelChange";
-            this.labelChange.Size = new System.Drawing.Size(85, 50);
+            this.labelChange.Size = new System.Drawing.Size(85, 45);
             this.labelChange.TabIndex = 1;
             this.labelChange.Text = "Change";
             this.labelChange.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(264, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 45);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Gross Total";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // txt_amountGiven
             // 
             this.txt_amountGiven.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_amountGiven.Location = new System.Drawing.Point(94, 3);
+            this.txt_amountGiven.Location = new System.Drawing.Point(94, 48);
             this.txt_amountGiven.Name = "txt_amountGiven";
             this.txt_amountGiven.Size = new System.Drawing.Size(164, 22);
             this.txt_amountGiven.TabIndex = 20;
@@ -691,39 +720,37 @@ namespace Pizza_Club
             this.txt_amountGiven.TextChanged += new System.EventHandler(this.txt_amountGiven_TextChanged);
             this.txt_amountGiven.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_amountGiven_KeyPress);
             // 
-            // label_cartGrossTotal
+            // label1
             // 
-            this.label_cartGrossTotal.AutoSize = true;
-            this.label_cartGrossTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_cartGrossTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cartGrossTotal.Location = new System.Drawing.Point(264, 50);
-            this.label_cartGrossTotal.Name = "label_cartGrossTotal";
-            this.label_cartGrossTotal.Size = new System.Drawing.Size(166, 50);
-            this.label_cartGrossTotal.TabIndex = 1;
-            this.label_cartGrossTotal.Text = "0.00";
-            this.label_cartGrossTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 45);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Amount Given";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label2
+            // labelExtra
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(264, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 50);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Gross Total";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelExtra.AutoSize = true;
+            this.labelExtra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelExtra.Location = new System.Drawing.Point(3, 0);
+            this.labelExtra.Name = "labelExtra";
+            this.labelExtra.Size = new System.Drawing.Size(85, 45);
+            this.labelExtra.TabIndex = 25;
+            this.labelExtra.Text = "Extra Charges";
+            this.labelExtra.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // txt_change
+            // txt_extraCharges
             // 
-            this.txt_change.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_change.Location = new System.Drawing.Point(94, 53);
-            this.txt_change.Name = "txt_change";
-            this.txt_change.ReadOnly = true;
-            this.txt_change.Size = new System.Drawing.Size(164, 22);
-            this.txt_change.TabIndex = 21;
-            this.txt_change.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_extraCharges.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_extraCharges.Location = new System.Drawing.Point(94, 3);
+            this.txt_extraCharges.Name = "txt_extraCharges";
+            this.txt_extraCharges.Size = new System.Drawing.Size(164, 22);
+            this.txt_extraCharges.TabIndex = 26;
+            this.txt_extraCharges.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_extraCharges.TextChanged += new System.EventHandler(this.txt_extraCharges_TextChanged);
             // 
             // dataGridView_cart
             // 
@@ -731,33 +758,33 @@ namespace Pizza_Club
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_cart.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Adobe Gothic Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_cart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Adobe Gothic Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_cart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_cart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_cart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DGVname,
             this.DGVquantity,
             this.DGVprice,
             this.DGVtotal});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_cart.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_cart.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_cart.Location = new System.Drawing.Point(448, 76);
             this.dataGridView_cart.MultiSelect = false;
             this.dataGridView_cart.Name = "dataGridView_cart";
             this.dataGridView_cart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_cart.Size = new System.Drawing.Size(307, 510);
+            this.dataGridView_cart.Size = new System.Drawing.Size(307, 558);
             this.dataGridView_cart.TabIndex = 25;
             this.dataGridView_cart.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_cart_CellMouseUp);
             // 
@@ -794,7 +821,7 @@ namespace Pizza_Club
             this.btn_deal1.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal1.Location = new System.Drawing.Point(3, 3);
             this.btn_deal1.Name = "btn_deal1";
-            this.btn_deal1.Size = new System.Drawing.Size(144, 58);
+            this.btn_deal1.Size = new System.Drawing.Size(144, 64);
             this.btn_deal1.TabIndex = 26;
             this.btn_deal1.Text = "Deal 1";
             this.btn_deal1.UseVisualStyleBackColor = false;
@@ -809,7 +836,7 @@ namespace Pizza_Club
             this.btn_deal2.ForeColor = System.Drawing.Color.Maroon;
             this.btn_deal2.Location = new System.Drawing.Point(153, 3);
             this.btn_deal2.Name = "btn_deal2";
-            this.btn_deal2.Size = new System.Drawing.Size(145, 58);
+            this.btn_deal2.Size = new System.Drawing.Size(145, 64);
             this.btn_deal2.TabIndex = 27;
             this.btn_deal2.Text = "Deal 2";
             this.btn_deal2.UseVisualStyleBackColor = false;
@@ -822,9 +849,9 @@ namespace Pizza_Club
             this.btn_deal3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal3.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal3.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal3.Location = new System.Drawing.Point(3, 67);
+            this.btn_deal3.Location = new System.Drawing.Point(3, 73);
             this.btn_deal3.Name = "btn_deal3";
-            this.btn_deal3.Size = new System.Drawing.Size(144, 58);
+            this.btn_deal3.Size = new System.Drawing.Size(144, 64);
             this.btn_deal3.TabIndex = 28;
             this.btn_deal3.Text = "Deal 3";
             this.btn_deal3.UseVisualStyleBackColor = false;
@@ -837,9 +864,9 @@ namespace Pizza_Club
             this.btn_deal4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal4.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal4.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal4.Location = new System.Drawing.Point(153, 67);
+            this.btn_deal4.Location = new System.Drawing.Point(153, 73);
             this.btn_deal4.Name = "btn_deal4";
-            this.btn_deal4.Size = new System.Drawing.Size(145, 58);
+            this.btn_deal4.Size = new System.Drawing.Size(145, 64);
             this.btn_deal4.TabIndex = 29;
             this.btn_deal4.Text = "Deal 4";
             this.btn_deal4.UseVisualStyleBackColor = false;
@@ -852,9 +879,9 @@ namespace Pizza_Club
             this.btn_deal5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal5.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal5.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal5.Location = new System.Drawing.Point(3, 131);
+            this.btn_deal5.Location = new System.Drawing.Point(3, 143);
             this.btn_deal5.Name = "btn_deal5";
-            this.btn_deal5.Size = new System.Drawing.Size(144, 58);
+            this.btn_deal5.Size = new System.Drawing.Size(144, 64);
             this.btn_deal5.TabIndex = 30;
             this.btn_deal5.Text = "Deal 5";
             this.btn_deal5.UseVisualStyleBackColor = false;
@@ -867,9 +894,9 @@ namespace Pizza_Club
             this.btn_deal6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal6.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal6.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal6.Location = new System.Drawing.Point(153, 131);
+            this.btn_deal6.Location = new System.Drawing.Point(153, 143);
             this.btn_deal6.Name = "btn_deal6";
-            this.btn_deal6.Size = new System.Drawing.Size(145, 58);
+            this.btn_deal6.Size = new System.Drawing.Size(145, 64);
             this.btn_deal6.TabIndex = 31;
             this.btn_deal6.Text = "Deal 6";
             this.btn_deal6.UseVisualStyleBackColor = false;
@@ -882,9 +909,9 @@ namespace Pizza_Club
             this.btn_deal7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal7.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal7.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal7.Location = new System.Drawing.Point(3, 195);
+            this.btn_deal7.Location = new System.Drawing.Point(3, 213);
             this.btn_deal7.Name = "btn_deal7";
-            this.btn_deal7.Size = new System.Drawing.Size(144, 58);
+            this.btn_deal7.Size = new System.Drawing.Size(144, 64);
             this.btn_deal7.TabIndex = 32;
             this.btn_deal7.Text = "Deal 7";
             this.btn_deal7.UseVisualStyleBackColor = false;
@@ -897,9 +924,9 @@ namespace Pizza_Club
             this.btn_deal8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal8.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal8.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal8.Location = new System.Drawing.Point(153, 195);
+            this.btn_deal8.Location = new System.Drawing.Point(153, 213);
             this.btn_deal8.Name = "btn_deal8";
-            this.btn_deal8.Size = new System.Drawing.Size(145, 58);
+            this.btn_deal8.Size = new System.Drawing.Size(145, 64);
             this.btn_deal8.TabIndex = 33;
             this.btn_deal8.Text = "Deal 8";
             this.btn_deal8.UseVisualStyleBackColor = false;
@@ -912,9 +939,9 @@ namespace Pizza_Club
             this.btn_deal9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal9.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal9.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal9.Location = new System.Drawing.Point(3, 259);
+            this.btn_deal9.Location = new System.Drawing.Point(3, 283);
             this.btn_deal9.Name = "btn_deal9";
-            this.btn_deal9.Size = new System.Drawing.Size(144, 58);
+            this.btn_deal9.Size = new System.Drawing.Size(144, 64);
             this.btn_deal9.TabIndex = 34;
             this.btn_deal9.Text = "Deal 9";
             this.btn_deal9.UseVisualStyleBackColor = false;
@@ -927,9 +954,9 @@ namespace Pizza_Club
             this.btn_deal10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal10.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal10.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal10.Location = new System.Drawing.Point(153, 259);
+            this.btn_deal10.Location = new System.Drawing.Point(153, 283);
             this.btn_deal10.Name = "btn_deal10";
-            this.btn_deal10.Size = new System.Drawing.Size(145, 58);
+            this.btn_deal10.Size = new System.Drawing.Size(145, 64);
             this.btn_deal10.TabIndex = 35;
             this.btn_deal10.Text = "Deal 10";
             this.btn_deal10.UseVisualStyleBackColor = false;
@@ -942,9 +969,9 @@ namespace Pizza_Club
             this.btn_deal11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal11.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal11.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal11.Location = new System.Drawing.Point(3, 323);
+            this.btn_deal11.Location = new System.Drawing.Point(3, 353);
             this.btn_deal11.Name = "btn_deal11";
-            this.btn_deal11.Size = new System.Drawing.Size(144, 58);
+            this.btn_deal11.Size = new System.Drawing.Size(144, 64);
             this.btn_deal11.TabIndex = 36;
             this.btn_deal11.Text = "Deal 11";
             this.btn_deal11.UseVisualStyleBackColor = false;
@@ -957,9 +984,9 @@ namespace Pizza_Club
             this.btn_deal12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal12.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal12.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal12.Location = new System.Drawing.Point(153, 323);
+            this.btn_deal12.Location = new System.Drawing.Point(153, 353);
             this.btn_deal12.Name = "btn_deal12";
-            this.btn_deal12.Size = new System.Drawing.Size(145, 58);
+            this.btn_deal12.Size = new System.Drawing.Size(145, 64);
             this.btn_deal12.TabIndex = 37;
             this.btn_deal12.Text = "Deal 12";
             this.btn_deal12.UseVisualStyleBackColor = false;
@@ -972,9 +999,9 @@ namespace Pizza_Club
             this.btn_deal13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal13.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal13.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal13.Location = new System.Drawing.Point(3, 387);
+            this.btn_deal13.Location = new System.Drawing.Point(3, 423);
             this.btn_deal13.Name = "btn_deal13";
-            this.btn_deal13.Size = new System.Drawing.Size(144, 58);
+            this.btn_deal13.Size = new System.Drawing.Size(144, 64);
             this.btn_deal13.TabIndex = 38;
             this.btn_deal13.Text = "Deal 13";
             this.btn_deal13.UseVisualStyleBackColor = false;
@@ -987,9 +1014,9 @@ namespace Pizza_Club
             this.btn_deal14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal14.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal14.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal14.Location = new System.Drawing.Point(153, 387);
+            this.btn_deal14.Location = new System.Drawing.Point(153, 423);
             this.btn_deal14.Name = "btn_deal14";
-            this.btn_deal14.Size = new System.Drawing.Size(145, 58);
+            this.btn_deal14.Size = new System.Drawing.Size(145, 64);
             this.btn_deal14.TabIndex = 39;
             this.btn_deal14.Text = "Deal 14";
             this.btn_deal14.UseVisualStyleBackColor = false;
@@ -1002,9 +1029,9 @@ namespace Pizza_Club
             this.btn_deal15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal15.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal15.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal15.Location = new System.Drawing.Point(3, 451);
+            this.btn_deal15.Location = new System.Drawing.Point(3, 493);
             this.btn_deal15.Name = "btn_deal15";
-            this.btn_deal15.Size = new System.Drawing.Size(144, 59);
+            this.btn_deal15.Size = new System.Drawing.Size(144, 65);
             this.btn_deal15.TabIndex = 40;
             this.btn_deal15.Text = "Deal 15";
             this.btn_deal15.UseVisualStyleBackColor = false;
@@ -1017,9 +1044,9 @@ namespace Pizza_Club
             this.btn_deal16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_deal16.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deal16.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_deal16.Location = new System.Drawing.Point(153, 451);
+            this.btn_deal16.Location = new System.Drawing.Point(153, 493);
             this.btn_deal16.Name = "btn_deal16";
-            this.btn_deal16.Size = new System.Drawing.Size(145, 59);
+            this.btn_deal16.Size = new System.Drawing.Size(145, 65);
             this.btn_deal16.TabIndex = 41;
             this.btn_deal16.Text = "Deal 16";
             this.btn_deal16.UseVisualStyleBackColor = false;
@@ -1092,7 +1119,7 @@ namespace Pizza_Club
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(301, 513);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(301, 561);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
             // tableLayoutPanel2
@@ -1110,7 +1137,7 @@ namespace Pizza_Club
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(445, 513);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(445, 561);
             this.tableLayoutPanel2.TabIndex = 44;
             // 
             // panel3
@@ -1119,7 +1146,7 @@ namespace Pizza_Club
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 73);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(445, 513);
+            this.panel3.Size = new System.Drawing.Size(445, 561);
             this.panel3.TabIndex = 45;
             // 
             // contextMenuStrip1
@@ -1155,7 +1182,7 @@ namespace Pizza_Club
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
-            this.ClientSize = new System.Drawing.Size(1059, 586);
+            this.ClientSize = new System.Drawing.Size(1059, 634);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
@@ -1276,5 +1303,7 @@ namespace Pizza_Club
         private System.Windows.Forms.ToolStripMenuItem removeItemToolStripMenuItem;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Label labelExtra;
+        private System.Windows.Forms.TextBox txt_extraCharges;
     }
 }

@@ -666,6 +666,7 @@ namespace Pizza_Club
 
             dataGridView_cart.Rows.Clear();
 
+            txt_extraCharges.Clear();
             txt_amountGiven.Clear();
             txt_change.Clear();
 
@@ -678,11 +679,15 @@ namespace Pizza_Club
         //calculate gross total
         void calculate_grossTotal()
         {
-            //calculate gross total from cart datagridview
             decimal sum = 0;
+            //calculate gross total from cart datagridview
             for (int i = 0; i < dataGridView_cart.Rows.Count; ++i)
             {
                 sum += Convert.ToInt32(dataGridView_cart.Rows[i].Cells[3].Value);
+            }
+            if(txt_extraCharges.Text != "")
+            {
+                sum += Convert.ToInt32(txt_extraCharges.Text);
             }
             label_cartGrossTotal.Text = sum.ToString();
             if (sum == 0)
@@ -1663,6 +1668,13 @@ namespace Pizza_Club
 
                 }
             }
+            if(txt_extraCharges.Text != "")
+            {
+                e.Graphics.DrawString("Extra Charges", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, gap));
+                e.Graphics.DrawString(txt_extraCharges.Text, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(220, gap));
+                gap += 10;
+            }
+
             //if (gap < 750)
             //gap = 750;
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
@@ -1758,6 +1770,12 @@ namespace Pizza_Club
             {
                 sqlcon.Close();
             }
+        }
+
+        //calculate gross total when extra charges are added
+        private void txt_extraCharges_TextChanged(object sender, EventArgs e)
+        {
+            calculate_grossTotal();
         }
     }
 }
