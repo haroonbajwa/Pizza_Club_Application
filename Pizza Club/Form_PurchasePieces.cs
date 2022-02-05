@@ -40,7 +40,18 @@ namespace Pizza_Club
                 {
                     combo_pcsName.Items.Add(reader["name"].ToString());
                 }
+                sqlcon.Close();
 
+                //to load drinks
+                sqlcon.Open();
+                string query1 = "select * from tbl_drinks";
+                SqlCommand cmd1 = new SqlCommand(query1, sqlcon);
+                cmd1.CommandText = query1;
+                SqlDataReader reader1 = cmd1.ExecuteReader();
+                while (reader1.Read())
+                {
+                    combo_pcsName.Items.Add(reader1["name"].ToString());
+                }
                 sqlcon.Close();
             }
             catch (Exception ex)
@@ -61,10 +72,7 @@ namespace Pizza_Club
             dataGridView_purchasePCS.Columns[4].ReadOnly = true;
             dataGridView_purchasePCS.Columns[5].ReadOnly = false;
 
-            auto_increment_id(sender, e);
-            btn_viewPCS_Click(sender, e);
-            load_allIngredients();
-            calculate_grossTotal();
+            btn_clearPCS_Click(sender, e);
 
         }
 
@@ -387,6 +395,8 @@ namespace Pizza_Club
             Uncheck_checkboxes();
             auto_increment_id(sender, e);
             btn_viewPCS_Click(sender, e);
+            load_allIngredients();
+            calculate_grossTotal();
         }
 
         //selct record to show in text boxes

@@ -203,7 +203,7 @@ namespace Pizza_Club
             this.btn_clearStock.Name = "btn_clearStock";
             this.btn_clearStock.Size = new System.Drawing.Size(134, 45);
             this.btn_clearStock.TabIndex = 7;
-            this.btn_clearStock.Text = "Clear";
+            this.btn_clearStock.Text = "Reset";
             this.btn_clearStock.UseVisualStyleBackColor = false;
             this.btn_clearStock.Click += new System.EventHandler(this.btn_clearStock_Click);
             // 

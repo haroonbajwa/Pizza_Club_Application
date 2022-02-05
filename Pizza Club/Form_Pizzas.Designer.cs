@@ -190,7 +190,7 @@ namespace Pizza_Club
             this.btn_clear_pizzas.Name = "btn_clear_pizzas";
             this.btn_clear_pizzas.Size = new System.Drawing.Size(79, 28);
             this.btn_clear_pizzas.TabIndex = 7;
-            this.btn_clear_pizzas.Text = "Clear";
+            this.btn_clear_pizzas.Text = "Reset";
             this.btn_clear_pizzas.UseVisualStyleBackColor = false;
             this.btn_clear_pizzas.Click += new System.EventHandler(this.btn_clear_pizzas_Click);
             // 

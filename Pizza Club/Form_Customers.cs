@@ -234,6 +234,13 @@ namespace Pizza_Club
         {
             // TODO: This line of code loads data into the 'databasePCDataSet.tbl_customers' table. You can move, or remove it, as needed.
             this.tbl_customersTableAdapter.Fill(this.databasePCDataSet.tbl_customers);
+
+            dataGridView_customer.Columns[0].ReadOnly = true;
+            dataGridView_customer.Columns[1].ReadOnly = true;
+            dataGridView_customer.Columns[2].ReadOnly = true;
+            dataGridView_customer.Columns[3].ReadOnly = true;
+            dataGridView_customer.Columns[4].ReadOnly = false;
+
             auto_increment_id(sender, e);
         }
     }

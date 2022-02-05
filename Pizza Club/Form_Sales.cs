@@ -24,7 +24,7 @@ namespace Pizza_Club
         public string selectedSize;
 
         //function of load customers in combo box
-        void load_customers()
+        /*void load_customers()
         {
             //remove previous items
             combo_customerName.Items.Clear();
@@ -48,7 +48,7 @@ namespace Pizza_Club
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }*/
 
         //function of load pizzas in combo box
         void load_pizzas()
@@ -167,10 +167,38 @@ namespace Pizza_Club
             Program.fw.Show();
         }
 
+        private void load_customerContacts()
+        {
+            try
+            {
+                sqlcon.Open();
+
+                string query = "select contact from tbl_customers";
+                SqlCommand cmd = new SqlCommand(query, sqlcon)
+                {
+                    CommandText = query
+                };
+                SqlDataReader reader = cmd.ExecuteReader();
+                AutoCompleteStringCollection MyCollection = new AutoCompleteStringCollection();
+                while (reader.Read())
+                {
+                    MyCollection.Add(reader.GetString(0));
+                }
+                txt_customerContact.AutoCompleteCustomSource = MyCollection;
+
+                sqlcon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         //on form load
         private void Form_Sales_Load(object sender, EventArgs e)
         {
-            load_customers();
+            //load_customers();
+            load_customerContacts();
             txt_customerContact.Text = "Contact";
             txt_customerAddress.Text = "Address";
             
@@ -186,7 +214,7 @@ namespace Pizza_Club
         //fetch customer data from database when anyone is selected from combobox
         private void combo_customerName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 sqlcon.Open();
 
@@ -205,7 +233,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         //IsValid Pizza
@@ -642,6 +670,9 @@ namespace Pizza_Club
             txt_change.Clear();
 
             label_cartGrossTotal.Text = "0.00";
+
+            //load_customers();
+            load_customerContacts();
         }
 
         //calculate gross total
@@ -736,6 +767,23 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message+"\n"+ex.Source);
+            }
+        }
+
+        //will write drink decrease here
+        public void Dec_drink_stock(string productName, int decQty, int DGVqty)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE tbl_stockPCS SET quantity=quantity-(" + decQty + " * " + DGVqty + ") WHERE name='" + productName + "';", sqlcon)
+                {
+                    CommandType = CommandType.Text
+                };
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n" + ex.Source);
             }
         }
 
@@ -1157,6 +1205,26 @@ namespace Pizza_Club
                             {
                                 Dec_sideOrder_ingredients("Nuggets", 10, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 Dec_sideOrder_ingredients("Hot Wings", 10, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }//decrease stock for drinks
+                            else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Tin Pack")
+                            {
+                                Dec_drink_stock("Tin Pack", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "1 Liter")
+                            {
+                                Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "1.5 Liter")
+                            {
+                                Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "S-Water")
+                            {
+                                Dec_drink_stock("S-Water", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "L-Water")
+                            {
+                                Dec_drink_stock("L-Water", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                             }
 
                         }
@@ -1661,6 +1729,34 @@ namespace Pizza_Club
             {
                 MessageBox.Show("Please enter only numbers.");
                 txt_qtySideOrder.Clear();
+            }
+        }
+
+        //type customer number, name and address will automatically loaded
+        private void txt_customerContact_TextChanged(object sender, EventArgs e)
+        {
+            if(txt_customerContact.Text == "")
+            {
+                combo_customerName.Text = "";
+                txt_customerAddress.Text = "";
+            }
+            try
+            {
+                SqlCommand com = new SqlCommand();
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand("Select name, address from tbl_customers Where contact = @contact", sqlcon);
+                cmd.Parameters.AddWithValue("@contact", txt_customerContact.Text);
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    combo_customerName.Text = da.GetValue(0).ToString();
+                    txt_customerAddress.Text = da.GetValue(1).ToString();
+                }
+                sqlcon.Close();
+            }
+            catch
+            {
+                sqlcon.Close();
             }
         }
     }

@@ -69,7 +69,7 @@ namespace Pizza_Club
             this.btn_sideOrders.Location = new System.Drawing.Point(3, 195);
             this.btn_sideOrders.Name = "btn_sideOrders";
             this.btn_sideOrders.Size = new System.Drawing.Size(206, 42);
-            this.btn_sideOrders.TabIndex = 3;
+            this.btn_sideOrders.TabIndex = 5;
             this.btn_sideOrders.Text = "Side Orders";
             this.btn_sideOrders.UseVisualStyleBackColor = false;
             this.btn_sideOrders.Click += new System.EventHandler(this.btn_sideOrders_Click);
@@ -101,7 +101,7 @@ namespace Pizza_Club
             this.btn_expenses.Location = new System.Drawing.Point(3, 387);
             this.btn_expenses.Name = "btn_expenses";
             this.btn_expenses.Size = new System.Drawing.Size(206, 42);
-            this.btn_expenses.TabIndex = 0;
+            this.btn_expenses.TabIndex = 9;
             this.btn_expenses.Text = "Expenses";
             this.btn_expenses.UseVisualStyleBackColor = false;
             this.btn_expenses.Click += new System.EventHandler(this.btn_expenses_Click);
@@ -117,7 +117,7 @@ namespace Pizza_Club
             this.btn_purchasePcs.Location = new System.Drawing.Point(3, 243);
             this.btn_purchasePcs.Name = "btn_purchasePcs";
             this.btn_purchasePcs.Size = new System.Drawing.Size(206, 42);
-            this.btn_purchasePcs.TabIndex = 5;
+            this.btn_purchasePcs.TabIndex = 6;
             this.btn_purchasePcs.Text = "Purchase (PCS)";
             this.btn_purchasePcs.UseVisualStyleBackColor = false;
             this.btn_purchasePcs.Click += new System.EventHandler(this.btn_purchasePcs_Click);
@@ -133,7 +133,7 @@ namespace Pizza_Club
             this.btn_customers.Location = new System.Drawing.Point(3, 435);
             this.btn_customers.Name = "btn_customers";
             this.btn_customers.Size = new System.Drawing.Size(206, 42);
-            this.btn_customers.TabIndex = 9;
+            this.btn_customers.TabIndex = 10;
             this.btn_customers.Text = "Customers";
             this.btn_customers.UseVisualStyleBackColor = false;
             this.btn_customers.Click += new System.EventHandler(this.btn_customers_Click);
@@ -149,7 +149,7 @@ namespace Pizza_Club
             this.btn_drinks.Location = new System.Drawing.Point(3, 99);
             this.btn_drinks.Name = "btn_drinks";
             this.btn_drinks.Size = new System.Drawing.Size(206, 42);
-            this.btn_drinks.TabIndex = 2;
+            this.btn_drinks.TabIndex = 3;
             this.btn_drinks.Text = "Drinks";
             this.btn_drinks.UseVisualStyleBackColor = false;
             this.btn_drinks.Click += new System.EventHandler(this.btn_drinks_Click);
@@ -165,7 +165,7 @@ namespace Pizza_Club
             this.btn_burgers.Location = new System.Drawing.Point(3, 51);
             this.btn_burgers.Name = "btn_burgers";
             this.btn_burgers.Size = new System.Drawing.Size(206, 42);
-            this.btn_burgers.TabIndex = 1;
+            this.btn_burgers.TabIndex = 2;
             this.btn_burgers.Text = "Burgers";
             this.btn_burgers.UseVisualStyleBackColor = false;
             this.btn_burgers.Click += new System.EventHandler(this.btn_burgers_Click);
@@ -181,7 +181,7 @@ namespace Pizza_Club
             this.btn_pizzas.Location = new System.Drawing.Point(3, 3);
             this.btn_pizzas.Name = "btn_pizzas";
             this.btn_pizzas.Size = new System.Drawing.Size(206, 42);
-            this.btn_pizzas.TabIndex = 0;
+            this.btn_pizzas.TabIndex = 1;
             this.btn_pizzas.Text = "Pizzas";
             this.btn_pizzas.UseVisualStyleBackColor = false;
             this.btn_pizzas.Click += new System.EventHandler(this.btn_pizzas_Click);
@@ -197,7 +197,7 @@ namespace Pizza_Club
             this.btn_adminUsers.Location = new System.Drawing.Point(877, 7);
             this.btn_adminUsers.Name = "btn_adminUsers";
             this.btn_adminUsers.Size = new System.Drawing.Size(94, 42);
-            this.btn_adminUsers.TabIndex = 8;
+            this.btn_adminUsers.TabIndex = 12;
             this.btn_adminUsers.Text = "Admin";
             this.btn_adminUsers.UseVisualStyleBackColor = false;
             this.btn_adminUsers.Click += new System.EventHandler(this.btn_adminUsers_Click);
@@ -213,7 +213,7 @@ namespace Pizza_Club
             this.btn_stock.Location = new System.Drawing.Point(3, 339);
             this.btn_stock.Name = "btn_stock";
             this.btn_stock.Size = new System.Drawing.Size(206, 42);
-            this.btn_stock.TabIndex = 7;
+            this.btn_stock.TabIndex = 8;
             this.btn_stock.Text = "Stock";
             this.btn_stock.UseVisualStyleBackColor = false;
             this.btn_stock.Click += new System.EventHandler(this.btn_stock_Click);
@@ -229,7 +229,7 @@ namespace Pizza_Club
             this.btn_purchaseGrms.Location = new System.Drawing.Point(3, 291);
             this.btn_purchaseGrms.Name = "btn_purchaseGrms";
             this.btn_purchaseGrms.Size = new System.Drawing.Size(206, 42);
-            this.btn_purchaseGrms.TabIndex = 6;
+            this.btn_purchaseGrms.TabIndex = 7;
             this.btn_purchaseGrms.Text = "Purchase (Grms)";
             this.btn_purchaseGrms.UseVisualStyleBackColor = false;
             this.btn_purchaseGrms.Click += new System.EventHandler(this.btn_purchaseGrms_Click);
@@ -286,7 +286,7 @@ namespace Pizza_Club
             this.btn_logout.Location = new System.Drawing.Point(0, 0);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(69, 61);
-            this.btn_logout.TabIndex = 2;
+            this.btn_logout.TabIndex = 13;
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
@@ -352,7 +352,7 @@ namespace Pizza_Club
             this.btn_sales.Location = new System.Drawing.Point(3, 483);
             this.btn_sales.Name = "btn_sales";
             this.btn_sales.Size = new System.Drawing.Size(206, 48);
-            this.btn_sales.TabIndex = 10;
+            this.btn_sales.TabIndex = 11;
             this.btn_sales.Text = "Sales";
             this.btn_sales.UseVisualStyleBackColor = false;
             this.btn_sales.Click += new System.EventHandler(this.btn_sales_Click);

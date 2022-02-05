@@ -47,6 +47,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_gramsQuantity = new System.Windows.Forms.TextBox();
             this.dataGridView_purchaseGrams = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.selectDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tblpurchaseGramsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databasePCDataSet = new Pizza_Club.DatabasePCDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,12 +60,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label_grossTotalGrms = new System.Windows.Forms.Label();
             this.txt_gramsName = new System.Windows.Forms.TextBox();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selectDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_purchaseGrams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblpurchaseGramsBindingSource)).BeginInit();
@@ -170,7 +170,7 @@
             this.btn_clearGrams.Name = "btn_clearGrams";
             this.btn_clearGrams.Size = new System.Drawing.Size(79, 28);
             this.btn_clearGrams.TabIndex = 10;
-            this.btn_clearGrams.Text = "Clear";
+            this.btn_clearGrams.Text = "Reset";
             this.btn_clearGrams.UseVisualStyleBackColor = false;
             this.btn_clearGrams.Click += new System.EventHandler(this.btn_clearGrams_Click);
             // 
@@ -269,6 +269,49 @@
             this.dataGridView_purchaseGrams.TabIndex = 12;
             this.dataGridView_purchaseGrams.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_purchaseGrams_MouseClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            this.productDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productDataGridViewTextBoxColumn.DataPropertyName = "product";
+            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // selectDataGridViewCheckBoxColumn
+            // 
+            this.selectDataGridViewCheckBoxColumn.DataPropertyName = "select";
+            this.selectDataGridViewCheckBoxColumn.HeaderText = "Select";
+            this.selectDataGridViewCheckBoxColumn.Name = "selectDataGridViewCheckBoxColumn";
+            this.selectDataGridViewCheckBoxColumn.Visible = false;
+            this.selectDataGridViewCheckBoxColumn.Width = 60;
+            // 
             // tblpurchaseGramsBindingSource
             // 
             this.tblpurchaseGramsBindingSource.DataMember = "tbl_purchaseGrams";
@@ -330,49 +373,6 @@
             this.txt_gramsName.Name = "txt_gramsName";
             this.txt_gramsName.Size = new System.Drawing.Size(178, 21);
             this.txt_gramsName.TabIndex = 6;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // productDataGridViewTextBoxColumn
-            // 
-            this.productDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.productDataGridViewTextBoxColumn.DataPropertyName = "product";
-            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
-            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            // 
-            // selectDataGridViewCheckBoxColumn
-            // 
-            this.selectDataGridViewCheckBoxColumn.DataPropertyName = "select";
-            this.selectDataGridViewCheckBoxColumn.HeaderText = "Select";
-            this.selectDataGridViewCheckBoxColumn.Name = "selectDataGridViewCheckBoxColumn";
-            this.selectDataGridViewCheckBoxColumn.Visible = false;
-            this.selectDataGridViewCheckBoxColumn.Width = 60;
             // 
             // Form_PurchaseGrams
             // 

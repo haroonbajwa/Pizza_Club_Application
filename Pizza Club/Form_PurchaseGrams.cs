@@ -62,9 +62,7 @@ namespace Pizza_Club
             dataGridView_purchaseGrams.Columns[4].ReadOnly = true;
             dataGridView_purchaseGrams.Columns[5].ReadOnly = false;
 
-            auto_increment_id(sender, e);
-            load_allIngredients();
-            btn_viewGrams_Click(sender, e);
+            btn_clearGrams_Click(sender, e);
 
         }
 
@@ -338,6 +336,8 @@ namespace Pizza_Club
             ClearTextBoxes();
             auto_increment_id(sender, e);
             btn_viewGrams_Click(sender, e);
+            load_allIngredients();
+            calculate_grossTotal();
         }
 
         public void calculate_grossTotal()
