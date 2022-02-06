@@ -89,6 +89,7 @@ namespace Pizza_Club
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(238, 39);
             this.txt_password.TabIndex = 2;
+            this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             // 
             // btn_adminLogin

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza Club", "Pizza Club\Pizza Club.csproj", "{E851B789-A25A-4037-947A-7B64A05DB1B8}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PC Setup", "PC Setup\PC Setup.vdproj", "{62CEAA73-191C-4F6F-9CCB-5F709E2C6943}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{E851B789-A25A-4037-947A-7B64A05DB1B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E851B789-A25A-4037-947A-7B64A05DB1B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E851B789-A25A-4037-947A-7B64A05DB1B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62CEAA73-191C-4F6F-9CCB-5F709E2C6943}.Debug|Any CPU.ActiveCfg = Debug
+		{62CEAA73-191C-4F6F-9CCB-5F709E2C6943}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

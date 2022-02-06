@@ -76,6 +76,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                sqlcon.Close();
             }
         }
 
@@ -103,6 +104,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                sqlcon.Close();
             }
         }
 
@@ -130,6 +132,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                sqlcon.Close();
             }
         }
 
@@ -157,6 +160,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                sqlcon.Close();
             }
         }
 
@@ -193,6 +197,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                sqlcon.Close();
             }
         }
 
@@ -462,6 +467,7 @@ namespace Pizza_Club
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    sqlcon.Close();
                 }
                 
             }
@@ -555,6 +561,7 @@ namespace Pizza_Club
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    sqlcon.Close();
                 }
 
             }
@@ -648,6 +655,7 @@ namespace Pizza_Club
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    sqlcon.Close();
                 }
 
             }
@@ -779,6 +787,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message+"\n"+ex.Source);
+                sqlcon.Close();
             }
         }
 
@@ -796,6 +805,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\n" + ex.Source);
+                sqlcon.Close();
             }
         }
 
@@ -890,6 +900,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Chicken Burger")
@@ -907,6 +918,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Beef Burger")
@@ -924,6 +936,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Sizler Burger")
@@ -941,6 +954,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Tower Burger")
@@ -958,6 +972,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Mighty Burger")
@@ -977,6 +992,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Club Burger")
@@ -996,6 +1012,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Twister")
@@ -1013,6 +1030,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Zinger Shwarma")
@@ -1030,6 +1048,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Cheese Burger")
@@ -1048,6 +1067,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Cheese Twister")
@@ -1066,6 +1086,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             } //decrease ingredients for side orders
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "1 Pcs Chicken")
@@ -1115,6 +1136,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 2")
@@ -1132,6 +1154,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 3")
@@ -1149,6 +1172,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 4")
@@ -1166,6 +1190,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 5")
@@ -1183,6 +1208,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 6")
@@ -1202,6 +1228,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
                             }
                             else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 8")
@@ -1223,6 +1250,7 @@ namespace Pizza_Club
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message);
+                                    sqlcon.Close();
                                 }
 
                                 Dec_sideOrder_ingredients("Hot Wings", 10, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));

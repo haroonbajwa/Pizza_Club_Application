@@ -140,6 +140,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                sqlcon.Close();
             }
         }
 
@@ -194,6 +195,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex);
+                sqlcon.Close();
             }
         }
 
@@ -240,6 +242,7 @@ namespace Pizza_Club
             }
             catch
             {
+                sqlcon.Close();
             }
         }
     }

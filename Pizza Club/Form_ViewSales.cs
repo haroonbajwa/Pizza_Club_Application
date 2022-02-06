@@ -84,6 +84,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex);
+                sqlcon.Close();
             }
             txt_searchSales.Clear();
             calculate_grossTotal();
@@ -105,12 +106,14 @@ namespace Pizza_Club
                     dt = new DataTable();
                     da.Fill(dt);
                     dataGridView_viewSales.DataSource = dt;
+                    calculate_grossTotal();
 
                     sqlcon.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
                 }
             }
             //today sales
@@ -125,12 +128,14 @@ namespace Pizza_Club
                     dt = new DataTable();
                     da.Fill(dt);
                     dataGridView_viewSales.DataSource = dt;
+                    calculate_grossTotal();
 
                     sqlcon.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
                 }
             }
             //load 7 days sales
@@ -145,12 +150,14 @@ namespace Pizza_Club
                     dt = new DataTable();
                     da.Fill(dt);
                     dataGridView_viewSales.DataSource = dt;
+                    calculate_grossTotal();
 
                     sqlcon.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
                 }
             }
             //load 30 days sales
@@ -165,12 +172,14 @@ namespace Pizza_Club
                     dt = new DataTable();
                     da.Fill(dt);
                     dataGridView_viewSales.DataSource = dt;
+                    calculate_grossTotal();
 
                     sqlcon.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
                 }
             }
             //load sales of selected date
@@ -185,12 +194,14 @@ namespace Pizza_Club
                     dt = new DataTable();
                     da.Fill(dt);
                     dataGridView_viewSales.DataSource = dt;
+                    calculate_grossTotal();
 
                     sqlcon.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
                 }
             }
         }
@@ -242,6 +253,7 @@ namespace Pizza_Club
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                sqlcon.Close();
             }
         }
     }
