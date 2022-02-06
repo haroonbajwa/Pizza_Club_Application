@@ -232,48 +232,50 @@ namespace Pizza_Club
         // stock grams
         private void btn_updateStockGrams_Click(object sender, EventArgs e)
         {
-            //calculate usage grams Qty
-            int usageQty = prevQty - Convert.ToInt32(txt_StockGramsQty.Text);
-
-            try
+            if(txt_StockGramsId.Text != "" && txt_StockGramsName.Text != "")
             {
-                SqlCommand cmd;
-                cmd = new SqlCommand("UPDATE tbl_stockGrams SET quantity = @quantity WHERE Id = @Id", sqlcon);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Id", txt_StockGramsId.Text);
-                cmd.Parameters.AddWithValue("@quantity", txt_StockGramsQty.Text);
+                //calculate usage grams Qty
+                int usageQty = prevQty - Convert.ToInt32(txt_StockGramsQty.Text);
 
-                sqlcon.Open();
-                cmd.ExecuteNonQuery();
-                sqlcon.Close();
-                cmd.Parameters.Clear();
+                try
+                {
+                    SqlCommand cmd;
+                    cmd = new SqlCommand("UPDATE tbl_stockGrams SET quantity = @quantity WHERE Id = @Id", sqlcon);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Id", txt_StockGramsId.Text);
+                    cmd.Parameters.AddWithValue("@quantity", txt_StockGramsQty.Text);
 
-                btn_viewStockGrams_Click(sender, e);
-                MessageBox.Show("Stock information updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                    sqlcon.Close();
+                    cmd.Parameters.Clear();
 
-                auto_increment_usageId(sender, e);
-                //add usage value to tbl_usageGrams table  (usage = prevStock - newStock)
-                SqlCommand cmd1 = new SqlCommand("Insert into tbl_usageGrams Values (@Id, @name, @usageQty, @date, @select)", sqlcon);
-                cmd1.CommandType = CommandType.Text;
+                    btn_viewStockGrams_Click(sender, e);
+                    MessageBox.Show("Stock information updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                cmd1.Parameters.AddWithValue("@Id", usageGramsId);
-                cmd1.Parameters.AddWithValue("@name", txt_StockGramsName.Text);
-                cmd1.Parameters.AddWithValue("@usageQty", usageQty);
-                cmd1.Parameters.AddWithValue("@date", DateTime.Now);
-                cmd1.Parameters.AddWithValue("@select", false);
+                    auto_increment_usageId(sender, e);
+                    //add usage value to tbl_usageGrams table  (usage = prevStock - newStock)
+                    SqlCommand cmd1 = new SqlCommand("Insert into tbl_usageGrams Values (@Id, @name, @usageQty, @date, @select)", sqlcon);
+                    cmd1.CommandType = CommandType.Text;
 
-                sqlcon.Open();
-                cmd1.ExecuteNonQuery();
-                sqlcon.Close();
+                    cmd1.Parameters.AddWithValue("@Id", usageGramsId);
+                    cmd1.Parameters.AddWithValue("@name", txt_StockGramsName.Text);
+                    cmd1.Parameters.AddWithValue("@usageQty", usageQty);
+                    cmd1.Parameters.AddWithValue("@date", DateTime.Now);
+                    cmd1.Parameters.AddWithValue("@select", false);
 
-                ClearTextBoxes();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                sqlcon.Close();
-            }
-            
+                    sqlcon.Open();
+                    cmd1.ExecuteNonQuery();
+                    sqlcon.Close();
+
+                    ClearTextBoxes();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    sqlcon.Close();
+                }
+            }     
         }
 
         private void btn_deleteStockGrams_Click(object sender, EventArgs e)

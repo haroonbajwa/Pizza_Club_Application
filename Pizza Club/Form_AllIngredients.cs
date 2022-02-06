@@ -122,7 +122,7 @@ namespace Pizza_Club
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("UPDATE tbl_allIngredients SET name = @ingName, type = @type, WHERE id = @id", sqlcon);
+                SqlCommand cmd = new SqlCommand("UPDATE tbl_allIngredients SET name = @ingName, type = @type WHERE Id = @id", sqlcon);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@id", txt_ingId.Text);
                 cmd.Parameters.AddWithValue("@ingName", txt_ingName.Text);
@@ -203,7 +203,7 @@ namespace Pizza_Club
         private void ClearTextBoxes()
         {
             txt_ingName.Clear();
-            combo_ingType.Text = "";
+            combo_ingType.SelectedIndex = -1;
             txt_ingName.Focus();
         }
 
