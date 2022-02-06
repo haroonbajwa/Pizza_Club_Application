@@ -105,7 +105,7 @@ namespace Pizza_Club
             this.btn_viewStockPcs.Location = new System.Drawing.Point(283, 103);
             this.btn_viewStockPcs.Name = "btn_viewStockPcs";
             this.btn_viewStockPcs.Size = new System.Drawing.Size(128, 35);
-            this.btn_viewStockPcs.TabIndex = 10;
+            this.btn_viewStockPcs.TabIndex = 6;
             this.btn_viewStockPcs.Text = "View";
             this.btn_viewStockPcs.UseVisualStyleBackColor = false;
             this.btn_viewStockPcs.Click += new System.EventHandler(this.btn_viewStockPcs_Click);
@@ -118,7 +118,7 @@ namespace Pizza_Club
             this.btn_deleteStockPcs.Location = new System.Drawing.Point(155, 103);
             this.btn_deleteStockPcs.Name = "btn_deleteStockPcs";
             this.btn_deleteStockPcs.Size = new System.Drawing.Size(122, 35);
-            this.btn_deleteStockPcs.TabIndex = 9;
+            this.btn_deleteStockPcs.TabIndex = 5;
             this.btn_deleteStockPcs.Text = "Delete";
             this.btn_deleteStockPcs.UseVisualStyleBackColor = false;
             this.btn_deleteStockPcs.Click += new System.EventHandler(this.btn_deleteStockPcs_Click);
@@ -141,7 +141,7 @@ namespace Pizza_Club
             this.btn_updateStockPcs.Location = new System.Drawing.Point(21, 103);
             this.btn_updateStockPcs.Name = "btn_updateStockPcs";
             this.btn_updateStockPcs.Size = new System.Drawing.Size(128, 35);
-            this.btn_updateStockPcs.TabIndex = 8;
+            this.btn_updateStockPcs.TabIndex = 4;
             this.btn_updateStockPcs.Text = "Update";
             this.btn_updateStockPcs.UseVisualStyleBackColor = false;
             this.btn_updateStockPcs.Click += new System.EventHandler(this.btn_updateStockPcs_Click);
@@ -202,7 +202,7 @@ namespace Pizza_Club
             this.btn_clearStock.Location = new System.Drawing.Point(459, 94);
             this.btn_clearStock.Name = "btn_clearStock";
             this.btn_clearStock.Size = new System.Drawing.Size(134, 45);
-            this.btn_clearStock.TabIndex = 7;
+            this.btn_clearStock.TabIndex = 8;
             this.btn_clearStock.Text = "Reset";
             this.btn_clearStock.UseVisualStyleBackColor = false;
             this.btn_clearStock.Click += new System.EventHandler(this.btn_clearStock_Click);
@@ -232,7 +232,7 @@ namespace Pizza_Club
             this.btn_viewStockGrams.Location = new System.Drawing.Point(283, 103);
             this.btn_viewStockGrams.Name = "btn_viewStockGrams";
             this.btn_viewStockGrams.Size = new System.Drawing.Size(128, 35);
-            this.btn_viewStockGrams.TabIndex = 10;
+            this.btn_viewStockGrams.TabIndex = 14;
             this.btn_viewStockGrams.Text = "View";
             this.btn_viewStockGrams.UseVisualStyleBackColor = false;
             this.btn_viewStockGrams.Click += new System.EventHandler(this.btn_viewStockGrams_Click);
@@ -245,7 +245,7 @@ namespace Pizza_Club
             this.btn_deleteStockGrams.Location = new System.Drawing.Point(155, 103);
             this.btn_deleteStockGrams.Name = "btn_deleteStockGrams";
             this.btn_deleteStockGrams.Size = new System.Drawing.Size(122, 35);
-            this.btn_deleteStockGrams.TabIndex = 9;
+            this.btn_deleteStockGrams.TabIndex = 13;
             this.btn_deleteStockGrams.Text = "Delete";
             this.btn_deleteStockGrams.UseVisualStyleBackColor = false;
             this.btn_deleteStockGrams.Click += new System.EventHandler(this.btn_deleteStockGrams_Click);
@@ -268,7 +268,7 @@ namespace Pizza_Club
             this.btn_updateStockGrams.Location = new System.Drawing.Point(21, 103);
             this.btn_updateStockGrams.Name = "btn_updateStockGrams";
             this.btn_updateStockGrams.Size = new System.Drawing.Size(128, 35);
-            this.btn_updateStockGrams.TabIndex = 8;
+            this.btn_updateStockGrams.TabIndex = 12;
             this.btn_updateStockGrams.Text = "Update";
             this.btn_updateStockGrams.UseVisualStyleBackColor = false;
             this.btn_updateStockGrams.Click += new System.EventHandler(this.btn_updateStockGrams_Click);
@@ -291,7 +291,7 @@ namespace Pizza_Club
             this.txt_StockGramsId.Name = "txt_StockGramsId";
             this.txt_StockGramsId.ReadOnly = true;
             this.txt_StockGramsId.Size = new System.Drawing.Size(109, 21);
-            this.txt_StockGramsId.TabIndex = 1;
+            this.txt_StockGramsId.TabIndex = 9;
             // 
             // txt_StockGramsName
             // 
@@ -300,7 +300,7 @@ namespace Pizza_Club
             this.txt_StockGramsName.Location = new System.Drawing.Point(233, 9);
             this.txt_StockGramsName.Name = "txt_StockGramsName";
             this.txt_StockGramsName.Size = new System.Drawing.Size(178, 21);
-            this.txt_StockGramsName.TabIndex = 2;
+            this.txt_StockGramsName.TabIndex = 10;
             // 
             // label5
             // 
@@ -318,7 +318,7 @@ namespace Pizza_Club
             this.txt_StockGramsQty.Location = new System.Drawing.Point(233, 48);
             this.txt_StockGramsQty.Name = "txt_StockGramsQty";
             this.txt_StockGramsQty.Size = new System.Drawing.Size(178, 21);
-            this.txt_StockGramsQty.TabIndex = 3;
+            this.txt_StockGramsQty.TabIndex = 11;
             // 
             // label7
             // 
@@ -374,7 +374,7 @@ namespace Pizza_Club
             this.dataGridView_stockPCS.Name = "dataGridView_stockPCS";
             this.dataGridView_stockPCS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_stockPCS.Size = new System.Drawing.Size(525, 240);
-            this.dataGridView_stockPCS.TabIndex = 13;
+            this.dataGridView_stockPCS.TabIndex = 7;
             this.dataGridView_stockPCS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_stockPCS_MouseClick);
             // 
             // idDataGridViewTextBoxColumn
@@ -448,7 +448,7 @@ namespace Pizza_Club
             this.dataGridView_stockGrams.Name = "dataGridView_stockGrams";
             this.dataGridView_stockGrams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_stockGrams.Size = new System.Drawing.Size(517, 240);
-            this.dataGridView_stockGrams.TabIndex = 13;
+            this.dataGridView_stockGrams.TabIndex = 15;
             this.dataGridView_stockGrams.SelectionChanged += new System.EventHandler(this.dataGridView_stockGrams_SelectionChanged);
             this.dataGridView_stockGrams.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_stockGrams_MouseClick);
             // 

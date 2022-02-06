@@ -213,7 +213,7 @@ namespace Pizza_Club
             this.btn_closeSales.Location = new System.Drawing.Point(1019, 1);
             this.btn_closeSales.Name = "btn_closeSales";
             this.btn_closeSales.Size = new System.Drawing.Size(39, 33);
-            this.btn_closeSales.TabIndex = 42;
+            this.btn_closeSales.TabIndex = 44;
             this.btn_closeSales.Text = "X";
             this.btn_closeSales.UseVisualStyleBackColor = false;
             this.btn_closeSales.Click += new System.EventHandler(this.btn_closeSales_Click);
@@ -626,7 +626,7 @@ namespace Pizza_Club
             this.dataGridView_cart.Name = "dataGridView_cart";
             this.dataGridView_cart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_cart.Size = new System.Drawing.Size(307, 558);
-            this.dataGridView_cart.TabIndex = 25;
+            this.dataGridView_cart.TabIndex = 27;
             this.dataGridView_cart.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_cart_CellMouseUp);
             // 
             // DGVname
@@ -663,7 +663,7 @@ namespace Pizza_Club
             this.btn_deal1.Location = new System.Drawing.Point(3, 3);
             this.btn_deal1.Name = "btn_deal1";
             this.btn_deal1.Size = new System.Drawing.Size(144, 64);
-            this.btn_deal1.TabIndex = 26;
+            this.btn_deal1.TabIndex = 28;
             this.btn_deal1.Text = "Deal 1";
             this.btn_deal1.UseVisualStyleBackColor = false;
             this.btn_deal1.Click += new System.EventHandler(this.btn_deal1_Click);
@@ -678,7 +678,7 @@ namespace Pizza_Club
             this.btn_deal2.Location = new System.Drawing.Point(153, 3);
             this.btn_deal2.Name = "btn_deal2";
             this.btn_deal2.Size = new System.Drawing.Size(145, 64);
-            this.btn_deal2.TabIndex = 27;
+            this.btn_deal2.TabIndex = 29;
             this.btn_deal2.Text = "Deal 2";
             this.btn_deal2.UseVisualStyleBackColor = false;
             this.btn_deal2.Click += new System.EventHandler(this.btn_deal2_Click);
@@ -693,7 +693,7 @@ namespace Pizza_Club
             this.btn_deal3.Location = new System.Drawing.Point(3, 73);
             this.btn_deal3.Name = "btn_deal3";
             this.btn_deal3.Size = new System.Drawing.Size(144, 64);
-            this.btn_deal3.TabIndex = 28;
+            this.btn_deal3.TabIndex = 30;
             this.btn_deal3.Text = "Deal 3";
             this.btn_deal3.UseVisualStyleBackColor = false;
             this.btn_deal3.Click += new System.EventHandler(this.btn_deal3_Click);
@@ -708,7 +708,7 @@ namespace Pizza_Club
             this.btn_deal4.Location = new System.Drawing.Point(153, 73);
             this.btn_deal4.Name = "btn_deal4";
             this.btn_deal4.Size = new System.Drawing.Size(145, 64);
-            this.btn_deal4.TabIndex = 29;
+            this.btn_deal4.TabIndex = 31;
             this.btn_deal4.Text = "Deal 4";
             this.btn_deal4.UseVisualStyleBackColor = false;
             this.btn_deal4.Click += new System.EventHandler(this.btn_deal4_Click);
@@ -723,7 +723,7 @@ namespace Pizza_Club
             this.btn_deal5.Location = new System.Drawing.Point(3, 143);
             this.btn_deal5.Name = "btn_deal5";
             this.btn_deal5.Size = new System.Drawing.Size(144, 64);
-            this.btn_deal5.TabIndex = 30;
+            this.btn_deal5.TabIndex = 32;
             this.btn_deal5.Text = "Deal 5";
             this.btn_deal5.UseVisualStyleBackColor = false;
             this.btn_deal5.Click += new System.EventHandler(this.btn_deal5_Click);
@@ -738,7 +738,7 @@ namespace Pizza_Club
             this.btn_deal6.Location = new System.Drawing.Point(153, 143);
             this.btn_deal6.Name = "btn_deal6";
             this.btn_deal6.Size = new System.Drawing.Size(145, 64);
-            this.btn_deal6.TabIndex = 31;
+            this.btn_deal6.TabIndex = 33;
             this.btn_deal6.Text = "Deal 6";
             this.btn_deal6.UseVisualStyleBackColor = false;
             this.btn_deal6.Click += new System.EventHandler(this.btn_deal6_Click);
@@ -753,7 +753,7 @@ namespace Pizza_Club
             this.btn_deal7.Location = new System.Drawing.Point(3, 213);
             this.btn_deal7.Name = "btn_deal7";
             this.btn_deal7.Size = new System.Drawing.Size(144, 64);
-            this.btn_deal7.TabIndex = 32;
+            this.btn_deal7.TabIndex = 34;
             this.btn_deal7.Text = "Deal 7";
             this.btn_deal7.UseVisualStyleBackColor = false;
             this.btn_deal7.Click += new System.EventHandler(this.btn_deal7_Click);
@@ -768,7 +768,7 @@ namespace Pizza_Club
             this.btn_deal8.Location = new System.Drawing.Point(153, 213);
             this.btn_deal8.Name = "btn_deal8";
             this.btn_deal8.Size = new System.Drawing.Size(145, 64);
-            this.btn_deal8.TabIndex = 33;
+            this.btn_deal8.TabIndex = 35;
             this.btn_deal8.Text = "Deal 8";
             this.btn_deal8.UseVisualStyleBackColor = false;
             this.btn_deal8.Click += new System.EventHandler(this.btn_deal8_Click);
@@ -783,7 +783,7 @@ namespace Pizza_Club
             this.btn_deal9.Location = new System.Drawing.Point(3, 283);
             this.btn_deal9.Name = "btn_deal9";
             this.btn_deal9.Size = new System.Drawing.Size(144, 64);
-            this.btn_deal9.TabIndex = 34;
+            this.btn_deal9.TabIndex = 36;
             this.btn_deal9.Text = "Deal 9";
             this.btn_deal9.UseVisualStyleBackColor = false;
             this.btn_deal9.Click += new System.EventHandler(this.btn_deal9_Click);
@@ -798,7 +798,7 @@ namespace Pizza_Club
             this.btn_deal10.Location = new System.Drawing.Point(153, 283);
             this.btn_deal10.Name = "btn_deal10";
             this.btn_deal10.Size = new System.Drawing.Size(145, 64);
-            this.btn_deal10.TabIndex = 35;
+            this.btn_deal10.TabIndex = 37;
             this.btn_deal10.Text = "Deal 10";
             this.btn_deal10.UseVisualStyleBackColor = false;
             this.btn_deal10.Click += new System.EventHandler(this.btn_deal10_Click);
@@ -813,7 +813,7 @@ namespace Pizza_Club
             this.btn_deal11.Location = new System.Drawing.Point(3, 353);
             this.btn_deal11.Name = "btn_deal11";
             this.btn_deal11.Size = new System.Drawing.Size(144, 64);
-            this.btn_deal11.TabIndex = 36;
+            this.btn_deal11.TabIndex = 38;
             this.btn_deal11.Text = "Deal 11";
             this.btn_deal11.UseVisualStyleBackColor = false;
             this.btn_deal11.Click += new System.EventHandler(this.btn_deal11_Click);
@@ -828,7 +828,7 @@ namespace Pizza_Club
             this.btn_deal12.Location = new System.Drawing.Point(153, 353);
             this.btn_deal12.Name = "btn_deal12";
             this.btn_deal12.Size = new System.Drawing.Size(145, 64);
-            this.btn_deal12.TabIndex = 37;
+            this.btn_deal12.TabIndex = 39;
             this.btn_deal12.Text = "Deal 12";
             this.btn_deal12.UseVisualStyleBackColor = false;
             this.btn_deal12.Click += new System.EventHandler(this.btn_deal12_Click);
@@ -843,7 +843,7 @@ namespace Pizza_Club
             this.btn_deal13.Location = new System.Drawing.Point(3, 423);
             this.btn_deal13.Name = "btn_deal13";
             this.btn_deal13.Size = new System.Drawing.Size(144, 64);
-            this.btn_deal13.TabIndex = 38;
+            this.btn_deal13.TabIndex = 40;
             this.btn_deal13.Text = "Deal 13";
             this.btn_deal13.UseVisualStyleBackColor = false;
             this.btn_deal13.Click += new System.EventHandler(this.btn_deal13_Click);
@@ -858,7 +858,7 @@ namespace Pizza_Club
             this.btn_deal14.Location = new System.Drawing.Point(153, 423);
             this.btn_deal14.Name = "btn_deal14";
             this.btn_deal14.Size = new System.Drawing.Size(145, 64);
-            this.btn_deal14.TabIndex = 39;
+            this.btn_deal14.TabIndex = 41;
             this.btn_deal14.Text = "Deal 14";
             this.btn_deal14.UseVisualStyleBackColor = false;
             this.btn_deal14.Click += new System.EventHandler(this.btn_deal14_Click);
@@ -873,7 +873,7 @@ namespace Pizza_Club
             this.btn_deal15.Location = new System.Drawing.Point(3, 493);
             this.btn_deal15.Name = "btn_deal15";
             this.btn_deal15.Size = new System.Drawing.Size(144, 65);
-            this.btn_deal15.TabIndex = 40;
+            this.btn_deal15.TabIndex = 42;
             this.btn_deal15.Text = "Deal 15";
             this.btn_deal15.UseVisualStyleBackColor = false;
             this.btn_deal15.Click += new System.EventHandler(this.btn_deal15_Click);
@@ -888,7 +888,7 @@ namespace Pizza_Club
             this.btn_deal16.Location = new System.Drawing.Point(153, 493);
             this.btn_deal16.Name = "btn_deal16";
             this.btn_deal16.Size = new System.Drawing.Size(145, 65);
-            this.btn_deal16.TabIndex = 41;
+            this.btn_deal16.TabIndex = 43;
             this.btn_deal16.Text = "Deal 16";
             this.btn_deal16.UseVisualStyleBackColor = false;
             this.btn_deal16.Click += new System.EventHandler(this.btn_deal16_Click);
@@ -908,7 +908,7 @@ namespace Pizza_Club
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = global::Pizza_Club.Properties.Resources.pizzalogo;
+            this.pictureBox1.Image = global::Pizza_Club.Properties.Resources.club1;
             this.pictureBox1.Location = new System.Drawing.Point(626, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 54);
@@ -1030,7 +1030,7 @@ namespace Pizza_Club
             this.btn_resetCart.Location = new System.Drawing.Point(3, 117);
             this.btn_resetCart.Name = "btn_resetCart";
             this.btn_resetCart.Size = new System.Drawing.Size(85, 34);
-            this.btn_resetCart.TabIndex = 24;
+            this.btn_resetCart.TabIndex = 26;
             this.btn_resetCart.Text = "RESET";
             this.btn_resetCart.UseVisualStyleBackColor = true;
             this.btn_resetCart.Click += new System.EventHandler(this.btn_resetCart_Click);
@@ -1041,7 +1041,7 @@ namespace Pizza_Club
             this.btn_preview.Location = new System.Drawing.Point(94, 117);
             this.btn_preview.Name = "btn_preview";
             this.btn_preview.Size = new System.Drawing.Size(164, 34);
-            this.btn_preview.TabIndex = 23;
+            this.btn_preview.TabIndex = 25;
             this.btn_preview.Text = "PREVIEW";
             this.btn_preview.UseVisualStyleBackColor = true;
             this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
@@ -1052,7 +1052,7 @@ namespace Pizza_Club
             this.btn_pay.Location = new System.Drawing.Point(264, 117);
             this.btn_pay.Name = "btn_pay";
             this.btn_pay.Size = new System.Drawing.Size(166, 34);
-            this.btn_pay.TabIndex = 22;
+            this.btn_pay.TabIndex = 24;
             this.btn_pay.Text = "PAY";
             this.btn_pay.UseVisualStyleBackColor = true;
             this.btn_pay.Click += new System.EventHandler(this.btn_pay_Click);
@@ -1108,7 +1108,7 @@ namespace Pizza_Club
             this.txt_amountGiven.Location = new System.Drawing.Point(94, 41);
             this.txt_amountGiven.Name = "txt_amountGiven";
             this.txt_amountGiven.Size = new System.Drawing.Size(164, 22);
-            this.txt_amountGiven.TabIndex = 20;
+            this.txt_amountGiven.TabIndex = 23;
             this.txt_amountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_amountGiven.TextChanged += new System.EventHandler(this.txt_amountGiven_TextChanged);
             this.txt_amountGiven.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_amountGiven_KeyPress);
@@ -1141,7 +1141,7 @@ namespace Pizza_Club
             this.txt_extraCharges.Location = new System.Drawing.Point(94, 3);
             this.txt_extraCharges.Name = "txt_extraCharges";
             this.txt_extraCharges.Size = new System.Drawing.Size(164, 22);
-            this.txt_extraCharges.TabIndex = 26;
+            this.txt_extraCharges.TabIndex = 22;
             this.txt_extraCharges.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_extraCharges.TextChanged += new System.EventHandler(this.txt_extraCharges_TextChanged);
             // 
@@ -1168,7 +1168,7 @@ namespace Pizza_Club
             this.radio_dineIn.Location = new System.Drawing.Point(142, 3);
             this.radio_dineIn.Name = "radio_dineIn";
             this.radio_dineIn.Size = new System.Drawing.Size(74, 20);
-            this.radio_dineIn.TabIndex = 0;
+            this.radio_dineIn.TabIndex = 20;
             this.radio_dineIn.TabStop = true;
             this.radio_dineIn.Text = "Dine In";
             this.radio_dineIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1181,7 +1181,7 @@ namespace Pizza_Club
             this.radio_takeAway.Location = new System.Drawing.Point(222, 3);
             this.radio_takeAway.Name = "radio_takeAway";
             this.radio_takeAway.Size = new System.Drawing.Size(103, 20);
-            this.radio_takeAway.TabIndex = 0;
+            this.radio_takeAway.TabIndex = 21;
             this.radio_takeAway.TabStop = true;
             this.radio_takeAway.Text = "Take Away";
             this.radio_takeAway.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

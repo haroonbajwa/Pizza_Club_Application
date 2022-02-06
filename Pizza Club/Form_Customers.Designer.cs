@@ -147,7 +147,7 @@ namespace Pizza_Club
             this.dataGridView_customer.Name = "dataGridView_customer";
             this.dataGridView_customer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_customer.Size = new System.Drawing.Size(1049, 303);
-            this.dataGridView_customer.TabIndex = 17;
+            this.dataGridView_customer.TabIndex = 10;
             this.dataGridView_customer.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_customer_MouseClick);
             // 
             // panel2
@@ -171,7 +171,7 @@ namespace Pizza_Club
             this.btn_viewCustomer.Location = new System.Drawing.Point(143, 74);
             this.btn_viewCustomer.Name = "btn_viewCustomer";
             this.btn_viewCustomer.Size = new System.Drawing.Size(135, 65);
-            this.btn_viewCustomer.TabIndex = 10;
+            this.btn_viewCustomer.TabIndex = 8;
             this.btn_viewCustomer.Text = "View";
             this.btn_viewCustomer.UseVisualStyleBackColor = false;
             this.btn_viewCustomer.Click += new System.EventHandler(this.btn_viewCustomer_Click);
@@ -184,7 +184,7 @@ namespace Pizza_Club
             this.btn_deleteCustomer.Location = new System.Drawing.Point(3, 74);
             this.btn_deleteCustomer.Name = "btn_deleteCustomer";
             this.btn_deleteCustomer.Size = new System.Drawing.Size(135, 65);
-            this.btn_deleteCustomer.TabIndex = 9;
+            this.btn_deleteCustomer.TabIndex = 7;
             this.btn_deleteCustomer.Text = "Delete";
             this.btn_deleteCustomer.UseVisualStyleBackColor = false;
             this.btn_deleteCustomer.Click += new System.EventHandler(this.btn_deleteCustomer_Click);
@@ -197,7 +197,7 @@ namespace Pizza_Club
             this.btn_updateCustomer.Location = new System.Drawing.Point(143, 3);
             this.btn_updateCustomer.Name = "btn_updateCustomer";
             this.btn_updateCustomer.Size = new System.Drawing.Size(135, 65);
-            this.btn_updateCustomer.TabIndex = 8;
+            this.btn_updateCustomer.TabIndex = 6;
             this.btn_updateCustomer.Text = "Update";
             this.btn_updateCustomer.UseVisualStyleBackColor = false;
             this.btn_updateCustomer.Click += new System.EventHandler(this.btn_updateCustomer_Click);
@@ -210,7 +210,7 @@ namespace Pizza_Club
             this.btn_addCustomer.Location = new System.Drawing.Point(3, 3);
             this.btn_addCustomer.Name = "btn_addCustomer";
             this.btn_addCustomer.Size = new System.Drawing.Size(135, 65);
-            this.btn_addCustomer.TabIndex = 7;
+            this.btn_addCustomer.TabIndex = 5;
             this.btn_addCustomer.Text = "ADD";
             this.btn_addCustomer.UseVisualStyleBackColor = false;
             this.btn_addCustomer.Click += new System.EventHandler(this.btn_addCustomer_Click);
@@ -233,7 +233,7 @@ namespace Pizza_Club
             this.btn_clearCustomer.Location = new System.Drawing.Point(635, 106);
             this.btn_clearCustomer.Name = "btn_clearCustomer";
             this.btn_clearCustomer.Size = new System.Drawing.Size(79, 28);
-            this.btn_clearCustomer.TabIndex = 7;
+            this.btn_clearCustomer.TabIndex = 9;
             this.btn_clearCustomer.Text = "Reset";
             this.btn_clearCustomer.UseVisualStyleBackColor = false;
             this.btn_clearCustomer.Click += new System.EventHandler(this.btn_clearCustomer_Click);

@@ -275,7 +275,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DatabasePC.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\pizzalogo.png" />
+    <None Include="Resources\club1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

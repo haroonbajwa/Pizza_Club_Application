@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_gramsId = new System.Windows.Forms.TextBox();
             this.btn_purchaseGrams = new System.Windows.Forms.Button();
             this.btn_deleteGrams = new System.Windows.Forms.Button();
@@ -53,13 +53,13 @@
             this.tblpurchaseGramsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databasePCDataSet = new Pizza_Club.DatabasePCDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.combo_gramsName = new System.Windows.Forms.ComboBox();
+            this.txt_gramsPrice = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tbl_purchaseGramsTableAdapter = new Pizza_Club.DatabasePCDataSetTableAdapters.tbl_purchaseGramsTableAdapter();
             this.txt_gramsName = new System.Windows.Forms.TextBox();
-            this.combo_gramsName = new System.Windows.Forms.ComboBox();
             this.label_grossTotalGrms = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_gramsPrice = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_purchaseGrams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblpurchaseGramsBindingSource)).BeginInit();
@@ -79,39 +79,39 @@
             // 
             // btn_purchaseGrams
             // 
-            this.btn_purchaseGrams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_purchaseGrams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn_purchaseGrams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_purchaseGrams.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_purchaseGrams.Location = new System.Drawing.Point(3, 7);
             this.btn_purchaseGrams.Name = "btn_purchaseGrams";
             this.btn_purchaseGrams.Size = new System.Drawing.Size(140, 65);
-            this.btn_purchaseGrams.TabIndex = 7;
+            this.btn_purchaseGrams.TabIndex = 5;
             this.btn_purchaseGrams.Text = "Purchase";
             this.btn_purchaseGrams.UseVisualStyleBackColor = false;
             this.btn_purchaseGrams.Click += new System.EventHandler(this.btn_purchaseGrams_Click);
             // 
             // btn_deleteGrams
             // 
-            this.btn_deleteGrams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_deleteGrams.BackColor = System.Drawing.Color.Red;
             this.btn_deleteGrams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deleteGrams.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deleteGrams.Location = new System.Drawing.Point(148, 7);
             this.btn_deleteGrams.Name = "btn_deleteGrams";
             this.btn_deleteGrams.Size = new System.Drawing.Size(140, 65);
-            this.btn_deleteGrams.TabIndex = 9;
+            this.btn_deleteGrams.TabIndex = 6;
             this.btn_deleteGrams.Text = "Delete ";
             this.btn_deleteGrams.UseVisualStyleBackColor = false;
             this.btn_deleteGrams.Click += new System.EventHandler(this.btn_deleteGrams_Click);
             // 
             // btn_viewGrams
             // 
-            this.btn_viewGrams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_viewGrams.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btn_viewGrams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_viewGrams.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_viewGrams.Location = new System.Drawing.Point(293, 7);
             this.btn_viewGrams.Name = "btn_viewGrams";
             this.btn_viewGrams.Size = new System.Drawing.Size(140, 65);
-            this.btn_viewGrams.TabIndex = 8;
+            this.btn_viewGrams.TabIndex = 7;
             this.btn_viewGrams.Text = "View";
             this.btn_viewGrams.UseVisualStyleBackColor = false;
             this.btn_viewGrams.Click += new System.EventHandler(this.btn_viewGrams_Click);
@@ -137,7 +137,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(240, 118);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.TabIndex = 8;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
@@ -159,7 +159,7 @@
             this.btn_clearGrams.Location = new System.Drawing.Point(480, 110);
             this.btn_clearGrams.Name = "btn_clearGrams";
             this.btn_clearGrams.Size = new System.Drawing.Size(79, 28);
-            this.btn_clearGrams.TabIndex = 10;
+            this.btn_clearGrams.TabIndex = 9;
             this.btn_clearGrams.Text = "Reset";
             this.btn_clearGrams.UseVisualStyleBackColor = false;
             this.btn_clearGrams.Click += new System.EventHandler(this.btn_clearGrams_Click);
@@ -208,14 +208,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_purchaseGrams.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_purchaseGrams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_purchaseGrams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_purchaseGrams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_purchaseGrams.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -225,20 +225,20 @@
             this.dateDataGridViewTextBoxColumn,
             this.selectDataGridViewCheckBoxColumn});
             this.dataGridView_purchaseGrams.DataSource = this.tblpurchaseGramsBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_purchaseGrams.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_purchaseGrams.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_purchaseGrams.Location = new System.Drawing.Point(0, 152);
             this.dataGridView_purchaseGrams.MultiSelect = false;
             this.dataGridView_purchaseGrams.Name = "dataGridView_purchaseGrams";
             this.dataGridView_purchaseGrams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_purchaseGrams.Size = new System.Drawing.Size(1052, 242);
-            this.dataGridView_purchaseGrams.TabIndex = 12;
+            this.dataGridView_purchaseGrams.TabIndex = 10;
             this.dataGridView_purchaseGrams.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_purchaseGrams_MouseClick);
             // 
             // idDataGridViewTextBoxColumn
@@ -312,6 +312,34 @@
             this.panel1.Size = new System.Drawing.Size(1052, 146);
             this.panel1.TabIndex = 13;
             // 
+            // combo_gramsName
+            // 
+            this.combo_gramsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_gramsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_gramsName.FormattingEnabled = true;
+            this.combo_gramsName.Location = new System.Drawing.Point(381, 15);
+            this.combo_gramsName.Name = "combo_gramsName";
+            this.combo_gramsName.Size = new System.Drawing.Size(178, 23);
+            this.combo_gramsName.TabIndex = 2;
+            // 
+            // txt_gramsPrice
+            // 
+            this.txt_gramsPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gramsPrice.Location = new System.Drawing.Point(381, 58);
+            this.txt_gramsPrice.Name = "txt_gramsPrice";
+            this.txt_gramsPrice.Size = new System.Drawing.Size(178, 21);
+            this.txt_gramsPrice.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(320, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Price ";
+            // 
             // tbl_purchaseGramsTableAdapter
             // 
             this.tbl_purchaseGramsTableAdapter.ClearBeforeFill = true;
@@ -323,16 +351,6 @@
             this.txt_gramsName.Name = "txt_gramsName";
             this.txt_gramsName.Size = new System.Drawing.Size(178, 21);
             this.txt_gramsName.TabIndex = 6;
-            // 
-            // combo_gramsName
-            // 
-            this.combo_gramsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combo_gramsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_gramsName.FormattingEnabled = true;
-            this.combo_gramsName.Location = new System.Drawing.Point(381, 15);
-            this.combo_gramsName.Name = "combo_gramsName";
-            this.combo_gramsName.Size = new System.Drawing.Size(178, 23);
-            this.combo_gramsName.TabIndex = 12;
             // 
             // label_grossTotalGrms
             // 
@@ -355,24 +373,6 @@
             this.label4.Size = new System.Drawing.Size(132, 26);
             this.label4.TabIndex = 14;
             this.label4.Text = "Gross Total:-";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(320, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Price ";
-            // 
-            // txt_gramsPrice
-            // 
-            this.txt_gramsPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gramsPrice.Location = new System.Drawing.Point(381, 58);
-            this.txt_gramsPrice.Name = "txt_gramsPrice";
-            this.txt_gramsPrice.Size = new System.Drawing.Size(178, 21);
-            this.txt_gramsPrice.TabIndex = 6;
             // 
             // Form_PurchaseGrams
             // 

@@ -23,6 +23,8 @@ namespace Pizza_Club
         public string cartProductprice;
         public string selectedSize;
 
+        string orderType = "";
+
         //function of load customers in combo box
         /*void load_customers()
         {
@@ -211,6 +213,7 @@ namespace Pizza_Club
             //auto check pizza size to small when form loads
             radio_small.Checked = true;
             radio_dineIn.Checked = true;
+            orderType = "Dine In";
         }
 
         //fetch customer data from database when anyone is selected from combobox
@@ -826,7 +829,6 @@ namespace Pizza_Club
                     {
                         auto_increment_id(sender, e);
 
-                        string orderType = "";
                         //check order type
                         if(radio_dineIn.Checked == true)
                         {
@@ -1650,11 +1652,11 @@ namespace Pizza_Club
         //design of receipt
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            Bitmap bmp = Properties.Resources.pizzalogo;
+            Bitmap bmp = Properties.Resources.club1;
             //Bitmap bmp2 = Properties.Resources.fotolarge;
             Image img = bmp;
             //Image logo = bmp2;
-            e.Graphics.DrawImage(img, 5, 5, 75, 70);
+            e.Graphics.DrawImage(img, 5, 5, 77, 70);
             //e.Graphics.DrawImage(logo, 700, 20, 150, 80);
             //e.Graphics.DrawString("Customer Name: " + txtBoxCustomer.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, 220));
             e.Graphics.DrawString("PIZZA CLUB", new Font("Arial", 9, FontStyle.Bold), Brushes.Black, new Point(100, 20));
@@ -1670,9 +1672,9 @@ namespace Pizza_Club
             //e.Graphics.DrawString("Time: " + DateTime.Now.ToLongTimeString(), new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, 310));
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 100));
             e.Graphics.DrawString("ITEM", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 110));
-            e.Graphics.DrawString("PRICE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(110, 110));
-            e.Graphics.DrawString("QTY", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(170, 110));
-            e.Graphics.DrawString("Total", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(220, 110));
+            e.Graphics.DrawString("PRICE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(112, 110));
+            e.Graphics.DrawString("QTY", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(172, 110));
+            e.Graphics.DrawString("Total", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(222, 110));
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 120));
             int gap = 130;
             //int subTotal1 = 0;
@@ -1682,11 +1684,11 @@ namespace Pizza_Club
                 {   //item name
                     e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[0].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(10, gap));
                     //item price
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(110, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(112, gap));
                     //quantity
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(170, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(172, gap));
                     //total
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(220, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(222, gap));
                     gap = gap + 20;
                     //subTotal1 = subTotal1 + (Convert.ToInt32(sales_dataGridView.Rows[i].Cells[5].Value.ToString()));
                 }
@@ -1711,6 +1713,7 @@ namespace Pizza_Club
             //if (txtBoxFinalCost.Text != null)
             //e.Graphics.DrawString("Taxes: " + printTax + ".00 Rs/-", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, gap));
             //gap = gap + 20;
+            e.Graphics.DrawString(orderType, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(10, gap));
             e.Graphics.DrawString("Final Amount: " + label_cartGrossTotal.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(160, gap));
             gap = gap + 10;
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
@@ -1725,10 +1728,11 @@ namespace Pizza_Club
             e.Graphics.DrawString("Thanks for your order!", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(90, gap));
             gap = gap + 10;
             e.Graphics.DrawString("For Home Delivery, Call us at: 0314 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(48, gap));
-            //gap = gap + 10;
+            gap = gap + 10;
+            e.Graphics.DrawString("Whatsapp: 0301 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(123, gap));
             //e.Graphics.DrawString("Previously known as BAJWA SUPER STORE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(48, gap));
             gap = gap + 20;
-            e.Graphics.DrawString("Developer Contact: 0304-2998055", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(70, gap));
+            e.Graphics.DrawString("Developer Contact: 0304-2998055", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(78, gap));
             gap = gap + 10;
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;

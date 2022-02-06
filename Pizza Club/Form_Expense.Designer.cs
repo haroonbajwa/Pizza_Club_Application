@@ -89,7 +89,7 @@ namespace Pizza_Club
             this.dataGridView_expense.DataSource = this.tblexpenseBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -99,7 +99,7 @@ namespace Pizza_Club
             this.dataGridView_expense.Name = "dataGridView_expense";
             this.dataGridView_expense.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_expense.Size = new System.Drawing.Size(1050, 215);
-            this.dataGridView_expense.TabIndex = 11;
+            this.dataGridView_expense.TabIndex = 10;
             this.dataGridView_expense.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_expense_MouseClick);
             // 
             // idDataGridViewTextBoxColumn
@@ -171,7 +171,7 @@ namespace Pizza_Club
             this.btn_clearExpnse.Location = new System.Drawing.Point(519, 110);
             this.btn_clearExpnse.Name = "btn_clearExpnse";
             this.btn_clearExpnse.Size = new System.Drawing.Size(79, 28);
-            this.btn_clearExpnse.TabIndex = 7;
+            this.btn_clearExpnse.TabIndex = 9;
             this.btn_clearExpnse.Text = "Reset";
             this.btn_clearExpnse.UseVisualStyleBackColor = false;
             this.btn_clearExpnse.Click += new System.EventHandler(this.btn_clearExpnse_Click);
@@ -254,7 +254,7 @@ namespace Pizza_Club
             this.btn_viewExpense.Location = new System.Drawing.Point(184, 74);
             this.btn_viewExpense.Name = "btn_viewExpense";
             this.btn_viewExpense.Size = new System.Drawing.Size(181, 65);
-            this.btn_viewExpense.TabIndex = 10;
+            this.btn_viewExpense.TabIndex = 7;
             this.btn_viewExpense.Text = "View";
             this.btn_viewExpense.UseVisualStyleBackColor = false;
             this.btn_viewExpense.Click += new System.EventHandler(this.btn_viewExpense_Click);
@@ -267,7 +267,7 @@ namespace Pizza_Club
             this.btn_deleteExpense.Location = new System.Drawing.Point(3, 73);
             this.btn_deleteExpense.Name = "btn_deleteExpense";
             this.btn_deleteExpense.Size = new System.Drawing.Size(175, 65);
-            this.btn_deleteExpense.TabIndex = 9;
+            this.btn_deleteExpense.TabIndex = 6;
             this.btn_deleteExpense.Text = "Delete";
             this.btn_deleteExpense.UseVisualStyleBackColor = false;
             this.btn_deleteExpense.Click += new System.EventHandler(this.btn_deleteExpense_Click);
@@ -279,7 +279,7 @@ namespace Pizza_Club
             this.dateTimePicker1.Location = new System.Drawing.Point(165, 153);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.TabIndex = 8;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
@@ -301,7 +301,7 @@ namespace Pizza_Club
             this.btn_updateExpense.Location = new System.Drawing.Point(184, 4);
             this.btn_updateExpense.Name = "btn_updateExpense";
             this.btn_updateExpense.Size = new System.Drawing.Size(181, 65);
-            this.btn_updateExpense.TabIndex = 8;
+            this.btn_updateExpense.TabIndex = 5;
             this.btn_updateExpense.Text = "Update";
             this.btn_updateExpense.UseVisualStyleBackColor = false;
             this.btn_updateExpense.Click += new System.EventHandler(this.btn_updateExpense_Click);
@@ -314,7 +314,7 @@ namespace Pizza_Club
             this.btn_addExpense.Location = new System.Drawing.Point(3, 4);
             this.btn_addExpense.Name = "btn_addExpense";
             this.btn_addExpense.Size = new System.Drawing.Size(175, 65);
-            this.btn_addExpense.TabIndex = 7;
+            this.btn_addExpense.TabIndex = 4;
             this.btn_addExpense.Text = "ADD";
             this.btn_addExpense.UseVisualStyleBackColor = false;
             this.btn_addExpense.Click += new System.EventHandler(this.btn_addExpense_Click);

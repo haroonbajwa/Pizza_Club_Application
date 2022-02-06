@@ -84,7 +84,7 @@ namespace Pizza_Club
             this.btn_clearSideOrder.Location = new System.Drawing.Point(525, 109);
             this.btn_clearSideOrder.Name = "btn_clearSideOrder";
             this.btn_clearSideOrder.Size = new System.Drawing.Size(79, 28);
-            this.btn_clearSideOrder.TabIndex = 7;
+            this.btn_clearSideOrder.TabIndex = 8;
             this.btn_clearSideOrder.Text = "Reset";
             this.btn_clearSideOrder.UseVisualStyleBackColor = false;
             this.btn_clearSideOrder.Click += new System.EventHandler(this.btn_clearSideOrder_Click);
@@ -165,7 +165,7 @@ namespace Pizza_Club
             this.btn_viewSideOrder.Location = new System.Drawing.Point(184, 74);
             this.btn_viewSideOrder.Name = "btn_viewSideOrder";
             this.btn_viewSideOrder.Size = new System.Drawing.Size(181, 65);
-            this.btn_viewSideOrder.TabIndex = 10;
+            this.btn_viewSideOrder.TabIndex = 7;
             this.btn_viewSideOrder.Text = "View";
             this.btn_viewSideOrder.UseVisualStyleBackColor = false;
             this.btn_viewSideOrder.Click += new System.EventHandler(this.btn_viewSideOrder_Click);
@@ -178,7 +178,7 @@ namespace Pizza_Club
             this.btn_deleteSideOrder.Location = new System.Drawing.Point(3, 73);
             this.btn_deleteSideOrder.Name = "btn_deleteSideOrder";
             this.btn_deleteSideOrder.Size = new System.Drawing.Size(175, 65);
-            this.btn_deleteSideOrder.TabIndex = 9;
+            this.btn_deleteSideOrder.TabIndex = 6;
             this.btn_deleteSideOrder.Text = "Delete";
             this.btn_deleteSideOrder.UseVisualStyleBackColor = false;
             this.btn_deleteSideOrder.Click += new System.EventHandler(this.btn_deleteSideOrder_Click);
@@ -191,7 +191,7 @@ namespace Pizza_Club
             this.btn_updateSideOrder.Location = new System.Drawing.Point(184, 4);
             this.btn_updateSideOrder.Name = "btn_updateSideOrder";
             this.btn_updateSideOrder.Size = new System.Drawing.Size(181, 65);
-            this.btn_updateSideOrder.TabIndex = 8;
+            this.btn_updateSideOrder.TabIndex = 5;
             this.btn_updateSideOrder.Text = "Update";
             this.btn_updateSideOrder.UseVisualStyleBackColor = false;
             this.btn_updateSideOrder.Click += new System.EventHandler(this.btn_updateSideOrder_Click);
@@ -204,7 +204,7 @@ namespace Pizza_Club
             this.btn_addSideOrder.Location = new System.Drawing.Point(3, 4);
             this.btn_addSideOrder.Name = "btn_addSideOrder";
             this.btn_addSideOrder.Size = new System.Drawing.Size(175, 65);
-            this.btn_addSideOrder.TabIndex = 7;
+            this.btn_addSideOrder.TabIndex = 4;
             this.btn_addSideOrder.Text = "ADD";
             this.btn_addSideOrder.UseVisualStyleBackColor = false;
             this.btn_addSideOrder.Click += new System.EventHandler(this.btn_addSideOder_Click);
@@ -257,7 +257,7 @@ namespace Pizza_Club
             this.dataGridView_SideOrder.Name = "dataGridView_SideOrder";
             this.dataGridView_SideOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_SideOrder.Size = new System.Drawing.Size(1050, 303);
-            this.dataGridView_SideOrder.TabIndex = 10;
+            this.dataGridView_SideOrder.TabIndex = 9;
             this.dataGridView_SideOrder.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_SideOrder_MouseClick);
             // 
             // idDataGridViewTextBoxColumn

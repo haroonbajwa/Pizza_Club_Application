@@ -159,7 +159,7 @@ namespace Pizza_Club
             this.btn_clearBurger.Location = new System.Drawing.Point(510, 110);
             this.btn_clearBurger.Name = "btn_clearBurger";
             this.btn_clearBurger.Size = new System.Drawing.Size(79, 28);
-            this.btn_clearBurger.TabIndex = 4;
+            this.btn_clearBurger.TabIndex = 8;
             this.btn_clearBurger.Text = "Reset";
             this.btn_clearBurger.UseVisualStyleBackColor = false;
             this.btn_clearBurger.Click += new System.EventHandler(this.btn_clearBurger_Click);
@@ -241,7 +241,7 @@ namespace Pizza_Club
             this.btn_viewBurger.Location = new System.Drawing.Point(184, 74);
             this.btn_viewBurger.Name = "btn_viewBurger";
             this.btn_viewBurger.Size = new System.Drawing.Size(181, 65);
-            this.btn_viewBurger.TabIndex = 8;
+            this.btn_viewBurger.TabIndex = 7;
             this.btn_viewBurger.Text = "View";
             this.btn_viewBurger.UseVisualStyleBackColor = false;
             this.btn_viewBurger.Click += new System.EventHandler(this.btn_viewBurger_Click);
@@ -254,7 +254,7 @@ namespace Pizza_Club
             this.btn_deleteBurger.Location = new System.Drawing.Point(3, 73);
             this.btn_deleteBurger.Name = "btn_deleteBurger";
             this.btn_deleteBurger.Size = new System.Drawing.Size(175, 65);
-            this.btn_deleteBurger.TabIndex = 7;
+            this.btn_deleteBurger.TabIndex = 6;
             this.btn_deleteBurger.Text = "Delete";
             this.btn_deleteBurger.UseVisualStyleBackColor = false;
             this.btn_deleteBurger.Click += new System.EventHandler(this.btn_deleteBurger_Click);
@@ -267,7 +267,7 @@ namespace Pizza_Club
             this.btn_updateBurger.Location = new System.Drawing.Point(184, 4);
             this.btn_updateBurger.Name = "btn_updateBurger";
             this.btn_updateBurger.Size = new System.Drawing.Size(181, 65);
-            this.btn_updateBurger.TabIndex = 6;
+            this.btn_updateBurger.TabIndex = 5;
             this.btn_updateBurger.Text = "Update";
             this.btn_updateBurger.UseVisualStyleBackColor = false;
             this.btn_updateBurger.Click += new System.EventHandler(this.btn_updateBurger_Click);
@@ -280,7 +280,7 @@ namespace Pizza_Club
             this.btn_addBurger.Location = new System.Drawing.Point(3, 4);
             this.btn_addBurger.Name = "btn_addBurger";
             this.btn_addBurger.Size = new System.Drawing.Size(175, 65);
-            this.btn_addBurger.TabIndex = 5;
+            this.btn_addBurger.TabIndex = 4;
             this.btn_addBurger.Text = "ADD";
             this.btn_addBurger.UseVisualStyleBackColor = false;
             this.btn_addBurger.Click += new System.EventHandler(this.btn_addBurger_Click);

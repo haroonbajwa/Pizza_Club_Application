@@ -30,8 +30,8 @@ namespace Pizza_Club
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_usageName = new System.Windows.Forms.TextBox();
             this.btn_clearUsage = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@ namespace Pizza_Club
             this.txt_usageName.Location = new System.Drawing.Point(381, 17);
             this.txt_usageName.Name = "txt_usageName";
             this.txt_usageName.Size = new System.Drawing.Size(178, 21);
-            this.txt_usageName.TabIndex = 16;
+            this.txt_usageName.TabIndex = 2;
             // 
             // btn_clearUsage
             // 
@@ -79,7 +79,7 @@ namespace Pizza_Club
             this.btn_clearUsage.Location = new System.Drawing.Point(480, 110);
             this.btn_clearUsage.Name = "btn_clearUsage";
             this.btn_clearUsage.Size = new System.Drawing.Size(79, 28);
-            this.btn_clearUsage.TabIndex = 10;
+            this.btn_clearUsage.TabIndex = 8;
             this.btn_clearUsage.Text = "Reset";
             this.btn_clearUsage.UseVisualStyleBackColor = false;
             this.btn_clearUsage.Click += new System.EventHandler(this.btn_clearUsage_Click);
@@ -129,7 +129,8 @@ namespace Pizza_Club
             this.dateTimePicker1.Location = new System.Drawing.Point(240, 118);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
             // 
@@ -158,39 +159,39 @@ namespace Pizza_Club
             // 
             // btn_updateUsage
             // 
-            this.btn_updateUsage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_updateUsage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_updateUsage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_updateUsage.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_updateUsage.Location = new System.Drawing.Point(3, 7);
             this.btn_updateUsage.Name = "btn_updateUsage";
             this.btn_updateUsage.Size = new System.Drawing.Size(140, 65);
-            this.btn_updateUsage.TabIndex = 7;
+            this.btn_updateUsage.TabIndex = 4;
             this.btn_updateUsage.Text = "Update";
             this.btn_updateUsage.UseVisualStyleBackColor = false;
             this.btn_updateUsage.Click += new System.EventHandler(this.btn_updateUsage_Click);
             // 
             // btn_deleteUsage
             // 
-            this.btn_deleteUsage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_deleteUsage.BackColor = System.Drawing.Color.Red;
             this.btn_deleteUsage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deleteUsage.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_deleteUsage.Location = new System.Drawing.Point(148, 7);
             this.btn_deleteUsage.Name = "btn_deleteUsage";
             this.btn_deleteUsage.Size = new System.Drawing.Size(140, 65);
-            this.btn_deleteUsage.TabIndex = 9;
+            this.btn_deleteUsage.TabIndex = 5;
             this.btn_deleteUsage.Text = "Delete ";
             this.btn_deleteUsage.UseVisualStyleBackColor = false;
             this.btn_deleteUsage.Click += new System.EventHandler(this.btn_deleteUsage_Click);
             // 
             // btn_viewUsage
             // 
-            this.btn_viewUsage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_viewUsage.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btn_viewUsage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_viewUsage.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_viewUsage.Location = new System.Drawing.Point(293, 7);
             this.btn_viewUsage.Name = "btn_viewUsage";
             this.btn_viewUsage.Size = new System.Drawing.Size(140, 65);
-            this.btn_viewUsage.TabIndex = 8;
+            this.btn_viewUsage.TabIndex = 6;
             this.btn_viewUsage.Text = "View";
             this.btn_viewUsage.UseVisualStyleBackColor = false;
             this.btn_viewUsage.Click += new System.EventHandler(this.btn_viewUsage_Click);
@@ -211,14 +212,14 @@ namespace Pizza_Club
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_usageGrams.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_usageGrams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_usageGrams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView_usageGrams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_usageGrams.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -227,20 +228,20 @@ namespace Pizza_Club
             this.dateDataGridViewTextBoxColumn,
             this.selectDataGridViewCheckBoxColumn});
             this.dataGridView_usageGrams.DataSource = this.tblusageGramsBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_usageGrams.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_usageGrams.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView_usageGrams.Location = new System.Drawing.Point(0, 161);
             this.dataGridView_usageGrams.MultiSelect = false;
             this.dataGridView_usageGrams.Name = "dataGridView_usageGrams";
             this.dataGridView_usageGrams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_usageGrams.Size = new System.Drawing.Size(1052, 296);
-            this.dataGridView_usageGrams.TabIndex = 17;
+            this.dataGridView_usageGrams.TabIndex = 9;
             this.dataGridView_usageGrams.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_usageGrams_MouseClick);
             // 
             // idDataGridViewTextBoxColumn

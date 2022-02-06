@@ -81,7 +81,7 @@ namespace Pizza_Club
             this.btn_viewIng.Location = new System.Drawing.Point(184, 74);
             this.btn_viewIng.Name = "btn_viewIng";
             this.btn_viewIng.Size = new System.Drawing.Size(181, 65);
-            this.btn_viewIng.TabIndex = 8;
+            this.btn_viewIng.TabIndex = 7;
             this.btn_viewIng.Text = "View";
             this.btn_viewIng.UseVisualStyleBackColor = false;
             this.btn_viewIng.Click += new System.EventHandler(this.btn_viewIng_Click);
@@ -94,7 +94,7 @@ namespace Pizza_Club
             this.btn_deleteIng.Location = new System.Drawing.Point(3, 73);
             this.btn_deleteIng.Name = "btn_deleteIng";
             this.btn_deleteIng.Size = new System.Drawing.Size(175, 65);
-            this.btn_deleteIng.TabIndex = 7;
+            this.btn_deleteIng.TabIndex = 6;
             this.btn_deleteIng.Text = "Delete";
             this.btn_deleteIng.UseVisualStyleBackColor = false;
             this.btn_deleteIng.Click += new System.EventHandler(this.btn_deleteIng_Click);
@@ -107,7 +107,7 @@ namespace Pizza_Club
             this.btn_updateIng.Location = new System.Drawing.Point(184, 4);
             this.btn_updateIng.Name = "btn_updateIng";
             this.btn_updateIng.Size = new System.Drawing.Size(181, 65);
-            this.btn_updateIng.TabIndex = 6;
+            this.btn_updateIng.TabIndex = 5;
             this.btn_updateIng.Text = "Update";
             this.btn_updateIng.UseVisualStyleBackColor = false;
             this.btn_updateIng.Click += new System.EventHandler(this.btn_updateIng_Click);
@@ -120,7 +120,7 @@ namespace Pizza_Club
             this.btn_addIng.Location = new System.Drawing.Point(3, 4);
             this.btn_addIng.Name = "btn_addIng";
             this.btn_addIng.Size = new System.Drawing.Size(175, 65);
-            this.btn_addIng.TabIndex = 5;
+            this.btn_addIng.TabIndex = 4;
             this.btn_addIng.Text = "ADD";
             this.btn_addIng.UseVisualStyleBackColor = false;
             this.btn_addIng.Click += new System.EventHandler(this.btn_addIng_Click);
@@ -152,7 +152,7 @@ namespace Pizza_Club
             this.combo_ingType.Location = new System.Drawing.Point(231, 89);
             this.combo_ingType.Name = "combo_ingType";
             this.combo_ingType.Size = new System.Drawing.Size(245, 23);
-            this.combo_ingType.TabIndex = 5;
+            this.combo_ingType.TabIndex = 3;
             // 
             // btn_clear_ing
             // 
@@ -162,7 +162,7 @@ namespace Pizza_Club
             this.btn_clear_ing.Location = new System.Drawing.Point(529, 110);
             this.btn_clear_ing.Name = "btn_clear_ing";
             this.btn_clear_ing.Size = new System.Drawing.Size(79, 28);
-            this.btn_clear_ing.TabIndex = 4;
+            this.btn_clear_ing.TabIndex = 8;
             this.btn_clear_ing.Text = "Reset";
             this.btn_clear_ing.UseVisualStyleBackColor = false;
             this.btn_clear_ing.Click += new System.EventHandler(this.btn_clear_ing_Click);
@@ -249,7 +249,7 @@ namespace Pizza_Club
             this.dataGridView_Ingredients.Name = "dataGridView_Ingredients";
             this.dataGridView_Ingredients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_Ingredients.Size = new System.Drawing.Size(1040, 290);
-            this.dataGridView_Ingredients.TabIndex = 13;
+            this.dataGridView_Ingredients.TabIndex = 9;
             this.dataGridView_Ingredients.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_Ingredients_MouseClick);
             // 
             // idDataGridViewTextBoxColumn

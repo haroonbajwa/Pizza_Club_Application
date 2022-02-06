@@ -87,7 +87,7 @@ namespace Pizza_Club
             this.btn_clearUsers.Location = new System.Drawing.Point(610, 111);
             this.btn_clearUsers.Name = "btn_clearUsers";
             this.btn_clearUsers.Size = new System.Drawing.Size(79, 28);
-            this.btn_clearUsers.TabIndex = 7;
+            this.btn_clearUsers.TabIndex = 9;
             this.btn_clearUsers.Text = "Reset";
             this.btn_clearUsers.UseVisualStyleBackColor = false;
             this.btn_clearUsers.Click += new System.EventHandler(this.btn_clearUsers_Click);
@@ -153,7 +153,7 @@ namespace Pizza_Club
             this.txt_userPassword.Location = new System.Drawing.Point(387, 74);
             this.txt_userPassword.Name = "txt_userPassword";
             this.txt_userPassword.Size = new System.Drawing.Size(178, 21);
-            this.txt_userPassword.TabIndex = 3;
+            this.txt_userPassword.TabIndex = 4;
             // 
             // label3
             // 
@@ -199,7 +199,7 @@ namespace Pizza_Club
             this.dataGridView_users.Name = "dataGridView_users";
             this.dataGridView_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_users.Size = new System.Drawing.Size(1050, 303);
-            this.dataGridView_users.TabIndex = 9;
+            this.dataGridView_users.TabIndex = 10;
             this.dataGridView_users.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_users_MouseClick);
             // 
             // idDataGridViewTextBoxColumn
@@ -268,7 +268,7 @@ namespace Pizza_Club
             this.btn_viewUser.Location = new System.Drawing.Point(153, 74);
             this.btn_viewUser.Name = "btn_viewUser";
             this.btn_viewUser.Size = new System.Drawing.Size(148, 65);
-            this.btn_viewUser.TabIndex = 10;
+            this.btn_viewUser.TabIndex = 8;
             this.btn_viewUser.Text = "View";
             this.btn_viewUser.UseVisualStyleBackColor = false;
             this.btn_viewUser.Click += new System.EventHandler(this.btn_viewUser_Click);
@@ -281,7 +281,7 @@ namespace Pizza_Club
             this.btn_deleteUser.Location = new System.Drawing.Point(3, 74);
             this.btn_deleteUser.Name = "btn_deleteUser";
             this.btn_deleteUser.Size = new System.Drawing.Size(144, 65);
-            this.btn_deleteUser.TabIndex = 9;
+            this.btn_deleteUser.TabIndex = 7;
             this.btn_deleteUser.Text = "Delete";
             this.btn_deleteUser.UseVisualStyleBackColor = false;
             this.btn_deleteUser.Click += new System.EventHandler(this.btn_deleteUser_Click);
@@ -294,7 +294,7 @@ namespace Pizza_Club
             this.btn_updateUser.Location = new System.Drawing.Point(153, 3);
             this.btn_updateUser.Name = "btn_updateUser";
             this.btn_updateUser.Size = new System.Drawing.Size(148, 65);
-            this.btn_updateUser.TabIndex = 8;
+            this.btn_updateUser.TabIndex = 6;
             this.btn_updateUser.Text = "Update";
             this.btn_updateUser.UseVisualStyleBackColor = false;
             this.btn_updateUser.Click += new System.EventHandler(this.btn_updateUser_Click);
@@ -307,7 +307,7 @@ namespace Pizza_Club
             this.btn_addUser.Location = new System.Drawing.Point(3, 3);
             this.btn_addUser.Name = "btn_addUser";
             this.btn_addUser.Size = new System.Drawing.Size(144, 65);
-            this.btn_addUser.TabIndex = 7;
+            this.btn_addUser.TabIndex = 5;
             this.btn_addUser.Text = "ADD";
             this.btn_addUser.UseVisualStyleBackColor = false;
             this.btn_addUser.Click += new System.EventHandler(this.btn_addUser_Click);

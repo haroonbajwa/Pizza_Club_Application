@@ -189,7 +189,7 @@ namespace Pizza_Club
             this.btn_clear_pizzas.Location = new System.Drawing.Point(684, 111);
             this.btn_clear_pizzas.Name = "btn_clear_pizzas";
             this.btn_clear_pizzas.Size = new System.Drawing.Size(79, 28);
-            this.btn_clear_pizzas.TabIndex = 7;
+            this.btn_clear_pizzas.TabIndex = 11;
             this.btn_clear_pizzas.Text = "Reset";
             this.btn_clear_pizzas.UseVisualStyleBackColor = false;
             this.btn_clear_pizzas.Click += new System.EventHandler(this.btn_clear_pizzas_Click);
@@ -316,7 +316,7 @@ namespace Pizza_Club
             this.dataGridView_pizzas.Name = "dataGridView_pizzas";
             this.dataGridView_pizzas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_pizzas.Size = new System.Drawing.Size(1050, 303);
-            this.dataGridView_pizzas.TabIndex = 4;
+            this.dataGridView_pizzas.TabIndex = 12;
             this.dataGridView_pizzas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_pizzas_MouseClick);
             // 
             // dataGridViewTextBoxColumn1

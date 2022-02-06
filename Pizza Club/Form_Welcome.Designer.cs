@@ -29,7 +29,6 @@ namespace Pizza_Club
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Welcome));
             this.btn_guest = new System.Windows.Forms.Button();
             this.btn_admin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -73,8 +72,8 @@ namespace Pizza_Club
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(285, 12);
+            this.pictureBox1.Image = global::Pizza_Club.Properties.Resources.club1;
+            this.pictureBox1.Location = new System.Drawing.Point(285, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(236, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

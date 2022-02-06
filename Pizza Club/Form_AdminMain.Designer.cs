@@ -49,8 +49,8 @@ namespace Pizza_Club
             this.panel_admin_main = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_sales = new System.Windows.Forms.Button();
             this.btn_usageGrams = new System.Windows.Forms.Button();
+            this.btn_sales = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,7 +102,7 @@ namespace Pizza_Club
             this.btn_expenses.Location = new System.Drawing.Point(3, 399);
             this.btn_expenses.Name = "btn_expenses";
             this.btn_expenses.Size = new System.Drawing.Size(206, 38);
-            this.btn_expenses.TabIndex = 9;
+            this.btn_expenses.TabIndex = 10;
             this.btn_expenses.Text = "Expenses";
             this.btn_expenses.UseVisualStyleBackColor = false;
             this.btn_expenses.Click += new System.EventHandler(this.btn_expenses_Click);
@@ -134,7 +134,7 @@ namespace Pizza_Club
             this.btn_customers.Location = new System.Drawing.Point(3, 443);
             this.btn_customers.Name = "btn_customers";
             this.btn_customers.Size = new System.Drawing.Size(206, 38);
-            this.btn_customers.TabIndex = 10;
+            this.btn_customers.TabIndex = 11;
             this.btn_customers.Text = "Customers";
             this.btn_customers.UseVisualStyleBackColor = false;
             this.btn_customers.Click += new System.EventHandler(this.btn_customers_Click);
@@ -198,7 +198,7 @@ namespace Pizza_Club
             this.btn_adminUsers.Location = new System.Drawing.Point(877, 7);
             this.btn_adminUsers.Name = "btn_adminUsers";
             this.btn_adminUsers.Size = new System.Drawing.Size(94, 42);
-            this.btn_adminUsers.TabIndex = 12;
+            this.btn_adminUsers.TabIndex = 13;
             this.btn_adminUsers.Text = "Admin";
             this.btn_adminUsers.UseVisualStyleBackColor = false;
             this.btn_adminUsers.Click += new System.EventHandler(this.btn_adminUsers_Click);
@@ -214,7 +214,7 @@ namespace Pizza_Club
             this.btn_stock.Location = new System.Drawing.Point(3, 355);
             this.btn_stock.Name = "btn_stock";
             this.btn_stock.Size = new System.Drawing.Size(206, 38);
-            this.btn_stock.TabIndex = 8;
+            this.btn_stock.TabIndex = 9;
             this.btn_stock.Text = "Stock";
             this.btn_stock.UseVisualStyleBackColor = false;
             this.btn_stock.Click += new System.EventHandler(this.btn_stock_Click);
@@ -271,7 +271,7 @@ namespace Pizza_Club
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::Pizza_Club.Properties.Resources.club1;
             this.pictureBox1.Location = new System.Drawing.Point(294, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 54);
@@ -287,7 +287,7 @@ namespace Pizza_Club
             this.btn_logout.Location = new System.Drawing.Point(0, 0);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(69, 61);
-            this.btn_logout.TabIndex = 13;
+            this.btn_logout.TabIndex = 14;
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
@@ -344,22 +344,6 @@ namespace Pizza_Club
             this.tableLayoutPanel1.Size = new System.Drawing.Size(212, 534);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btn_sales
-            // 
-            this.btn_sales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_sales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_sales.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btn_sales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sales.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sales.ForeColor = System.Drawing.Color.White;
-            this.btn_sales.Location = new System.Drawing.Point(3, 487);
-            this.btn_sales.Name = "btn_sales";
-            this.btn_sales.Size = new System.Drawing.Size(206, 44);
-            this.btn_sales.TabIndex = 11;
-            this.btn_sales.Text = "Sales";
-            this.btn_sales.UseVisualStyleBackColor = false;
-            this.btn_sales.Click += new System.EventHandler(this.btn_sales_Click);
-            // 
             // btn_usageGrams
             // 
             this.btn_usageGrams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -371,10 +355,26 @@ namespace Pizza_Club
             this.btn_usageGrams.Location = new System.Drawing.Point(3, 311);
             this.btn_usageGrams.Name = "btn_usageGrams";
             this.btn_usageGrams.Size = new System.Drawing.Size(206, 38);
-            this.btn_usageGrams.TabIndex = 11;
+            this.btn_usageGrams.TabIndex = 8;
             this.btn_usageGrams.Text = "Usage (Grms)";
             this.btn_usageGrams.UseVisualStyleBackColor = false;
             this.btn_usageGrams.Click += new System.EventHandler(this.btn_usageGrams_Click);
+            // 
+            // btn_sales
+            // 
+            this.btn_sales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_sales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_sales.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_sales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sales.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sales.ForeColor = System.Drawing.Color.White;
+            this.btn_sales.Location = new System.Drawing.Point(3, 487);
+            this.btn_sales.Name = "btn_sales";
+            this.btn_sales.Size = new System.Drawing.Size(206, 44);
+            this.btn_sales.TabIndex = 12;
+            this.btn_sales.Text = "Sales";
+            this.btn_sales.UseVisualStyleBackColor = false;
+            this.btn_sales.Click += new System.EventHandler(this.btn_sales_Click);
             // 
             // Form_AdminMain
             // 

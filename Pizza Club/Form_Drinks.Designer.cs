@@ -159,7 +159,7 @@ namespace Pizza_Club
             this.btn_clear_drinks.Location = new System.Drawing.Point(529, 110);
             this.btn_clear_drinks.Name = "btn_clear_drinks";
             this.btn_clear_drinks.Size = new System.Drawing.Size(79, 28);
-            this.btn_clear_drinks.TabIndex = 4;
+            this.btn_clear_drinks.TabIndex = 8;
             this.btn_clear_drinks.Text = "Reset";
             this.btn_clear_drinks.UseVisualStyleBackColor = false;
             this.btn_clear_drinks.Click += new System.EventHandler(this.btn_clear_drinks_Click);
@@ -241,7 +241,7 @@ namespace Pizza_Club
             this.btn_viewDrinks.Location = new System.Drawing.Point(184, 74);
             this.btn_viewDrinks.Name = "btn_viewDrinks";
             this.btn_viewDrinks.Size = new System.Drawing.Size(181, 65);
-            this.btn_viewDrinks.TabIndex = 8;
+            this.btn_viewDrinks.TabIndex = 7;
             this.btn_viewDrinks.Text = "View";
             this.btn_viewDrinks.UseVisualStyleBackColor = false;
             this.btn_viewDrinks.Click += new System.EventHandler(this.btn_viewDrinks_Click);
@@ -254,7 +254,7 @@ namespace Pizza_Club
             this.btn_deleteDrink.Location = new System.Drawing.Point(3, 73);
             this.btn_deleteDrink.Name = "btn_deleteDrink";
             this.btn_deleteDrink.Size = new System.Drawing.Size(175, 65);
-            this.btn_deleteDrink.TabIndex = 7;
+            this.btn_deleteDrink.TabIndex = 6;
             this.btn_deleteDrink.Text = "Delete";
             this.btn_deleteDrink.UseVisualStyleBackColor = false;
             this.btn_deleteDrink.Click += new System.EventHandler(this.btn_deleteDrink_Click);
@@ -267,7 +267,7 @@ namespace Pizza_Club
             this.btn_updateDrink.Location = new System.Drawing.Point(184, 4);
             this.btn_updateDrink.Name = "btn_updateDrink";
             this.btn_updateDrink.Size = new System.Drawing.Size(181, 65);
-            this.btn_updateDrink.TabIndex = 6;
+            this.btn_updateDrink.TabIndex = 5;
             this.btn_updateDrink.Text = "Update";
             this.btn_updateDrink.UseVisualStyleBackColor = false;
             this.btn_updateDrink.Click += new System.EventHandler(this.btn_updateDrink_Click);
@@ -280,7 +280,7 @@ namespace Pizza_Club
             this.btn_addDrink.Location = new System.Drawing.Point(3, 4);
             this.btn_addDrink.Name = "btn_addDrink";
             this.btn_addDrink.Size = new System.Drawing.Size(175, 65);
-            this.btn_addDrink.TabIndex = 5;
+            this.btn_addDrink.TabIndex = 4;
             this.btn_addDrink.Text = "ADD";
             this.btn_addDrink.UseVisualStyleBackColor = false;
             this.btn_addDrink.Click += new System.EventHandler(this.btn_addDrink_Click);

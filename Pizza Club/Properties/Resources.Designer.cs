@@ -63,9 +63,9 @@ namespace Pizza_Club.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pizzalogo {
+        internal static System.Drawing.Bitmap club1 {
             get {
-                object obj = ResourceManager.GetObject("pizzalogo", resourceCulture);
+                object obj = ResourceManager.GetObject("club1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

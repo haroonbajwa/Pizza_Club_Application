@@ -150,5 +150,26 @@ namespace Pizza_Club
             {
             }
         }
+
+        //get records by selecting specific date
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlcon.Close();
+                sqlcon.Open();
+                string query = "select * from tbl_usageGrams where date = '" + dateTimePicker1.Text + "'";
+                SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
+                dt = new DataTable();
+                da.Fill(dt);
+                dataGridView_usageGrams.DataSource = dt;
+
+                sqlcon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            }
+        }
     }
 }
