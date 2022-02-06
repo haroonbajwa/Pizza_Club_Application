@@ -25,6 +25,7 @@ namespace Pizza_Club
         public static Form_Expense fe;
         public static Form_Sales fsales;
         public static Form_ViewSales fvsales;
+        public static Form_usageGrams fug;
 
         /// <summary>
         /// The main entry point for the application.
@@ -50,6 +51,7 @@ namespace Pizza_Club
             fe = new Form_Expense();
             fsales = new Form_Sales();
             fvsales = new Form_ViewSales();
+            fug = new Form_usageGrams();
             Application.Run(new Form_Welcome());
             // Application.Run(new Form_Pizzas());
         }

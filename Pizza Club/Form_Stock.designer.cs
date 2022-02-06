@@ -449,6 +449,7 @@ namespace Pizza_Club
             this.dataGridView_stockGrams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_stockGrams.Size = new System.Drawing.Size(517, 240);
             this.dataGridView_stockGrams.TabIndex = 13;
+            this.dataGridView_stockGrams.SelectionChanged += new System.EventHandler(this.dataGridView_stockGrams_SelectionChanged);
             this.dataGridView_stockGrams.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_stockGrams_MouseClick);
             // 
             // idDataGridViewTextBoxColumn1

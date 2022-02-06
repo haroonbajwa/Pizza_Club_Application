@@ -35,15 +35,12 @@
             this.btn_purchaseGrams = new System.Windows.Forms.Button();
             this.btn_deleteGrams = new System.Windows.Forms.Button();
             this.btn_viewGrams = new System.Windows.Forms.Button();
-            this.combo_gramsName = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_clearGrams = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_gramsPrice = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_gramsQuantity = new System.Windows.Forms.TextBox();
             this.dataGridView_purchaseGrams = new System.Windows.Forms.DataGridView();
@@ -57,9 +54,12 @@
             this.databasePCDataSet = new Pizza_Club.DatabasePCDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbl_purchaseGramsTableAdapter = new Pizza_Club.DatabasePCDataSetTableAdapters.tbl_purchaseGramsTableAdapter();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label_grossTotalGrms = new System.Windows.Forms.Label();
             this.txt_gramsName = new System.Windows.Forms.TextBox();
+            this.combo_gramsName = new System.Windows.Forms.ComboBox();
+            this.label_grossTotalGrms = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_gramsPrice = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_purchaseGrams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblpurchaseGramsBindingSource)).BeginInit();
@@ -115,16 +115,6 @@
             this.btn_viewGrams.Text = "View";
             this.btn_viewGrams.UseVisualStyleBackColor = false;
             this.btn_viewGrams.Click += new System.EventHandler(this.btn_viewGrams_Click);
-            // 
-            // combo_gramsName
-            // 
-            this.combo_gramsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combo_gramsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_gramsName.FormattingEnabled = true;
-            this.combo_gramsName.Location = new System.Drawing.Point(381, 15);
-            this.combo_gramsName.Name = "combo_gramsName";
-            this.combo_gramsName.Size = new System.Drawing.Size(178, 23);
-            this.combo_gramsName.TabIndex = 12;
             // 
             // panel2
             // 
@@ -193,24 +183,6 @@
             this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
-            // 
-            // txt_gramsPrice
-            // 
-            this.txt_gramsPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gramsPrice.Location = new System.Drawing.Point(381, 58);
-            this.txt_gramsPrice.Name = "txt_gramsPrice";
-            this.txt_gramsPrice.Size = new System.Drawing.Size(178, 21);
-            this.txt_gramsPrice.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(320, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Price ";
             // 
             // label2
             // 
@@ -344,16 +316,23 @@
             // 
             this.tbl_purchaseGramsTableAdapter.ClearBeforeFill = true;
             // 
-            // label4
+            // txt_gramsName
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(576, 412);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 26);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Gross Total:-";
+            this.txt_gramsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gramsName.Location = new System.Drawing.Point(220, 208);
+            this.txt_gramsName.Name = "txt_gramsName";
+            this.txt_gramsName.Size = new System.Drawing.Size(178, 21);
+            this.txt_gramsName.TabIndex = 6;
+            // 
+            // combo_gramsName
+            // 
+            this.combo_gramsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_gramsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_gramsName.FormattingEnabled = true;
+            this.combo_gramsName.Location = new System.Drawing.Point(381, 15);
+            this.combo_gramsName.Name = "combo_gramsName";
+            this.combo_gramsName.Size = new System.Drawing.Size(178, 23);
+            this.combo_gramsName.TabIndex = 12;
             // 
             // label_grossTotalGrms
             // 
@@ -366,13 +345,34 @@
             this.label_grossTotalGrms.TabIndex = 15;
             this.label_grossTotalGrms.Text = "0.00";
             // 
-            // txt_gramsName
+            // label4
             // 
-            this.txt_gramsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gramsName.Location = new System.Drawing.Point(220, 208);
-            this.txt_gramsName.Name = "txt_gramsName";
-            this.txt_gramsName.Size = new System.Drawing.Size(178, 21);
-            this.txt_gramsName.TabIndex = 6;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(576, 412);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 26);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Gross Total:-";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(320, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Price ";
+            // 
+            // txt_gramsPrice
+            // 
+            this.txt_gramsPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gramsPrice.Location = new System.Drawing.Point(381, 58);
+            this.txt_gramsPrice.Name = "txt_gramsPrice";
+            this.txt_gramsPrice.Size = new System.Drawing.Size(178, 21);
+            this.txt_gramsPrice.TabIndex = 6;
             // 
             // Form_PurchaseGrams
             // 
@@ -407,13 +407,10 @@
         private System.Windows.Forms.Button btn_purchaseGrams;
         private System.Windows.Forms.Button btn_deleteGrams;
         private System.Windows.Forms.Button btn_viewGrams;
-        private System.Windows.Forms.ComboBox combo_gramsName;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_clearGrams;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_gramsPrice;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_gramsQuantity;
         private System.Windows.Forms.DataGridView dataGridView_purchaseGrams;
@@ -423,8 +420,6 @@
         private DatabasePCDataSetTableAdapters.tbl_purchaseGramsTableAdapter tbl_purchaseGramsTableAdapter;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label_grossTotalGrms;
         private System.Windows.Forms.TextBox txt_gramsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
@@ -432,5 +427,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn selectDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.ComboBox combo_gramsName;
+        private System.Windows.Forms.TextBox txt_gramsPrice;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_grossTotalGrms;
+        private System.Windows.Forms.Label label4;
     }
 }

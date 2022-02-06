@@ -90,6 +90,12 @@
     <Compile Include="Form_SideOderItems.Designer.cs">
       <DependentUpon>Form_SideOderItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_usageGrams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_usageGrams.Designer.cs">
+      <DependentUpon>Form_usageGrams.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_SideOderItems.resx">
       <DependentUpon>Form_SideOderItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_usageGrams.resx">
+      <DependentUpon>Form_usageGrams.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Users.resx">
       <DependentUpon>Form_Users.cs</DependentUpon>

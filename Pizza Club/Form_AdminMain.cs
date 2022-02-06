@@ -157,5 +157,14 @@ namespace Pizza_Club
             Button btn = (sender as Button);
             btn.BackColor = Color.DarkGreen;
         }
+
+        private void btn_usageGrams_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fug, sender);
+
+            ResetButtonColor();
+            Button btn = (sender as Button);
+            btn.BackColor = Color.DarkGreen;
+        }
     }
 }

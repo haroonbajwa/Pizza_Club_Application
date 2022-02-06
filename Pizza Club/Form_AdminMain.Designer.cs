@@ -50,6 +50,7 @@ namespace Pizza_Club
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_sales = new System.Windows.Forms.Button();
+            this.btn_usageGrams = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,9 +67,9 @@ namespace Pizza_Club
             this.btn_sideOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sideOrders.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sideOrders.ForeColor = System.Drawing.Color.White;
-            this.btn_sideOrders.Location = new System.Drawing.Point(3, 195);
+            this.btn_sideOrders.Location = new System.Drawing.Point(3, 179);
             this.btn_sideOrders.Name = "btn_sideOrders";
-            this.btn_sideOrders.Size = new System.Drawing.Size(206, 42);
+            this.btn_sideOrders.Size = new System.Drawing.Size(206, 38);
             this.btn_sideOrders.TabIndex = 5;
             this.btn_sideOrders.Text = "Side Orders";
             this.btn_sideOrders.UseVisualStyleBackColor = false;
@@ -82,9 +83,9 @@ namespace Pizza_Club
             this.btn_allIngredients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_allIngredients.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_allIngredients.ForeColor = System.Drawing.Color.White;
-            this.btn_allIngredients.Location = new System.Drawing.Point(3, 147);
+            this.btn_allIngredients.Location = new System.Drawing.Point(3, 135);
             this.btn_allIngredients.Name = "btn_allIngredients";
-            this.btn_allIngredients.Size = new System.Drawing.Size(206, 42);
+            this.btn_allIngredients.Size = new System.Drawing.Size(206, 38);
             this.btn_allIngredients.TabIndex = 4;
             this.btn_allIngredients.Text = "All Ingredients";
             this.btn_allIngredients.UseVisualStyleBackColor = false;
@@ -98,9 +99,9 @@ namespace Pizza_Club
             this.btn_expenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_expenses.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_expenses.ForeColor = System.Drawing.Color.White;
-            this.btn_expenses.Location = new System.Drawing.Point(3, 387);
+            this.btn_expenses.Location = new System.Drawing.Point(3, 399);
             this.btn_expenses.Name = "btn_expenses";
-            this.btn_expenses.Size = new System.Drawing.Size(206, 42);
+            this.btn_expenses.Size = new System.Drawing.Size(206, 38);
             this.btn_expenses.TabIndex = 9;
             this.btn_expenses.Text = "Expenses";
             this.btn_expenses.UseVisualStyleBackColor = false;
@@ -114,9 +115,9 @@ namespace Pizza_Club
             this.btn_purchasePcs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_purchasePcs.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_purchasePcs.ForeColor = System.Drawing.Color.White;
-            this.btn_purchasePcs.Location = new System.Drawing.Point(3, 243);
+            this.btn_purchasePcs.Location = new System.Drawing.Point(3, 223);
             this.btn_purchasePcs.Name = "btn_purchasePcs";
-            this.btn_purchasePcs.Size = new System.Drawing.Size(206, 42);
+            this.btn_purchasePcs.Size = new System.Drawing.Size(206, 38);
             this.btn_purchasePcs.TabIndex = 6;
             this.btn_purchasePcs.Text = "Purchase (PCS)";
             this.btn_purchasePcs.UseVisualStyleBackColor = false;
@@ -130,9 +131,9 @@ namespace Pizza_Club
             this.btn_customers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_customers.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_customers.ForeColor = System.Drawing.Color.White;
-            this.btn_customers.Location = new System.Drawing.Point(3, 435);
+            this.btn_customers.Location = new System.Drawing.Point(3, 443);
             this.btn_customers.Name = "btn_customers";
-            this.btn_customers.Size = new System.Drawing.Size(206, 42);
+            this.btn_customers.Size = new System.Drawing.Size(206, 38);
             this.btn_customers.TabIndex = 10;
             this.btn_customers.Text = "Customers";
             this.btn_customers.UseVisualStyleBackColor = false;
@@ -146,9 +147,9 @@ namespace Pizza_Club
             this.btn_drinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_drinks.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_drinks.ForeColor = System.Drawing.Color.White;
-            this.btn_drinks.Location = new System.Drawing.Point(3, 99);
+            this.btn_drinks.Location = new System.Drawing.Point(3, 91);
             this.btn_drinks.Name = "btn_drinks";
-            this.btn_drinks.Size = new System.Drawing.Size(206, 42);
+            this.btn_drinks.Size = new System.Drawing.Size(206, 38);
             this.btn_drinks.TabIndex = 3;
             this.btn_drinks.Text = "Drinks";
             this.btn_drinks.UseVisualStyleBackColor = false;
@@ -162,9 +163,9 @@ namespace Pizza_Club
             this.btn_burgers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_burgers.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_burgers.ForeColor = System.Drawing.Color.White;
-            this.btn_burgers.Location = new System.Drawing.Point(3, 51);
+            this.btn_burgers.Location = new System.Drawing.Point(3, 47);
             this.btn_burgers.Name = "btn_burgers";
-            this.btn_burgers.Size = new System.Drawing.Size(206, 42);
+            this.btn_burgers.Size = new System.Drawing.Size(206, 38);
             this.btn_burgers.TabIndex = 2;
             this.btn_burgers.Text = "Burgers";
             this.btn_burgers.UseVisualStyleBackColor = false;
@@ -180,7 +181,7 @@ namespace Pizza_Club
             this.btn_pizzas.ForeColor = System.Drawing.Color.White;
             this.btn_pizzas.Location = new System.Drawing.Point(3, 3);
             this.btn_pizzas.Name = "btn_pizzas";
-            this.btn_pizzas.Size = new System.Drawing.Size(206, 42);
+            this.btn_pizzas.Size = new System.Drawing.Size(206, 38);
             this.btn_pizzas.TabIndex = 1;
             this.btn_pizzas.Text = "Pizzas";
             this.btn_pizzas.UseVisualStyleBackColor = false;
@@ -210,9 +211,9 @@ namespace Pizza_Club
             this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_stock.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_stock.ForeColor = System.Drawing.Color.White;
-            this.btn_stock.Location = new System.Drawing.Point(3, 339);
+            this.btn_stock.Location = new System.Drawing.Point(3, 355);
             this.btn_stock.Name = "btn_stock";
-            this.btn_stock.Size = new System.Drawing.Size(206, 42);
+            this.btn_stock.Size = new System.Drawing.Size(206, 38);
             this.btn_stock.TabIndex = 8;
             this.btn_stock.Text = "Stock";
             this.btn_stock.UseVisualStyleBackColor = false;
@@ -226,9 +227,9 @@ namespace Pizza_Club
             this.btn_purchaseGrms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_purchaseGrms.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_purchaseGrms.ForeColor = System.Drawing.Color.White;
-            this.btn_purchaseGrms.Location = new System.Drawing.Point(3, 291);
+            this.btn_purchaseGrms.Location = new System.Drawing.Point(3, 267);
             this.btn_purchaseGrms.Name = "btn_purchaseGrms";
-            this.btn_purchaseGrms.Size = new System.Drawing.Size(206, 42);
+            this.btn_purchaseGrms.Size = new System.Drawing.Size(206, 38);
             this.btn_purchaseGrms.TabIndex = 7;
             this.btn_purchaseGrms.Text = "Purchase (Grms)";
             this.btn_purchaseGrms.UseVisualStyleBackColor = false;
@@ -312,32 +313,34 @@ namespace Pizza_Club
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btn_sales, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.btn_expenses, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.btn_customers, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btn_usageGrams, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.btn_pizzas, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_burgers, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_drinks, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_stock, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.btn_purchasePcs, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btn_purchaseGrms, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btn_sideOrders, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btn_allIngredients, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btn_sales, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.btn_customers, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.btn_expenses, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btn_stock, 0, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 11;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
+            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(212, 534);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -349,13 +352,29 @@ namespace Pizza_Club
             this.btn_sales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sales.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sales.ForeColor = System.Drawing.Color.White;
-            this.btn_sales.Location = new System.Drawing.Point(3, 483);
+            this.btn_sales.Location = new System.Drawing.Point(3, 487);
             this.btn_sales.Name = "btn_sales";
-            this.btn_sales.Size = new System.Drawing.Size(206, 48);
+            this.btn_sales.Size = new System.Drawing.Size(206, 44);
             this.btn_sales.TabIndex = 11;
             this.btn_sales.Text = "Sales";
             this.btn_sales.UseVisualStyleBackColor = false;
             this.btn_sales.Click += new System.EventHandler(this.btn_sales_Click);
+            // 
+            // btn_usageGrams
+            // 
+            this.btn_usageGrams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_usageGrams.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_usageGrams.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_usageGrams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_usageGrams.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_usageGrams.ForeColor = System.Drawing.Color.White;
+            this.btn_usageGrams.Location = new System.Drawing.Point(3, 311);
+            this.btn_usageGrams.Name = "btn_usageGrams";
+            this.btn_usageGrams.Size = new System.Drawing.Size(206, 38);
+            this.btn_usageGrams.TabIndex = 11;
+            this.btn_usageGrams.Text = "Usage (Grms)";
+            this.btn_usageGrams.UseVisualStyleBackColor = false;
+            this.btn_usageGrams.Click += new System.EventHandler(this.btn_usageGrams_Click);
             // 
             // Form_AdminMain
             // 
@@ -402,5 +421,6 @@ namespace Pizza_Club
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btn_sales;
+        private System.Windows.Forms.Button btn_usageGrams;
     }
 }

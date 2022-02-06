@@ -190,10 +190,50 @@ namespace Pizza_Club
             }
         }
 
-        // stock grams
+        //check and increment id for usageGrams table
+        private int usageGramsId = 1;
+        void auto_increment_usageId(object sender, EventArgs e)
+        {
+            int a;
+            sqlcon.Open();
+            string query = "Select Max(Id) from tbl_usageGrams";
+            SqlCommand cmd = new SqlCommand(query, sqlcon);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                string val = dr[0].ToString();
+                if (val == "")
+                {
+                    usageGramsId = 1;
+                }
+                else
+                {
+                    a = Convert.ToInt32(dr[0].ToString());
+                    a = a + 1;
+                    usageGramsId = a;
+                }
+            }
+            sqlcon.Close();
+        }
 
+        //get selected row qty value
+        private int prevQty = 0;
+        private void dataGridView_stockGrams_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_stockGrams.SelectedRows.Count > 0)
+            {
+                int selectedrowindex = dataGridView_stockGrams.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView_stockGrams.Rows[selectedrowindex];
+                prevQty = Convert.ToInt32(selectedRow.Cells[2].Value);
+            }
+        }
+
+        // stock grams
         private void btn_updateStockGrams_Click(object sender, EventArgs e)
         {
+            //calculate usage grams Qty
+            int usageQty = prevQty - Convert.ToInt32(txt_StockGramsQty.Text);
+
             try
             {
                 SqlCommand cmd;
@@ -209,6 +249,22 @@ namespace Pizza_Club
 
                 btn_viewStockGrams_Click(sender, e);
                 MessageBox.Show("Stock information updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                auto_increment_usageId(sender, e);
+                //add usage value to tbl_usageGrams table  (usage = prevStock - newStock)
+                SqlCommand cmd1 = new SqlCommand("Insert into tbl_usageGrams Values (@Id, @name, @usageQty, @date, @select)", sqlcon);
+                cmd1.CommandType = CommandType.Text;
+
+                cmd1.Parameters.AddWithValue("@Id", usageGramsId);
+                cmd1.Parameters.AddWithValue("@name", txt_StockGramsName.Text);
+                cmd1.Parameters.AddWithValue("@usageQty", usageQty);
+                cmd1.Parameters.AddWithValue("@date", DateTime.Now);
+                cmd1.Parameters.AddWithValue("@select", false);
+
+                sqlcon.Open();
+                cmd1.ExecuteNonQuery();
+                sqlcon.Close();
+
                 ClearTextBoxes();
             }
             catch(Exception ex)
