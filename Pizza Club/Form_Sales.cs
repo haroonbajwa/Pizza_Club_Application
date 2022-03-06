@@ -717,31 +717,31 @@ namespace Pizza_Club
             int totalItems = dataGridView_cart.Rows.Count;
             if(totalItems > 0 && totalItems <= 6)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 400);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 450);
             }
             if (totalItems > 6 && totalItems <= 10)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 500);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 550);
             }
             if (totalItems > 10 && totalItems <= 14)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 650);
             }
             if (totalItems > 14 && totalItems <= 20)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 700);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 750);
             }
             if (totalItems > 20 && totalItems <= 25)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 800);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 850);
             }
             if (totalItems > 25 && totalItems <= 30)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 900);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 950);
             }
             if (totalItems > 30 && totalItems <= 35)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 1000);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 1050);
             }
             //printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
             printPreviewDialog1.ShowDialog();
@@ -1642,37 +1642,37 @@ namespace Pizza_Club
             int totalItems = dataGridView_cart.Rows.Count;
             if (totalItems > 0 && totalItems <= 6)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 400);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 500);
                 printDocument1.Print();
             }
             if (totalItems > 6 && totalItems <= 10)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 500);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
                 printDocument1.Print();
             }
             if (totalItems > 10 && totalItems <= 14)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 700);
                 printDocument1.Print();
             }
             if (totalItems > 14 && totalItems <= 20)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 700);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 800);
                 printDocument1.Print();
             }
             if (totalItems > 20 && totalItems <= 25)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 800);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 900);
                 printDocument1.Print();
             }
             if (totalItems > 25 && totalItems <= 30)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 900);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 1000);
                 printDocument1.Print();
             }
             if (totalItems > 30 && totalItems <= 35)
             {
-                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 1000);
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 1100);
                 printDocument1.Print();
             }
         }
@@ -1684,27 +1684,34 @@ namespace Pizza_Club
             //Bitmap bmp2 = Properties.Resources.fotolarge;
             Image img = bmp;
             //Image logo = bmp2;
-            e.Graphics.DrawImage(img, 5, 5, 77, 70);
+            e.Graphics.DrawImage(img, 5, 5, 80, 72);
             //e.Graphics.DrawImage(logo, 700, 20, 150, 80);
             //e.Graphics.DrawString("Customer Name: " + txtBoxCustomer.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, 220));
-            e.Graphics.DrawString("PIZZA CLUB", new Font("Arial", 9, FontStyle.Bold), Brushes.Black, new Point(100, 20));
-            e.Graphics.DrawString("Model Town Phase: 2", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(102, 40));
-            e.Graphics.DrawString("Near Islam Medical College", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(92, 50));
-            e.Graphics.DrawString("Pasrur Road Sialkot", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(104, 60));
-            e.Graphics.DrawString("Order Receipt", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(110, 80));
+            e.Graphics.DrawString("PIZZA CLUB", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(104, 20));
+            e.Graphics.DrawString("Model Town Phase: 2", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(111, 40));
+            e.Graphics.DrawString("Near Islam Medical College", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(101, 50));
+            e.Graphics.DrawString("Pasrur Road Sialkot", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(113, 60));
+            e.Graphics.DrawString("Order Receipt", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(117, 80));
+
+            //customer detail
+            e.Graphics.DrawString("Customer Detail", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(5, 100));
+            e.Graphics.DrawString("Name: " + combo_customerName.Text, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(5, 110));
+            e.Graphics.DrawString("Contact: " + txt_customerContact.Text, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(5, 120));
+            e.Graphics.DrawString("Address: " + txt_customerAddress.Text, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(5, 130));
+
             auto_increment_id(sender, e);
-            e.Graphics.DrawString("Order ID: " + sale_id, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 90));
-            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(215, 90));
+            e.Graphics.DrawString("Order ID: " + sale_id, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 150));
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(215, 150));
             //if (string.IsNullOrEmpty(txtBoxCustomer.Text) != true)
 
             //e.Graphics.DrawString("Time: " + DateTime.Now.ToLongTimeString(), new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, 310));
-            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 100));
-            e.Graphics.DrawString("ITEM", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 110));
-            e.Graphics.DrawString("PRICE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(112, 110));
-            e.Graphics.DrawString("QTY", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(172, 110));
-            e.Graphics.DrawString("Total", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(222, 110));
-            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 120));
-            int gap = 130;
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 160));
+            e.Graphics.DrawString("ITEM", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 170));
+            e.Graphics.DrawString("PRICE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(115, 170));
+            e.Graphics.DrawString("QTY", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(175, 170));
+            e.Graphics.DrawString("Total", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(225, 170));
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 180));
+            int gap = 190;
             //int subTotal1 = 0;
             for (int i = 0; i < dataGridView_cart.Rows.Count-1; i++)
             {
@@ -1712,11 +1719,11 @@ namespace Pizza_Club
                 {   //item name
                     e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[0].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(10, gap));
                     //item price
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(112, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(115, gap));
                     //quantity
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(172, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(175, gap));
                     //total
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(222, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(225, gap));
                     gap = gap + 20;
                     //subTotal1 = subTotal1 + (Convert.ToInt32(sales_dataGridView.Rows[i].Cells[5].Value.ToString()));
                 }
@@ -1728,13 +1735,13 @@ namespace Pizza_Club
             if(txt_extraCharges.Text != "")
             {
                 e.Graphics.DrawString("Extra Charges", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, gap));
-                e.Graphics.DrawString(txt_extraCharges.Text, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(220, gap));
+                e.Graphics.DrawString(txt_extraCharges.Text, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(225, gap));
                 gap += 10;
             }
 
             //if (gap < 750)
             //gap = 750;
-            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
             //e.Graphics.DrawString("Sub Total: " + subTotal1 + ".00 Rs/-", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, gap));
             //gap = gap + 30;
@@ -1742,27 +1749,27 @@ namespace Pizza_Club
             //e.Graphics.DrawString("Taxes: " + printTax + ".00 Rs/-", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, gap));
             //gap = gap + 20;
             e.Graphics.DrawString(orderType, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(10, gap));
-            e.Graphics.DrawString("Final Amount: " + label_cartGrossTotal.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(160, gap));
+            e.Graphics.DrawString("Final Amount: " + label_cartGrossTotal.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(170, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("Amount Paid: " + txt_amountGiven.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(162, gap));
+            e.Graphics.DrawString("Amount Paid: " + txt_amountGiven.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(165, gap));
             gap = gap + 10;
             e.Graphics.DrawString("Change: " + txt_change.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(183, gap));
             gap = gap + 30;
-            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
 
-            e.Graphics.DrawString("Thanks for your order!", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(90, gap));
+            e.Graphics.DrawString("THANKS FOR YOUR ORDER", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(95, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("For Home Delivery, Call us at: 0314 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(48, gap));
+            e.Graphics.DrawString("For Home Delivery, Call us at: 0314 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(55, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("Whatsapp: 0301 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(123, gap));
+            e.Graphics.DrawString("Whatsapp: 0301 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(132, gap));
             //e.Graphics.DrawString("Previously known as BAJWA SUPER STORE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(48, gap));
             gap = gap + 20;
-            e.Graphics.DrawString("Developer Contact: 0304-2998055", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(78, gap));
+            e.Graphics.DrawString("Developer Contact: 0304 2998055", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(88, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
         }
 
