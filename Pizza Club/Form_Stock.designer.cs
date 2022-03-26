@@ -35,24 +35,26 @@ namespace Pizza_Club
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.combo_StockPcsName = new System.Windows.Forms.ComboBox();
             this.btn_viewStockPcs = new System.Windows.Forms.Button();
             this.btn_deleteStockPcs = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_addStockPcs = new System.Windows.Forms.Button();
             this.btn_updateStockPcs = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_StockPcsId = new System.Windows.Forms.TextBox();
-            this.txt_StockPcsName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_StockPcsQty = new System.Windows.Forms.TextBox();
             this.btn_clearStock = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.combo_StockGramsName = new System.Windows.Forms.ComboBox();
             this.btn_viewStockGrams = new System.Windows.Forms.Button();
             this.btn_deleteStockGrams = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_addStockGrams = new System.Windows.Forms.Button();
             this.btn_updateStockGrams = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_StockGramsId = new System.Windows.Forms.TextBox();
-            this.txt_StockGramsName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_StockGramsQty = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -83,13 +85,14 @@ namespace Pizza_Club
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.combo_StockPcsName);
             this.panel1.Controls.Add(this.btn_viewStockPcs);
             this.panel1.Controls.Add(this.btn_deleteStockPcs);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.btn_addStockPcs);
             this.panel1.Controls.Add(this.btn_updateStockPcs);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_StockPcsId);
-            this.panel1.Controls.Add(this.txt_StockPcsName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txt_StockPcsQty);
             this.panel1.Location = new System.Drawing.Point(2, 70);
@@ -97,14 +100,23 @@ namespace Pizza_Club
             this.panel1.Size = new System.Drawing.Size(451, 146);
             this.panel1.TabIndex = 10;
             // 
+            // combo_StockPcsName
+            // 
+            this.combo_StockPcsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_StockPcsName.FormattingEnabled = true;
+            this.combo_StockPcsName.Location = new System.Drawing.Point(233, 9);
+            this.combo_StockPcsName.Name = "combo_StockPcsName";
+            this.combo_StockPcsName.Size = new System.Drawing.Size(178, 21);
+            this.combo_StockPcsName.TabIndex = 7;
+            // 
             // btn_viewStockPcs
             // 
             this.btn_viewStockPcs.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btn_viewStockPcs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_viewStockPcs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_viewStockPcs.Location = new System.Drawing.Point(283, 103);
+            this.btn_viewStockPcs.Location = new System.Drawing.Point(337, 103);
             this.btn_viewStockPcs.Name = "btn_viewStockPcs";
-            this.btn_viewStockPcs.Size = new System.Drawing.Size(128, 35);
+            this.btn_viewStockPcs.Size = new System.Drawing.Size(96, 35);
             this.btn_viewStockPcs.TabIndex = 6;
             this.btn_viewStockPcs.Text = "View";
             this.btn_viewStockPcs.UseVisualStyleBackColor = false;
@@ -115,9 +127,9 @@ namespace Pizza_Club
             this.btn_deleteStockPcs.BackColor = System.Drawing.Color.Red;
             this.btn_deleteStockPcs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deleteStockPcs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deleteStockPcs.Location = new System.Drawing.Point(155, 103);
+            this.btn_deleteStockPcs.Location = new System.Drawing.Point(233, 103);
             this.btn_deleteStockPcs.Name = "btn_deleteStockPcs";
-            this.btn_deleteStockPcs.Size = new System.Drawing.Size(122, 35);
+            this.btn_deleteStockPcs.Size = new System.Drawing.Size(96, 35);
             this.btn_deleteStockPcs.TabIndex = 5;
             this.btn_deleteStockPcs.Text = "Delete";
             this.btn_deleteStockPcs.UseVisualStyleBackColor = false;
@@ -133,14 +145,27 @@ namespace Pizza_Club
             this.label6.TabIndex = 0;
             this.label6.Text = "ID";
             // 
+            // btn_addStockPcs
+            // 
+            this.btn_addStockPcs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_addStockPcs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addStockPcs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addStockPcs.Location = new System.Drawing.Point(29, 103);
+            this.btn_addStockPcs.Name = "btn_addStockPcs";
+            this.btn_addStockPcs.Size = new System.Drawing.Size(96, 35);
+            this.btn_addStockPcs.TabIndex = 4;
+            this.btn_addStockPcs.Text = "ADD";
+            this.btn_addStockPcs.UseVisualStyleBackColor = false;
+            this.btn_addStockPcs.Click += new System.EventHandler(this.btn_addStockPcs_Click);
+            // 
             // btn_updateStockPcs
             // 
             this.btn_updateStockPcs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_updateStockPcs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_updateStockPcs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_updateStockPcs.Location = new System.Drawing.Point(21, 103);
+            this.btn_updateStockPcs.Location = new System.Drawing.Point(131, 103);
             this.btn_updateStockPcs.Name = "btn_updateStockPcs";
-            this.btn_updateStockPcs.Size = new System.Drawing.Size(128, 35);
+            this.btn_updateStockPcs.Size = new System.Drawing.Size(96, 35);
             this.btn_updateStockPcs.TabIndex = 4;
             this.btn_updateStockPcs.Text = "Update";
             this.btn_updateStockPcs.UseVisualStyleBackColor = false;
@@ -165,15 +190,6 @@ namespace Pizza_Club
             this.txt_StockPcsId.ReadOnly = true;
             this.txt_StockPcsId.Size = new System.Drawing.Size(109, 21);
             this.txt_StockPcsId.TabIndex = 1;
-            // 
-            // txt_StockPcsName
-            // 
-            this.txt_StockPcsName.Enabled = false;
-            this.txt_StockPcsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_StockPcsName.Location = new System.Drawing.Point(233, 9);
-            this.txt_StockPcsName.Name = "txt_StockPcsName";
-            this.txt_StockPcsName.Size = new System.Drawing.Size(178, 21);
-            this.txt_StockPcsName.TabIndex = 2;
             // 
             // label2
             // 
@@ -210,13 +226,14 @@ namespace Pizza_Club
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.combo_StockGramsName);
             this.panel2.Controls.Add(this.btn_viewStockGrams);
             this.panel2.Controls.Add(this.btn_deleteStockGrams);
             this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btn_addStockGrams);
             this.panel2.Controls.Add(this.btn_updateStockGrams);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txt_StockGramsId);
-            this.panel2.Controls.Add(this.txt_StockGramsName);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txt_StockGramsQty);
             this.panel2.Location = new System.Drawing.Point(599, 70);
@@ -224,14 +241,23 @@ namespace Pizza_Club
             this.panel2.Size = new System.Drawing.Size(451, 146);
             this.panel2.TabIndex = 11;
             // 
+            // combo_StockGramsName
+            // 
+            this.combo_StockGramsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_StockGramsName.FormattingEnabled = true;
+            this.combo_StockGramsName.Location = new System.Drawing.Point(233, 9);
+            this.combo_StockGramsName.Name = "combo_StockGramsName";
+            this.combo_StockGramsName.Size = new System.Drawing.Size(178, 21);
+            this.combo_StockGramsName.TabIndex = 15;
+            // 
             // btn_viewStockGrams
             // 
             this.btn_viewStockGrams.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btn_viewStockGrams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_viewStockGrams.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_viewStockGrams.Location = new System.Drawing.Point(283, 103);
+            this.btn_viewStockGrams.Location = new System.Drawing.Point(335, 103);
             this.btn_viewStockGrams.Name = "btn_viewStockGrams";
-            this.btn_viewStockGrams.Size = new System.Drawing.Size(128, 35);
+            this.btn_viewStockGrams.Size = new System.Drawing.Size(96, 35);
             this.btn_viewStockGrams.TabIndex = 14;
             this.btn_viewStockGrams.Text = "View";
             this.btn_viewStockGrams.UseVisualStyleBackColor = false;
@@ -242,9 +268,9 @@ namespace Pizza_Club
             this.btn_deleteStockGrams.BackColor = System.Drawing.Color.Red;
             this.btn_deleteStockGrams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deleteStockGrams.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deleteStockGrams.Location = new System.Drawing.Point(155, 103);
+            this.btn_deleteStockGrams.Location = new System.Drawing.Point(233, 103);
             this.btn_deleteStockGrams.Name = "btn_deleteStockGrams";
-            this.btn_deleteStockGrams.Size = new System.Drawing.Size(122, 35);
+            this.btn_deleteStockGrams.Size = new System.Drawing.Size(96, 35);
             this.btn_deleteStockGrams.TabIndex = 13;
             this.btn_deleteStockGrams.Text = "Delete";
             this.btn_deleteStockGrams.UseVisualStyleBackColor = false;
@@ -260,14 +286,27 @@ namespace Pizza_Club
             this.label3.TabIndex = 0;
             this.label3.Text = "ID";
             // 
+            // btn_addStockGrams
+            // 
+            this.btn_addStockGrams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_addStockGrams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addStockGrams.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addStockGrams.Location = new System.Drawing.Point(29, 103);
+            this.btn_addStockGrams.Name = "btn_addStockGrams";
+            this.btn_addStockGrams.Size = new System.Drawing.Size(96, 35);
+            this.btn_addStockGrams.TabIndex = 4;
+            this.btn_addStockGrams.Text = "ADD";
+            this.btn_addStockGrams.UseVisualStyleBackColor = false;
+            this.btn_addStockGrams.Click += new System.EventHandler(this.btn_addStockGrams_Click);
+            // 
             // btn_updateStockGrams
             // 
             this.btn_updateStockGrams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_updateStockGrams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_updateStockGrams.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_updateStockGrams.Location = new System.Drawing.Point(21, 103);
+            this.btn_updateStockGrams.Location = new System.Drawing.Point(131, 103);
             this.btn_updateStockGrams.Name = "btn_updateStockGrams";
-            this.btn_updateStockGrams.Size = new System.Drawing.Size(128, 35);
+            this.btn_updateStockGrams.Size = new System.Drawing.Size(96, 35);
             this.btn_updateStockGrams.TabIndex = 12;
             this.btn_updateStockGrams.Text = "Update";
             this.btn_updateStockGrams.UseVisualStyleBackColor = false;
@@ -292,15 +331,6 @@ namespace Pizza_Club
             this.txt_StockGramsId.ReadOnly = true;
             this.txt_StockGramsId.Size = new System.Drawing.Size(109, 21);
             this.txt_StockGramsId.TabIndex = 9;
-            // 
-            // txt_StockGramsName
-            // 
-            this.txt_StockGramsName.Enabled = false;
-            this.txt_StockGramsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_StockGramsName.Location = new System.Drawing.Point(233, 9);
-            this.txt_StockGramsName.Name = "txt_StockGramsName";
-            this.txt_StockGramsName.Size = new System.Drawing.Size(178, 21);
-            this.txt_StockGramsName.TabIndex = 10;
             // 
             // label5
             // 
@@ -530,7 +560,6 @@ namespace Pizza_Club
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_StockPcsId;
-        private System.Windows.Forms.TextBox txt_StockPcsName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_StockPcsQty;
         private System.Windows.Forms.Button btn_viewStockPcs;
@@ -543,7 +572,6 @@ namespace Pizza_Club
         private System.Windows.Forms.Button btn_updateStockGrams;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_StockGramsId;
-        private System.Windows.Forms.TextBox txt_StockGramsName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_StockGramsQty;
         private System.Windows.Forms.Label label7;
@@ -563,5 +591,9 @@ namespace Pizza_Club
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn selectDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.ComboBox combo_StockPcsName;
+        private System.Windows.Forms.Button btn_addStockPcs;
+        private System.Windows.Forms.ComboBox combo_StockGramsName;
+        private System.Windows.Forms.Button btn_addStockGrams;
     }
 }

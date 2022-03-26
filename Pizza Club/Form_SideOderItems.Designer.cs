@@ -111,6 +111,7 @@ namespace Pizza_Club
             // 
             // txt_SideOrderId
             // 
+            this.txt_SideOrderId.Enabled = false;
             this.txt_SideOrderId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SideOrderId.Location = new System.Drawing.Point(231, 10);
             this.txt_SideOrderId.Name = "txt_SideOrderId";

@@ -30,8 +30,8 @@ namespace Pizza_Club
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView_purchasePCS = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,13 +48,17 @@ namespace Pizza_Club
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_searchPurchasePCS = new System.Windows.Forms.TextBox();
             this.combo_pcsName = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_filterPurchase = new System.Windows.Forms.Button();
+            this.radio_selectDate = new System.Windows.Forms.RadioButton();
+            this.radio_30Days = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btn_purchasePCS = new System.Windows.Forms.Button();
             this.btn_deletePCS = new System.Windows.Forms.Button();
             this.btn_viewPCS = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.btn_clearPCS = new System.Windows.Forms.Button();
             this.txt_pcsQuantity = new System.Windows.Forms.TextBox();
             this.tbl_purchasePCSTableAdapter = new Pizza_Club.DatabasePCDataSetTableAdapters.tbl_purchasePCSTableAdapter();
@@ -74,14 +78,14 @@ namespace Pizza_Club
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_purchasePCS.AutoGenerateColumns = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_purchasePCS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_purchasePCS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_purchasePCS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_purchasePCS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -91,14 +95,14 @@ namespace Pizza_Club
             this.dateDataGridViewTextBoxColumn,
             this.selectDataGridViewCheckBoxColumn});
             this.dataGridView_purchasePCS.DataSource = this.tblpurchasePCSBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_purchasePCS.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_purchasePCS.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_purchasePCS.Location = new System.Drawing.Point(0, 152);
             this.dataGridView_purchasePCS.MultiSelect = false;
             this.dataGridView_purchasePCS.Name = "dataGridView_purchasePCS";
@@ -220,6 +224,8 @@ namespace Pizza_Club
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txt_searchPurchasePCS);
             this.panel1.Controls.Add(this.combo_pcsName);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btn_clearPCS);
@@ -236,6 +242,27 @@ namespace Pizza_Club
             this.panel1.Size = new System.Drawing.Size(1052, 146);
             this.panel1.TabIndex = 11;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(16, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Search";
+            // 
+            // txt_searchPurchasePCS
+            // 
+            this.txt_searchPurchasePCS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_searchPurchasePCS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_searchPurchasePCS.Location = new System.Drawing.Point(79, 118);
+            this.txt_searchPurchasePCS.Name = "txt_searchPurchasePCS";
+            this.txt_searchPurchasePCS.Size = new System.Drawing.Size(188, 22);
+            this.txt_searchPurchasePCS.TabIndex = 13;
+            this.txt_searchPurchasePCS.TextChanged += new System.EventHandler(this.txt_searchPurchasePCS_TextChanged);
+            // 
             // combo_pcsName
             // 
             this.combo_pcsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -250,23 +277,65 @@ namespace Pizza_Club
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.btn_filterPurchase);
+            this.panel2.Controls.Add(this.radio_selectDate);
+            this.panel2.Controls.Add(this.radio_30Days);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.btn_purchasePCS);
             this.panel2.Controls.Add(this.btn_deletePCS);
             this.panel2.Controls.Add(this.btn_viewPCS);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(565, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(487, 146);
             this.panel2.TabIndex = 11;
             // 
+            // btn_filterPurchase
+            // 
+            this.btn_filterPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_filterPurchase.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btn_filterPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_filterPurchase.Font = new System.Drawing.Font("Adobe Gothic Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_filterPurchase.Location = new System.Drawing.Point(368, 108);
+            this.btn_filterPurchase.Name = "btn_filterPurchase";
+            this.btn_filterPurchase.Size = new System.Drawing.Size(93, 33);
+            this.btn_filterPurchase.TabIndex = 10;
+            this.btn_filterPurchase.Text = "Filter";
+            this.btn_filterPurchase.UseVisualStyleBackColor = false;
+            this.btn_filterPurchase.Click += new System.EventHandler(this.btn_filterPurchase_Click);
+            // 
+            // radio_selectDate
+            // 
+            this.radio_selectDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.radio_selectDate.AutoSize = true;
+            this.radio_selectDate.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radio_selectDate.Location = new System.Drawing.Point(115, 117);
+            this.radio_selectDate.Name = "radio_selectDate";
+            this.radio_selectDate.Size = new System.Drawing.Size(110, 24);
+            this.radio_selectDate.TabIndex = 9;
+            this.radio_selectDate.TabStop = true;
+            this.radio_selectDate.Text = "Select Date";
+            this.radio_selectDate.UseVisualStyleBackColor = true;
+            // 
+            // radio_30Days
+            // 
+            this.radio_30Days.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.radio_30Days.AutoSize = true;
+            this.radio_30Days.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radio_30Days.Location = new System.Drawing.Point(25, 117);
+            this.radio_30Days.Name = "radio_30Days";
+            this.radio_30Days.Size = new System.Drawing.Size(84, 24);
+            this.radio_30Days.TabIndex = 9;
+            this.radio_30Days.TabStop = true;
+            this.radio_30Days.Text = "30 Days";
+            this.radio_30Days.UseVisualStyleBackColor = true;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(240, 117);
+            this.dateTimePicker1.Location = new System.Drawing.Point(231, 117);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(129, 20);
             this.dateTimePicker1.TabIndex = 8;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -308,17 +377,6 @@ namespace Pizza_Club
             this.btn_viewPCS.Text = "View";
             this.btn_viewPCS.UseVisualStyleBackColor = false;
             this.btn_viewPCS.Click += new System.EventHandler(this.btn_viewPCS_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(187, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Filter";
             // 
             // btn_clearPCS
             // 
@@ -432,8 +490,12 @@ namespace Pizza_Club
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn selectDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label_grossTotal;
+        private System.Windows.Forms.RadioButton radio_30Days;
+        private System.Windows.Forms.RadioButton radio_selectDate;
+        private System.Windows.Forms.Button btn_filterPurchase;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_searchPurchasePCS;
     }
 }

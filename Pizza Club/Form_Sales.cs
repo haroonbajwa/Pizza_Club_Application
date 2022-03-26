@@ -1120,6 +1120,10 @@ namespace Pizza_Club
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "12 Hot Shots")
                             {
                                 Dec_sideOrder_ingredients("Hot Shots", 12, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Beef Petty")
+                            {
+                                Dec_sideOrder_ingredients("Beef Petty", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                             }//decrease ingredients for deals
                             else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 1")
                             {
@@ -1132,6 +1136,7 @@ namespace Pizza_Club
                                         CommandType = CommandType.Text
                                     };
                                     cmd.ExecuteNonQuery();
+                                    Dec_drink_stock("Tin Pack", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 }
                                 catch (Exception ex)
                                 {
@@ -1150,6 +1155,7 @@ namespace Pizza_Club
                                         CommandType = CommandType.Text
                                     };
                                     cmd.ExecuteNonQuery();
+                                    Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 }
                                 catch (Exception ex)
                                 {
@@ -1168,6 +1174,7 @@ namespace Pizza_Club
                                         CommandType = CommandType.Text
                                     };
                                     cmd.ExecuteNonQuery();
+                                    Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 }
                                 catch (Exception ex)
                                 {
@@ -1186,6 +1193,7 @@ namespace Pizza_Club
                                         CommandType = CommandType.Text
                                     };
                                     cmd.ExecuteNonQuery();
+                                    Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 }
                                 catch (Exception ex)
                                 {
@@ -1204,6 +1212,7 @@ namespace Pizza_Club
                                         CommandType = CommandType.Text
                                     };
                                     cmd.ExecuteNonQuery();
+                                    Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 }
                                 catch (Exception ex)
                                 {
@@ -1222,7 +1231,7 @@ namespace Pizza_Club
                                         CommandType = CommandType.Text
                                     };
                                     cmd.ExecuteNonQuery();
-
+                                    Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                     Dec_sideOrder_ingredients("Hot Wings", 10, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 }
                                 catch (Exception ex)
@@ -1231,9 +1240,14 @@ namespace Pizza_Club
                                     sqlcon.Close();
                                 }
                             }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 7")
+                            {
+                                Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
                             else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 8")
                             {
                                 Dec_sideOrder_ingredients("Hot Wings", 5, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                                Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 9")
                             {
@@ -1246,6 +1260,7 @@ namespace Pizza_Club
                                         CommandType = CommandType.Text
                                     };
                                     cmd.ExecuteNonQuery();
+                                    Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 }
                                 catch (Exception ex)
                                 {
@@ -1258,16 +1273,37 @@ namespace Pizza_Club
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 10")
                             {
                                 Dec_sideOrder_ingredients("Chicken Pcs", 3, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                                Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 11")
                             {
                                 Dec_sideOrder_ingredients("Nuggets", 10, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                                Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 12")
                             {
                                 Dec_sideOrder_ingredients("Nuggets", 10, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 Dec_sideOrder_ingredients("Hot Wings", 10, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
-                            }//decrease stock for drinks
+                                Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 13")
+                            {
+                                Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 14")
+                            {
+                                Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 15")
+                            {
+                                Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 16")
+                            {
+                                Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+
+                            //decrease stock for drinks
                             else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Tin Pack")
                             {
                                 Dec_drink_stock("Tin Pack", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
@@ -1691,39 +1727,39 @@ namespace Pizza_Club
             e.Graphics.DrawString("Model Town Phase: 2", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(111, 40));
             e.Graphics.DrawString("Near Islam Medical College", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(101, 50));
             e.Graphics.DrawString("Pasrur Road Sialkot", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(113, 60));
-            e.Graphics.DrawString("Order Receipt", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(117, 80));
+            e.Graphics.DrawString("Order Receipt", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(117, 80));
 
             //customer detail
-            e.Graphics.DrawString("Customer Detail", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(5, 100));
-            e.Graphics.DrawString("Name: " + combo_customerName.Text, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(5, 110));
-            e.Graphics.DrawString("Contact: " + txt_customerContact.Text, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(5, 120));
-            e.Graphics.DrawString("Address: " + txt_customerAddress.Text, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(5, 130));
+            e.Graphics.DrawString("Customer Detail", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(5, 100));
+            e.Graphics.DrawString("Name: " + combo_customerName.Text, new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(5, 113));
+            e.Graphics.DrawString("Contact: " + txt_customerContact.Text, new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(5, 126));
+            e.Graphics.DrawString("Address: " + txt_customerAddress.Text, new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(5, 139));
 
             auto_increment_id(sender, e);
-            e.Graphics.DrawString("Order ID: " + sale_id, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 150));
-            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(215, 150));
+            e.Graphics.DrawString("Order ID: " + sale_id, new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(10, 165));
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToString(), new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(150, 165));
             //if (string.IsNullOrEmpty(txtBoxCustomer.Text) != true)
 
             //e.Graphics.DrawString("Time: " + DateTime.Now.ToLongTimeString(), new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, 310));
-            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 160));
-            e.Graphics.DrawString("ITEM", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, 170));
-            e.Graphics.DrawString("PRICE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(115, 170));
-            e.Graphics.DrawString("QTY", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(175, 170));
-            e.Graphics.DrawString("Total", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(225, 170));
-            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 180));
-            int gap = 190;
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 175));
+            e.Graphics.DrawString("ITEM", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(10, 185));
+            e.Graphics.DrawString("PRICE", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(140, 185));
+            e.Graphics.DrawString("QTY", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(190, 185));
+            e.Graphics.DrawString("Total", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(235, 185));
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 195));
+            int gap = 205;
             //int subTotal1 = 0;
             for (int i = 0; i < dataGridView_cart.Rows.Count-1; i++)
             {
                 try
                 {   //item name
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[0].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(10, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[0].Value.ToString(), new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(10, gap));
                     //item price
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(115, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(140, gap));
                     //quantity
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(175, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(190, gap));
                     //total
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(225, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(235, gap));
                     gap = gap + 20;
                     //subTotal1 = subTotal1 + (Convert.ToInt32(sales_dataGridView.Rows[i].Cells[5].Value.ToString()));
                 }
@@ -1734,8 +1770,8 @@ namespace Pizza_Club
             }
             if(txt_extraCharges.Text != "")
             {
-                e.Graphics.DrawString("Extra Charges", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(10, gap));
-                e.Graphics.DrawString(txt_extraCharges.Text, new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(225, gap));
+                e.Graphics.DrawString("Extra Charges", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(10, gap));
+                e.Graphics.DrawString(txt_extraCharges.Text, new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(235, gap));
                 gap += 10;
             }
 
@@ -1748,14 +1784,14 @@ namespace Pizza_Club
             //if (txtBoxFinalCost.Text != null)
             //e.Graphics.DrawString("Taxes: " + printTax + ".00 Rs/-", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, gap));
             //gap = gap + 20;
-            e.Graphics.DrawString(orderType, new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(10, gap));
-            e.Graphics.DrawString("Final Amount: " + label_cartGrossTotal.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(170, gap));
+            e.Graphics.DrawString(orderType, new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(10, gap));
+            e.Graphics.DrawString("Final Amount: " + label_cartGrossTotal.Text + ".00 Rs/-", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(145, gap));
             gap = gap + 10;
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("Amount Paid: " + txt_amountGiven.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(165, gap));
+            e.Graphics.DrawString("Amount Paid: " + txt_amountGiven.Text + ".00 Rs/-", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(145, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("Change: " + txt_change.Text + ".00 Rs/-", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(183, gap));
+            e.Graphics.DrawString("Change: " + txt_change.Text + ".00 Rs/-", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(170, gap));
             gap = gap + 30;
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
@@ -1766,8 +1802,8 @@ namespace Pizza_Club
             gap = gap + 10;
             e.Graphics.DrawString("Whatsapp: 0301 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(132, gap));
             //e.Graphics.DrawString("Previously known as BAJWA SUPER STORE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(48, gap));
-            gap = gap + 20;
-            e.Graphics.DrawString("Developer Contact: 0304 2998055", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(88, gap));
+            //gap = gap + 20;
+            //e.Graphics.DrawString("Developer Contact: 0304 2998055", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(88, gap));
             gap = gap + 10;
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;

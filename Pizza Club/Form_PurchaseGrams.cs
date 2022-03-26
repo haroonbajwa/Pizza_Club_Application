@@ -138,7 +138,7 @@ namespace Pizza_Club
 
 
                     //check if stock record exists then update or create new
-                    sqlcon.Open();
+                    /*sqlcon.Open();
                     cmd = new SqlCommand("SELECT COUNT(*) FROM tbl_stockGrams WHERE name = @name", sqlcon);
                     cmd.Parameters.AddWithValue("@name", combo_gramsName.Text);
                     int productExist = (int)cmd.ExecuteScalar();
@@ -192,7 +192,7 @@ namespace Pizza_Club
                         sqlcon.Open();
                         cmd.ExecuteNonQuery();
                         sqlcon.Close();
-                    }
+                    }*/
 
 
                     btn_viewGrams_Click(sender, e);
@@ -210,7 +210,7 @@ namespace Pizza_Club
         private void btn_deleteGrams_Click(object sender, EventArgs e)
         {
             //read stock value of purchase record to be deleted
-            int del_purchase_stock = 0;
+            /*int del_purchase_stock = 0;
             try
             {
                 //read stock from purchase table of invoice which is going to delete
@@ -280,7 +280,7 @@ namespace Pizza_Club
             {
                 MessageBox.Show(ex.Message);
                 sqlcon.Close();
-            }
+            }*/
 
             //delete purchase Invoice
             try
@@ -330,6 +330,7 @@ namespace Pizza_Club
             txt_gramsName.Text = "";
             txt_gramsQuantity.Text = "";
             txt_gramsPrice.Text = "";
+            txt_searchPurchaseGrams.Text = "";
             combo_gramsName.Focus();
         }
 
@@ -359,10 +360,10 @@ namespace Pizza_Club
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            DataView DV = new DataView(dt);
+            /*DataView DV = new DataView(dt);
             DV.RowFilter = string.Format("Date = #{0}#", dateTimePicker1.Text);
             dataGridView_purchaseGrams.DataSource = DV;
-            calculate_grossTotal();
+            calculate_grossTotal();*/
         }
 
         //select a record to show in text boxes
@@ -388,6 +389,70 @@ namespace Pizza_Club
             }
             catch
             {
+            }
+        }
+
+        //filter purchase grams records
+        private void btn_filterPurchaseGrams_Click(object sender, EventArgs e)
+        {
+            if (radio_30DaysGrams.Checked == true)
+            {
+                try
+                {
+                    sqlcon.Close();
+                    sqlcon.Open();
+                    string query = "select * from tbl_purchaseGrams where date >= DATEADD(day,-30,GETDATE()) AND date <= getdate()";
+                    SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView_purchaseGrams.DataSource = dt;
+                    calculate_grossTotal();
+
+                    sqlcon.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
+                }
+            }
+            else if (radio_selectDateGrams.Checked == true)
+            {
+                try
+                {
+                    sqlcon.Close();
+                    sqlcon.Open();
+                    string query = "select * from tbl_purchaseGrams where date = '" + dateTimePicker1.Text + "'";
+                    SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView_purchaseGrams.DataSource = dt;
+                    calculate_grossTotal();
+
+                    sqlcon.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
+                }
+            }
+        }
+
+        //search purchase grams records by product name
+        private void txt_searchPurchaseGrams_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataView DV = new DataView(dt);
+                DV.RowFilter = string.Format("product LIKE '%{0}%'", txt_searchPurchaseGrams.Text);
+                dataGridView_purchaseGrams.DataSource = DV;
+                calculate_grossTotal();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                sqlcon.Close();
             }
         }
     }

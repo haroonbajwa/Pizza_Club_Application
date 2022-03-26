@@ -41,19 +41,88 @@ namespace Pizza_Club
             dataGridView_stockGrams.Columns[2].ReadOnly = true;
             dataGridView_stockGrams.Columns[3].ReadOnly = false;
 
+            auto_increment_id_pcs(sender, e);
+            load_pcsIngredients();
+            auto_increment_id_grams(sender, e);
+            load_gramsIngredients();
+
+        }
+
+        //function of load PCS ingredients in combo box
+        void load_pcsIngredients()
+        {
+            //remove previous items
+            combo_StockPcsName.Items.Clear();
+
+            try
+            {
+                sqlcon.Open();
+
+                string query = "select * from tbl_allIngredients WHERE type = @type";
+                SqlCommand cmd = new SqlCommand(query, sqlcon);
+                cmd.Parameters.AddWithValue("@type", "Pieces");
+                cmd.CommandText = query;
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    combo_StockPcsName.Items.Add(reader["name"].ToString());
+                }
+                sqlcon.Close();
+
+                //to load drinks
+                sqlcon.Open();
+                string query1 = "select * from tbl_drinks";
+                SqlCommand cmd1 = new SqlCommand(query1, sqlcon);
+                cmd1.CommandText = query1;
+                SqlDataReader reader1 = cmd1.ExecuteReader();
+                while (reader1.Read())
+                {
+                    combo_StockPcsName.Items.Add(reader1["name"].ToString());
+                }
+                sqlcon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //function of load PCS ingredients in combo box
+        void load_gramsIngredients()
+        {
+            //remove previous items
+            combo_StockGramsName.Items.Clear();
+
+            try
+            {
+                sqlcon.Open();
+
+                string query = "select * from tbl_allIngredients WHERE type = @type";
+                SqlCommand cmd = new SqlCommand(query, sqlcon);
+                cmd.Parameters.AddWithValue("@type", "Grams");
+                cmd.CommandText = query;
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    combo_StockGramsName.Items.Add(reader["name"].ToString());
+                }
+                sqlcon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //Clear textboxes
         private void ClearTextBoxes()
         {
-            txt_StockGramsId.Clear();
-            txt_StockGramsName.Clear();
+            combo_StockGramsName.Text = "";
             txt_StockGramsQty.Clear();
 
-            txt_StockPcsId.Clear();
-            txt_StockPcsName.Clear();
+            combo_StockPcsName.Text = "";
             txt_StockPcsQty.Clear();
-            
+
         }
 
         //Uncheck checkboxes
@@ -82,6 +151,88 @@ namespace Pizza_Club
         {
             ClearTextBoxes();
             Uncheck_checkboxes();
+
+            load_pcsIngredients();
+            auto_increment_id_pcs(sender, e);
+            btn_viewStockPcs_Click(sender, e);
+
+            load_gramsIngredients();
+            auto_increment_id_grams(sender, e);
+            btn_viewStockGrams_Click(sender, e);
+        }
+
+        //Auto Increment id for stock pcs table
+        void auto_increment_id_pcs(object sender, EventArgs e)
+        {
+            int a;
+            sqlcon.Open();
+            string query = "Select Max(id) from tbl_stockPCS";
+            SqlCommand cmd = new SqlCommand(query, sqlcon);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                string val = dr[0].ToString();
+                if (val == "")
+                {
+                    txt_StockPcsId.Text = "1";
+                }
+                else
+                {
+                    a = Convert.ToInt32(dr[0].ToString());
+                    a = a + 1;
+                    txt_StockPcsId.Text = a.ToString();
+                }
+            }
+            sqlcon.Close();
+        }
+
+        //CHECK IF ANY BOX IS NOT FILLED
+        private bool IsValid()
+        {
+            if (combo_StockPcsName.Text == String.Empty)
+            {
+                MessageBox.Show("Name is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                combo_StockPcsName.Focus();
+                return false;
+            }
+            else if (txt_StockPcsQty.Text == String.Empty)
+            {
+                MessageBox.Show("Quantity is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_StockPcsQty.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        //add stock information
+        private void btn_addStockPcs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (IsValid())
+                {
+                    SqlCommand cmd = new SqlCommand("Insert into tbl_stockPCS Values (@id, @name, @quantity, @select)", sqlcon);
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.Parameters.AddWithValue("@id", txt_StockPcsId.Text);
+                    cmd.Parameters.AddWithValue("@name", combo_StockPcsName.Text);
+                    cmd.Parameters.AddWithValue("@quantity", txt_StockPcsQty.Text);
+                    cmd.Parameters.AddWithValue("@select", false);
+
+                    sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                    sqlcon.Close();
+
+                    btn_viewStockPcs_Click(sender, e);
+                    MessageBox.Show("New Stock added successfully", "saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearTextBoxes();
+                    auto_increment_id_pcs(sender, e);
+                }
+            }
+            catch
+            {
+                sqlcon.Close();
+            }
         }
 
         // stock pices buttons
@@ -103,6 +254,7 @@ namespace Pizza_Club
                 btn_viewStockPcs_Click(sender, e);
                 MessageBox.Show("Stock information updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearTextBoxes();
+                auto_increment_id_pcs(sender, e);
             }
             catch (Exception ex)
             {
@@ -145,6 +297,7 @@ namespace Pizza_Club
             btn_viewStockPcs_Click(sender, e);
             MessageBox.Show("Stock record(s) deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ClearTextBoxes();
+            auto_increment_id_pcs(sender, e);
         }
 
         private void btn_viewStockPcs_Click(object sender, EventArgs e)
@@ -182,7 +335,8 @@ namespace Pizza_Club
                 {
                     DataGridViewRow row = cell.OwningRow;
                     txt_StockPcsId.Text = row.Cells[0].Value.ToString();
-                    txt_StockPcsName.Text = row.Cells[1].Value.ToString();
+                    //txt_StockPcsName.Text = row.Cells[1].Value.ToString();
+                    combo_StockPcsName.Text = row.Cells[1].Value.ToString();
                     txt_StockPcsQty.Text = row.Cells[2].Value.ToString();
                 }
             }
@@ -190,6 +344,82 @@ namespace Pizza_Club
             {
             }
         }
+
+        //Auto Increment for grams stock table
+        void auto_increment_id_grams(object sender, EventArgs e)
+        {
+            int a;
+            sqlcon.Open();
+            string query = "Select Max(id) from tbl_stockGrams";
+            SqlCommand cmd = new SqlCommand(query, sqlcon);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                string val = dr[0].ToString();
+                if (val == "")
+                {
+                    txt_StockGramsId.Text = "1";
+                }
+                else
+                {
+                    a = Convert.ToInt32(dr[0].ToString());
+                    a = a + 1;
+                    txt_StockGramsId.Text = a.ToString();
+                }
+            }
+            sqlcon.Close();
+        }
+
+        //CHECK IF ANY BOX IS NOT FILLED
+        private bool IsValidGrams()
+        {
+            if (combo_StockGramsName.Text == String.Empty)
+            {
+                MessageBox.Show("Name is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                combo_StockGramsName.Focus();
+                return false;
+            }
+            else if (txt_StockGramsQty.Text == String.Empty)
+            {
+                MessageBox.Show("Quantity is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_StockGramsQty.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        //add grams stock
+        private void btn_addStockGrams_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (IsValidGrams())
+                {
+                    SqlCommand cmd = new SqlCommand("Insert into tbl_stockGrams Values (@id, @name, @quantity, @select)", sqlcon);
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.Parameters.AddWithValue("@id", txt_StockGramsId.Text);
+                    cmd.Parameters.AddWithValue("@name", combo_StockGramsName.Text);
+                    cmd.Parameters.AddWithValue("@quantity", txt_StockGramsQty.Text);
+                    cmd.Parameters.AddWithValue("@select", false);
+
+                    sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                    sqlcon.Close();
+
+                    btn_viewStockPcs_Click(sender, e);
+                    MessageBox.Show("New Stock added successfully", "saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearTextBoxes();
+                    btn_viewStockGrams_Click(sender, e);
+                    auto_increment_id_grams(sender, e);
+                }
+            }
+            catch
+            {
+                sqlcon.Close();
+            }
+        }
+
 
         //check and increment id for usageGrams table
         private int usageGramsId = 1;
@@ -232,10 +462,18 @@ namespace Pizza_Club
         // stock grams
         private void btn_updateStockGrams_Click(object sender, EventArgs e)
         {
-            if(txt_StockGramsId.Text != "" && txt_StockGramsName.Text != "")
+            if(txt_StockGramsId.Text != "" && combo_StockGramsName.Text != "")
             {
-                //calculate usage grams Qty
-                int usageQty = prevQty - Convert.ToInt32(txt_StockGramsQty.Text);
+                int usageQty = 0;
+                try
+                {
+                    //calculate usage grams Qty
+                    usageQty = prevQty - Convert.ToInt32(txt_StockGramsQty.Text);
+                }
+                catch
+                {
+
+                }
 
                 try
                 {
@@ -259,7 +497,7 @@ namespace Pizza_Club
                     cmd1.CommandType = CommandType.Text;
 
                     cmd1.Parameters.AddWithValue("@Id", usageGramsId);
-                    cmd1.Parameters.AddWithValue("@name", txt_StockGramsName.Text);
+                    cmd1.Parameters.AddWithValue("@name", combo_StockGramsName.Text);
                     cmd1.Parameters.AddWithValue("@usageQty", usageQty);
                     cmd1.Parameters.AddWithValue("@date", DateTime.Now);
                     cmd1.Parameters.AddWithValue("@select", false);
@@ -269,6 +507,7 @@ namespace Pizza_Club
                     sqlcon.Close();
 
                     ClearTextBoxes();
+                    auto_increment_id_grams(sender, e);
                 }
                 catch (Exception ex)
                 {
@@ -311,6 +550,7 @@ namespace Pizza_Club
             btn_viewStockGrams_Click(sender, e);
             MessageBox.Show("Stock record(s) deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ClearTextBoxes();
+            auto_increment_id_grams(sender, e);
         }
 
         private void btn_viewStockGrams_Click(object sender, EventArgs e)
@@ -348,7 +588,7 @@ namespace Pizza_Club
                 {
                     DataGridViewRow row = cell.OwningRow;
                     txt_StockGramsId.Text = row.Cells[0].Value.ToString();
-                    txt_StockGramsName.Text = row.Cells[1].Value.ToString();
+                    combo_StockGramsName.Text = row.Cells[1].Value.ToString();
                     txt_StockGramsQty.Text = row.Cells[2].Value.ToString();
                 }
             }
@@ -356,5 +596,6 @@ namespace Pizza_Club
             {
             }
         }
+
     }
 }

@@ -147,7 +147,7 @@ namespace Pizza_Club
 
 
                     //check if stock record exists then update or create new
-                    sqlcon.Open();
+                    /*sqlcon.Open();
                     cmd = new SqlCommand("SELECT COUNT(*) FROM tbl_stockPCS WHERE name = @name", sqlcon);
                     cmd.Parameters.AddWithValue("@name", combo_pcsName.Text);
                     int productExist = (int)cmd.ExecuteScalar();
@@ -201,7 +201,7 @@ namespace Pizza_Club
                         sqlcon.Open();
                         cmd.ExecuteNonQuery();
                         sqlcon.Close();
-                    }
+                    }*/
 
 
                     btn_viewPCS_Click(sender, e);
@@ -219,7 +219,7 @@ namespace Pizza_Club
         private void btn_deletePCS_Click(object sender, EventArgs e)
         {
             //read stock value of purchase record to be deleted
-            int del_purchase_stock = 0;
+            /*int del_purchase_stock = 0;
             try
             {
                 //read stock from purchase table of invoice which is going to delete
@@ -241,10 +241,10 @@ namespace Pizza_Club
             {
                 MessageBox.Show(ex.Message);
                 sqlcon.Close();
-            }
+            }*/
 
             //read stock total stock value from stock table against product name
-            int total_stock = 0;
+            /*int total_stock = 0;
             try
             {
                 SqlCommand cmd2;
@@ -289,7 +289,7 @@ namespace Pizza_Club
             {
                 MessageBox.Show(ex.Message);
                 sqlcon.Close();
-            }
+            }*/
 
             //delete purchase Invoice
             try
@@ -374,6 +374,7 @@ namespace Pizza_Club
             txt_pcsName.Text = "";
             txt_pcsQuantity.Text = "";
             txt_pcsPrice.Text = "";
+            txt_searchPurchasePCS.Text = "";
             combo_pcsName.Focus();
         }
 
@@ -443,10 +444,74 @@ namespace Pizza_Club
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            DataView DV = new DataView(dt);
+            /*DataView DV = new DataView(dt);
             DV.RowFilter = string.Format("Date = #{0}#", dateTimePicker1.Text);
             dataGridView_purchasePCS.DataSource = DV;
-            calculate_grossTotal();
+            calculate_grossTotal();*/
+        }
+
+        //filter purchase records
+        private void btn_filterPurchase_Click(object sender, EventArgs e)
+        {
+            if(radio_30Days.Checked == true)
+            {
+                try
+                {
+                    sqlcon.Close();
+                    sqlcon.Open();
+                    string query = "select * from tbl_purchasePCS where date >= DATEADD(day,-30,GETDATE()) AND date <= getdate()";
+                    SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView_purchasePCS.DataSource = dt;
+                    calculate_grossTotal();
+
+                    sqlcon.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
+                }
+            }
+            else if(radio_selectDate.Checked == true)
+            {
+                try
+                {
+                    sqlcon.Close();
+                    sqlcon.Open();
+                    string query = "select * from tbl_purchasePCS where date = '" + dateTimePicker1.Text + "'";
+                    SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView_purchasePCS.DataSource = dt;
+                    calculate_grossTotal();
+
+                    sqlcon.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error " + ex);
+                    sqlcon.Close();
+                }
+            }
+        }
+
+        //search purchase by product name
+        private void txt_searchPurchasePCS_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataView DV = new DataView(dt);
+                DV.RowFilter = string.Format("product LIKE '%{0}%'", txt_searchPurchasePCS.Text);
+                dataGridView_purchasePCS.DataSource = DV;
+                calculate_grossTotal();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                sqlcon.Close();
+            }
         }
     }
 }
