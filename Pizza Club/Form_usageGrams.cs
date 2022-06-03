@@ -160,7 +160,7 @@ namespace Pizza_Club
             {
                 sqlcon.Close();
                 sqlcon.Open();
-                string query = "select * from tbl_usageGrams where date = '" + dateTimePicker1.Text + "'";
+                string query = "select * from tbl_usageGrams where date between '" + dateTimePicker1.Value.Date.AddHours(6) + "' AND '" + dateTimePicker1.Value.Date.AddHours(30) + "'";
                 SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
                 dt = new DataTable();
                 da.Fill(dt);

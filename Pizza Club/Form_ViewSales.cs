@@ -121,16 +121,33 @@ namespace Pizza_Club
             {
                 try
                 {
-                    sqlcon.Close();
-                    sqlcon.Open();
-                    string query = "select * from tbl_sales where date = '" + DateTime.Today + "'";
-                    SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
-                    dt = new DataTable();
-                    da.Fill(dt);
-                    dataGridView_viewSales.DataSource = dt;
-                    calculate_grossTotal();
+                    if (DateTime.Now < DateTime.Today.AddHours(6))
+                    {
+                        sqlcon.Close();
+                        sqlcon.Open();
+                        string query = "select * from tbl_sales where date between '" + DateTime.Today.AddHours(-18) + "' AND '" + DateTime.Today.AddHours(6) + "'";
+                        SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        dataGridView_viewSales.DataSource = dt;
+                        calculate_grossTotal();
 
-                    sqlcon.Close();
+                        sqlcon.Close();
+                    }
+                    else if (DateTime.Now >= DateTime.Today.AddHours(6))
+                    {
+                        sqlcon.Close();
+                        sqlcon.Open();
+                        string query = "select * from tbl_sales where date between '" + DateTime.Today.AddHours(6) + "' AND '" + DateTime.Today.AddHours(30) + "'";
+                        SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        dataGridView_viewSales.DataSource = dt;
+                        calculate_grossTotal();
+
+                        sqlcon.Close();
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -186,10 +203,10 @@ namespace Pizza_Club
             else if (radio_selectDate.Checked == true)
             {
                 try
-                {
+                {   
                     sqlcon.Close();
                     sqlcon.Open();
-                    string query = "select * from tbl_sales where date = '" + dateTimePicker1.Text + "'";
+                    string query = "select * from tbl_sales where date between '" + dateTimePicker1.Value.Date.AddHours(6) + "' AND '" + dateTimePicker1.Value.Date.AddHours(30) + "'";
                     SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
                     dt = new DataTable();
                     da.Fill(dt);

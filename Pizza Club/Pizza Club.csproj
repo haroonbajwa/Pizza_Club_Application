@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -66,11 +70,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabasePCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form_AddRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddRecord.Designer.cs">
+      <DependentUpon>Form_AddRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Details.Designer.cs">
+      <DependentUpon>Form_Details.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Expense.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Expense.Designer.cs">
       <DependentUpon>Form_Expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OnlinePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_OnlinePayment.Designer.cs">
+      <DependentUpon>Form_OnlinePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Purchase.Designer.cs">
+      <DependentUpon>Form_Purchase.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_PurchaseGrams.cs">
       <SubType>Form</SubType>
@@ -170,8 +198,20 @@
     <Compile Include="Form_PurchasePieces.Designer.cs">
       <DependentUpon>Form_PurchasePieces.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_AddRecord.resx">
+      <DependentUpon>Form_AddRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Details.resx">
+      <DependentUpon>Form_Details.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Expense.resx">
       <DependentUpon>Form_Expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_OnlinePayment.resx">
+      <DependentUpon>Form_OnlinePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Purchase.resx">
+      <DependentUpon>Form_Purchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_PurchaseGrams.resx">
       <DependentUpon>Form_PurchaseGrams.cs</DependentUpon>
@@ -242,6 +282,7 @@
     <None Include="DatabasePCDataSet.xss">
       <DependentUpon>DatabasePCDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -249,7 +249,7 @@ namespace Pizza_Club
             this.btn_deleteSales.FlatAppearance.BorderSize = 0;
             this.btn_deleteSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deleteSales.Image = ((System.Drawing.Image)(resources.GetObject("btn_deleteSales.Image")));
-            this.btn_deleteSales.Location = new System.Drawing.Point(996, 24);
+            this.btn_deleteSales.Location = new System.Drawing.Point(995, 27);
             this.btn_deleteSales.Name = "btn_deleteSales";
             this.btn_deleteSales.Size = new System.Drawing.Size(45, 37);
             this.btn_deleteSales.TabIndex = 10;
@@ -262,7 +262,7 @@ namespace Pizza_Club
             this.btn_refreshSales.FlatAppearance.BorderSize = 0;
             this.btn_refreshSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refreshSales.Image = ((System.Drawing.Image)(resources.GetObject("btn_refreshSales.Image")));
-            this.btn_refreshSales.Location = new System.Drawing.Point(996, 73);
+            this.btn_refreshSales.Location = new System.Drawing.Point(995, 70);
             this.btn_refreshSales.Name = "btn_refreshSales";
             this.btn_refreshSales.Size = new System.Drawing.Size(45, 37);
             this.btn_refreshSales.TabIndex = 9;

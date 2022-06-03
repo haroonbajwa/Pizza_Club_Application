@@ -29,12 +29,15 @@ namespace Pizza_Club
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Welcome));
             this.btn_guest = new System.Windows.Forms.Button();
             this.btn_admin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_addRecord = new System.Windows.Forms.Button();
+            this.btn_details = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -111,6 +114,36 @@ namespace Pizza_Club
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_addRecord
+            // 
+            this.btn_addRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_addRecord.FlatAppearance.BorderSize = 0;
+            this.btn_addRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addRecord.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addRecord.ForeColor = System.Drawing.Color.White;
+            this.btn_addRecord.Image = ((System.Drawing.Image)(resources.GetObject("btn_addRecord.Image")));
+            this.btn_addRecord.Location = new System.Drawing.Point(741, 394);
+            this.btn_addRecord.Name = "btn_addRecord";
+            this.btn_addRecord.Size = new System.Drawing.Size(47, 44);
+            this.btn_addRecord.TabIndex = 0;
+            this.btn_addRecord.UseVisualStyleBackColor = false;
+            this.btn_addRecord.Click += new System.EventHandler(this.btn_addRecord_Click);
+            // 
+            // btn_details
+            // 
+            this.btn_details.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_details.FlatAppearance.BorderSize = 0;
+            this.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_details.Font = new System.Drawing.Font("Adobe Gothic Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_details.ForeColor = System.Drawing.Color.White;
+            this.btn_details.Image = ((System.Drawing.Image)(resources.GetObject("btn_details.Image")));
+            this.btn_details.Location = new System.Drawing.Point(741, 341);
+            this.btn_details.Name = "btn_details";
+            this.btn_details.Size = new System.Drawing.Size(47, 44);
+            this.btn_details.TabIndex = 0;
+            this.btn_details.UseVisualStyleBackColor = false;
+            this.btn_details.Click += new System.EventHandler(this.btn_details_Click);
+            // 
             // Form_Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +155,8 @@ namespace Pizza_Club
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_admin);
+            this.Controls.Add(this.btn_details);
+            this.Controls.Add(this.btn_addRecord);
             this.Controls.Add(this.btn_guest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Welcome";
@@ -143,6 +178,8 @@ namespace Pizza_Club
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_addRecord;
+        private System.Windows.Forms.Button btn_details;
     }
 }
 

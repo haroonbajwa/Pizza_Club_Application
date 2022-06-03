@@ -13,6 +13,7 @@ namespace Pizza_Club
         public static Form_Welcome fw;
         public static Form_AdminMain fam;
         public static Form_Pizzas fp;
+        public static Form_Purchase fpurchase;
         public static purchase_pieces fpp;
         public static Form_PurchaseGrams fpg;
         public static Form_Burgers fb;
@@ -26,6 +27,9 @@ namespace Pizza_Club
         public static Form_Sales fsales;
         public static Form_ViewSales fvsales;
         public static Form_usageGrams fug;
+        public static Form_AddRecord far;
+        public static Form_OnlinePayment fop;
+        public static Form_Details fdetails;
 
         /// <summary>
         /// The main entry point for the application.
@@ -39,6 +43,7 @@ namespace Pizza_Club
             fw = new Form_Welcome();
             fam = new Form_AdminMain();
             fp = new Form_Pizzas();
+            fpurchase = new Form_Purchase();
             fpp = new purchase_pieces();
             fpg = new Form_PurchaseGrams();
             fb = new Form_Burgers();
@@ -52,6 +57,9 @@ namespace Pizza_Club
             fsales = new Form_Sales();
             fvsales = new Form_ViewSales();
             fug = new Form_usageGrams();
+            far = new Form_AddRecord();
+            fop = new Form_OnlinePayment();
+            fdetails = new Form_Details();
             Application.Run(new Form_Welcome());
             // Application.Run(new Form_Pizzas());
         }

@@ -1124,8 +1124,20 @@ namespace Pizza_Club
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Beef Petty")
                             {
                                 Dec_sideOrder_ingredients("Beef Petty", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "20 Nuggets")
+                            {
+                                Dec_sideOrder_ingredients("Nuggets", 20, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "20 Hot Wings")
+                            {
+                                Dec_sideOrder_ingredients("Hot Wings", 20, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                            }
+                            else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "24 Hot Shots")
+                            {
+                                Dec_sideOrder_ingredients("Hot Shots", 24, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                             }//decrease ingredients for deals
-                            else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 1")
+                            else if(dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 01")
                             {
                                 //bread, zinger piece
                                 try
@@ -1193,7 +1205,7 @@ namespace Pizza_Club
                                         CommandType = CommandType.Text
                                     };
                                     cmd.ExecuteNonQuery();
-                                    Dec_drink_stock("1 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                                    Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 }
                                 catch (Exception ex)
                                 {
@@ -1272,7 +1284,7 @@ namespace Pizza_Club
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 10")
                             {
-                                Dec_sideOrder_ingredients("Chicken Pcs", 3, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
+                                Dec_sideOrder_ingredients("Hot Wings", 10, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                                 Dec_drink_stock("1.5 Liter", 1, Convert.ToInt32(dataGridView_cart.Rows[i].Cells["DGVquantity"].Value));
                             }
                             else if (dataGridView_cart.Rows[i].Cells[0].Value.ToString() == "Deal 11")
@@ -1387,8 +1399,10 @@ namespace Pizza_Club
 
 
                         MessageBox.Show("Sales Successfull!");
-                        //to print receipt
+                        //to print receipt twice
                         ReceiptPrints();
+                        ReceiptPrints();
+
                         sqlcon.Close();
 
                         btn_resetCart_Click(sender, e);
@@ -1561,15 +1575,15 @@ namespace Pizza_Club
         //deals buttons
         private void btn_deal1_Click(object sender, EventArgs e)
         {
-            string selectedDeal = "Deal 1";
-            string dealPrice = "299";
+            string selectedDeal = "Deal 01";
+            string dealPrice = "320";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal2_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 2";
-            string dealPrice = "499";
+            string dealPrice = "550";
             HandleDealATC(selectedDeal, dealPrice);
 
         }
@@ -1577,7 +1591,7 @@ namespace Pizza_Club
         private void btn_deal3_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 3";
-            string dealPrice = "670";
+            string dealPrice = "699";
             HandleDealATC(selectedDeal, dealPrice);
 
         }
@@ -1585,91 +1599,91 @@ namespace Pizza_Club
         private void btn_deal4_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 4";
-            string dealPrice = "799";
+            string dealPrice = "899";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal5_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 5";
-            string dealPrice = "650";
+            string dealPrice = "699";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal6_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 6";
-            string dealPrice = "1199";
+            string dealPrice = "1299";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal7_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 7";
-            string dealPrice = "799";
+            string dealPrice = "899";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal8_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 8";
-            string dealPrice = "850";
+            string dealPrice = "899";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal9_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 9";
-            string dealPrice = "1499";
+            string dealPrice = "1699";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal10_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 10";
-            string dealPrice = "1599";
+            string dealPrice = "1899";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal11_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 11";
-            string dealPrice = "1799";
+            string dealPrice = "1899";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal12_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 12";
-            string dealPrice = "2499";
+            string dealPrice = "2699";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal13_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 13";
-            string dealPrice = "699";
+            string dealPrice = "799";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal14_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 14";
-            string dealPrice = "1350";
+            string dealPrice = "1499";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal15_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 15";
-            string dealPrice = "1799";
+            string dealPrice = "1999";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
         private void btn_deal16_Click(object sender, EventArgs e)
         {
             string selectedDeal = "Deal 16";
-            string dealPrice = "2399";
+            string dealPrice = "2599";
             HandleDealATC(selectedDeal, dealPrice);
         }
 
@@ -1736,16 +1750,16 @@ namespace Pizza_Club
             e.Graphics.DrawString("Address: " + txt_customerAddress.Text, new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(5, 139));
 
             auto_increment_id(sender, e);
-            e.Graphics.DrawString("Order ID: " + sale_id, new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(10, 165));
-            e.Graphics.DrawString("Date: " + DateTime.Now.ToString(), new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(150, 165));
+            e.Graphics.DrawString("Order ID: " + sale_id, new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(10, 165));
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToString(), new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(140, 165));
             //if (string.IsNullOrEmpty(txtBoxCustomer.Text) != true)
 
             //e.Graphics.DrawString("Time: " + DateTime.Now.ToLongTimeString(), new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, 310));
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 175));
-            e.Graphics.DrawString("ITEM", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(10, 185));
-            e.Graphics.DrawString("PRICE", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(140, 185));
-            e.Graphics.DrawString("QTY", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(190, 185));
-            e.Graphics.DrawString("Total", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(235, 185));
+            e.Graphics.DrawString("ITEM", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(5, 185));
+            e.Graphics.DrawString("PRICE", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(155, 185));
+            e.Graphics.DrawString("QTY", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(200, 185));
+            e.Graphics.DrawString("Total", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(240, 185));
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, 195));
             int gap = 205;
             //int subTotal1 = 0;
@@ -1753,13 +1767,13 @@ namespace Pizza_Club
             {
                 try
                 {   //item name
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[0].Value.ToString(), new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(10, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[0].Value.ToString(), new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(5, gap));
                     //item price
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(140, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(155, gap));
                     //quantity
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(190, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[1].Value.ToString(), new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(200, gap));
                     //total
-                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(235, gap));
+                    e.Graphics.DrawString(dataGridView_cart.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(240, gap));
                     gap = gap + 20;
                     //subTotal1 = subTotal1 + (Convert.ToInt32(sales_dataGridView.Rows[i].Cells[5].Value.ToString()));
                 }
@@ -1770,8 +1784,8 @@ namespace Pizza_Club
             }
             if(txt_extraCharges.Text != "")
             {
-                e.Graphics.DrawString("Extra Charges", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(10, gap));
-                e.Graphics.DrawString(txt_extraCharges.Text, new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(235, gap));
+                e.Graphics.DrawString("Extra Charges", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(5, gap));
+                e.Graphics.DrawString(txt_extraCharges.Text, new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(240, gap));
                 gap += 10;
             }
 
@@ -1784,23 +1798,23 @@ namespace Pizza_Club
             //if (txtBoxFinalCost.Text != null)
             //e.Graphics.DrawString("Taxes: " + printTax + ".00 Rs/-", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, new Point(220, gap));
             //gap = gap + 20;
-            e.Graphics.DrawString(orderType, new Font("Arial", 7, FontStyle.Regular), Brushes.Black, new Point(10, gap));
-            e.Graphics.DrawString("Final Amount: " + label_cartGrossTotal.Text + ".00 Rs/-", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(145, gap));
+            e.Graphics.DrawString(orderType, new Font("Arial", 8, FontStyle.Regular), Brushes.Black, new Point(5, gap));
+            e.Graphics.DrawString("Final Amount: " + label_cartGrossTotal.Text + ".00 Rs/-", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(130, gap));
             gap = gap + 10;
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("Amount Paid: " + txt_amountGiven.Text + ".00 Rs/-", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(145, gap));
-            gap = gap + 10;
-            e.Graphics.DrawString("Change: " + txt_change.Text + ".00 Rs/-", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(170, gap));
+            e.Graphics.DrawString("Amount Paid: " + txt_amountGiven.Text + ".00 Rs/-", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(130, gap));
+            gap = gap + 15;
+            e.Graphics.DrawString("Change: " + txt_change.Text + ".00 Rs/-", new Font("Arial", 8, FontStyle.Bold), Brushes.Black, new Point(155, gap));
             gap = gap + 30;
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(0, gap));
             gap = gap + 10;
 
-            e.Graphics.DrawString("THANKS FOR YOUR ORDER", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(95, gap));
+            e.Graphics.DrawString("THANKS FOR YOUR ORDER", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(85, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("For Home Delivery, Call us at: 0314 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(55, gap));
+            e.Graphics.DrawString("For Home Delivery, Call us at: 0314 7863120", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(45, gap));
             gap = gap + 10;
-            e.Graphics.DrawString("Whatsapp: 0301 7863120", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(132, gap));
+            e.Graphics.DrawString("Whatsapp: 0301 7863120", new Font("Arial", 7, FontStyle.Bold), Brushes.Black, new Point(132, gap));
             //e.Graphics.DrawString("Previously known as BAJWA SUPER STORE", new Font("Arial", 6, FontStyle.Bold), Brushes.Black, new Point(48, gap));
             //gap = gap + 20;
             //e.Graphics.DrawString("Developer Contact: 0304 2998055", new Font("Arial", 5, FontStyle.Bold), Brushes.Black, new Point(88, gap));

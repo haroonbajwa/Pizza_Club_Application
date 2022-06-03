@@ -270,10 +270,29 @@ namespace Pizza_Club
         //filter record by date
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            DataView DV = new DataView(dt);
+            /*DataView DV = new DataView(dt);
             DV.RowFilter = string.Format("Date = #{0}#", dateTimePicker1.Text);
             dataGridView_expense.DataSource = DV;
-            calculate_grossTotal();
+            calculate_grossTotal();*/
+
+            try
+            {
+                sqlcon.Close();
+                sqlcon.Open();
+                string query = "select * from tbl_expense where date between '" + dateTimePicker1.Value.Date.AddHours(6) + "' AND '" + dateTimePicker1.Value.Date.AddHours(30) + "'";
+                SqlDataAdapter da = new SqlDataAdapter(query, sqlcon);
+                dt = new DataTable();
+                da.Fill(dt);
+                dataGridView_expense.DataSource = dt;
+                calculate_grossTotal();
+
+                sqlcon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+                sqlcon.Close();
+            }
         }
     }
 }

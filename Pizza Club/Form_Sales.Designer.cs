@@ -664,7 +664,7 @@ namespace Pizza_Club
             this.btn_deal1.Name = "btn_deal1";
             this.btn_deal1.Size = new System.Drawing.Size(144, 64);
             this.btn_deal1.TabIndex = 28;
-            this.btn_deal1.Text = "Deal 1";
+            this.btn_deal1.Text = "Deal 01";
             this.btn_deal1.UseVisualStyleBackColor = false;
             this.btn_deal1.Click += new System.EventHandler(this.btn_deal1_Click);
             // 

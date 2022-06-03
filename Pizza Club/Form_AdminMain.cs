@@ -62,14 +62,14 @@ namespace Pizza_Club
             btn.BackColor = Color.DarkGreen;
         }
 
-        private void btn_purchasePcs_Click(object sender, EventArgs e)
+        /*private void btn_purchasePcs_Click(object sender, EventArgs e)
         {
             OpenChildForm(Program.fpp, sender);
 
             ResetButtonColor();
             Button btn = (sender as Button);
             btn.BackColor = Color.DarkGreen;
-        }
+        }*/
 
         private void btn_burgers_Click(object sender, EventArgs e)
         {
@@ -131,14 +131,14 @@ namespace Pizza_Club
             btn.BackColor = Color.DarkGreen;
         }
 
-        private void btn_purchaseGrms_Click(object sender, EventArgs e)
+        /*private void btn_purchaseGrms_Click(object sender, EventArgs e)
         {
             OpenChildForm(Program.fpg, sender);
 
             ResetButtonColor();
             Button btn = (sender as Button);
             btn.BackColor = Color.DarkGreen;
-        }
+        }*/
 
         private void btn_expenses_Click(object sender, EventArgs e)
         {
@@ -152,7 +152,7 @@ namespace Pizza_Club
         private void btn_sales_Click(object sender, EventArgs e)
         {
             OpenChildForm(Program.fvsales, sender);
-
+            
             ResetButtonColor();
             Button btn = (sender as Button);
             btn.BackColor = Color.DarkGreen;
@@ -161,6 +161,25 @@ namespace Pizza_Club
         private void btn_usageGrams_Click(object sender, EventArgs e)
         {
             OpenChildForm(Program.fug, sender);
+
+            ResetButtonColor();
+            Button btn = (sender as Button);
+            btn.BackColor = Color.DarkGreen;
+        }
+
+        private void btn_purchase_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fpurchase, sender);
+
+            ResetButtonColor();
+            Button btn = (sender as Button);
+            btn.BackColor = Color.DarkGreen;
+        }
+
+
+        private void btn_onlinePayments_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(Program.fop, sender);
 
             ResetButtonColor();
             Button btn = (sender as Button);

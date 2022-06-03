@@ -62,5 +62,20 @@ namespace Pizza_Club
                 }
             }
         }
+
+        //add new record
+        private void btn_addRecord_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.far.Show();
+        }
+
+        //view today's records details
+        private void btn_details_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.fdetails.Show();
+            Program.fdetails.GetTodayData();
+        }
     }
 }
